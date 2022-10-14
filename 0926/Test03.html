@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p, ul, ol{width: 500px;}
+
+        /* 
+            아래 3개는 block형 속성의 태그에서 적용
+            letter-spacing
+            line-height
+            text-align : block형 속성 내부에서 정렬한다는 말이지 통째로 움직이지는 않음(p태그가 움직이는 것은 아님)
+        */
+
+        .leftAlign{
+            text-align: left;
+            /* 기본 성격으로 디폴트 값임 */
+        }
+        .centerAlign{
+            text-align: center;
+        }
+        .rightAlign{
+            text-align: right;
+        }
+
+        ul, ol{list-style-type: none;}
+    </style>
+</head>
+<body>
+    <h1>문단 정렬 text-align</h1>
+
+    <p class="leftAlign">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. At modi, fugit dignissimos sed tempora neque molestiae expedita fuga, praesentium a voluptatem illum provident soluta tenetur quas! Odit accusamus ipsa nam!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis unde quasi distinctio. Assumenda veniam possimus architecto fugiat eos, sapiente inventore culpa laboriosam atque unde ipsam odio laborum quam cumque delectus!
+    </p>
+
+    <p class="centerAlign">
+        얼마나 놀이 열매를 어디 사랑의 설레는 가슴이 어디 이것이다. 맺어, 그와 못할 구하지 생명을 원질이 때문이다. 그와 모래뿐일 능히 인간에 작고 크고 것이다. 사는가 부패를 사람은 이상의 같이 힘차게 아름다우냐? 우리 인류의 눈에 대중을 목숨이 소리다.이것은 커다란 말이다. 그것을 그들은 천지는 우리 청춘은 있으랴? 무엇을 소리다.이것은 웅대한 찾아 없으면 것이 시들어 있는 속잎나고, 것이다. 들어 우리 그들을 반짝이는 속에 바이며, 아니더면, 부패뿐이다. 같으며, 원질이 품고 부패뿐이다. 우리 바이며, 앞이 같은 위하여서 목숨을 날카로우나 것이다.
+    </p>
+
+    <p class="rightAlign">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum modi inventore assumenda illo laborum corporis vero repellendus molestiae iste, quasi ad ipsa id sunt voluptatem eaque eligendi, quos obcaecati repellat!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis velit fugit esse ad accusantium suscipit, ut in a ipsam harum nobis incidunt tempore odit nostrum exercitationem culpa rem maiores illo.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, nostrum sint praesentium commodi, eum soluta dolorum architecto non deserunt aliquam veniam eveniet, rem earum assumenda tenetur officia molestias itaque dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam illo excepturi ab earum veniam deleniti. Illo magnam voluptatem unde ea facilis suscipit vero adipisci recusandae esse ipsam? Alias, rem neque.
+    </p>
+
+    <ul class="centerAlign">
+        <li> - unorderList1</li>
+        <li> - unorderList2</li>
+        <li> - unorderList3</li>
+    </ul>
+    <ol class="rightAlign">
+        <li> 1. orderList1</li>
+        <li> 2. orderList2</li>
+        <li> 3. orderList3</li>
+    </ol>
+
+    <img src="" alt="">
+</body>
+</html>

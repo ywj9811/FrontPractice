@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/box.css">
+
+    <style>
+        .lnb-container{width: 200px;}
+        .lnb-container>ul>li>a{
+            display: block; 
+            padding: 10px; 
+            background-color: pink;
+        }
+        .subMenu a{
+            display: block;
+            padding: 10px;
+            background-color: skyblue;
+        }
+        .subMenu{
+            position: absolute;
+            left: 200px;
+            /* position이 fix 혹은 absolute로 들어가게 되면 너비가 없어짐 붕 뜸 */
+            top: 0;
+            width: 200px;
+            display: none;
+        }
+        .lnb-container>ul>li{
+            position: relative;
+        }
+        /* .lnb-container>ul>li:nth-child(1) .subMenu{z-index: 1;} */
+
+        /* .lnb-container>ul>li>a+.subMenu{} 혹은 .lnb-container>ul>li>.subMenu */
+        .lnb-container>ul>li:hover>a+ .subMenu{display: inline;}
+        .lnb-container>ul>li:hover>a{opacity: 0.5;}
+    </style>
+</head>
+<body>
+    <h1>세로 기본 메뉴 + Position</h1>
+    <nav class="lnb-container">
+        <ul>
+            <li><a href="#">메뉴소개</a>
+                <ul class="subMenu">
+                    <li><a href="#">샌드위치</a></li>
+                    <li><a href="#">샐러드</a></li>
+                    <li><a href="#">아침메뉴</a></li>
+                </ul>
+            </li>
+            <li><a href="#">이용방법</a>
+                <ul class="subMenu">
+                    <li><a href="#">서브웨이이용방법</a></li>
+                    <li><a href="#">단체메뉴이용방법</a></li>
+                    <li><a href="#">APP이용방법</a></li>
+                </ul>
+            </li>
+            <li><a href="#">새소식</a></li>
+            <li><a href="#">서브웨이</a></li>
+            <li><a href="#">가맹점</a></li>
+            <li><a href="#">온라인주문</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

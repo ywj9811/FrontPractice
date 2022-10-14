@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0928 homework</title>
+    <style>
+        body{
+            background-color:#cfe6f5;
+        }
+        .title,.pairing{
+            width: 750px;
+        }
+        /*title*/
+        .wrap{
+            width: 750px;
+            height: 200px;
+            margin: 50px auto;
+            border: 2px solid #fff;
+        }
+        .title{
+            margin-left:20px;
+            margin-top: 20px;
+        }
+        .title td:nth-child(1){
+            width: 520px;
+            background-color: rgb(88, 120, 176);
+            color: #fff;
+            font-size: 45px;
+            text-align: center;
+        }
+        .title td:nth-child(2){
+            text-align: center;
+            padding-right: 20px;
+        }
+        .title td:nth-child(2) > img {
+            width: 150px;
+        }
+        /*.pairing*/
+        .pairing{
+            margin: auto;
+            border-collapse: collapse;
+            border: 2px solid black;
+        }
+        .pairing > caption{
+            font-size: 25px;
+            text-align: left;
+            color: rgb(38, 38, 152);
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .pairing th, .pairing td {
+            border: 1px solid black;
+            height: 40px;
+        }
+        .pairing thead th{
+            background-color: #424f56;
+            color: rgb(213, 209, 209);
+            text-align: left;
+            padding-left: 10px;
+            border-right: 1px solid rgb(130, 123, 123);
+        }
+        .pairing tbody th{
+            background-color: #a0bbcc;
+        }
+        .pairing tbody td{
+            background-color: #fff;
+            text-align: left;
+            padding-left: 10px;
+        }
+        .pairing .time{
+            width: 70px;
+        }
+        .pairing tfoot td{
+            color: rgb(123, 120, 120);
+            font-style: italic;
+            text-align: center;
+            background-color:#d1e0e9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <!--title-->
+        <table class="title">
+            <tr>
+                <td>TV 편성표 보기</td>
+                <td><img src="./images/tv.png" alt=""></td>
+            </tr>
+        </table>
+    </div>
+    <!--pairing-->
+    <table class="pairing">
+            <caption>2012년 12월 17일(월) TV 영화 편성표</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th scope="col">OCN</th>
+                <th scope="col">SUPER ACTION</th>
+                <th scope="col">채널 CGV</th>
+                <th scope="col">XTM</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row" class="time">19시</th>
+                <td rowspan="2">의뢰인</td>
+                <td>CSI MIAMI 시즌2(11회) </td>
+                <td>지구가 멈추는 날</td>
+                <td>Friends(20회)</td>
+            </tr>
+            <tr>
+                <th scope="row" class="time">20시</th>
+                <!-- <td></td> -->
+                <td>미트더 스파르탄</td>
+                <td rowspan="3">공감랭크쇼</td>
+                <td>Friends(21회)</td>
+            </tr>
+            <tr>
+                <th scope="row" class="time">21시</th>
+                <td>CSI시즌2(12회)</td>
+                <td rowspan="3">스워드 피쉬</td>
+                <!-- <td>공감랭크쇼</td> -->
+                <td>가제트(81회)</td>
+            </tr>
+            <tr>
+                <th scope="row" class="time">22시</th>
+                <td>CSI시즌2(13회)</td>
+                <!-- <td>스워드 피쉬</td> -->
+                <!-- <td>공감랭크쇼</td> -->
+                <td>가제트(82회)</td>
+            </tr>
+            <tr>
+                <th scope="row" class="time">23시</th>
+                <td>더 록</td>
+                <!-- <td>스워드 피쉬</td> -->
+                <td>탑기어</td>
+                <td>가제트(83회)</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5">일간단위로 업데이트 되며, 방송사 사정에 따라 변경될 수 있습니다.</td>
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

@@ -1,0 +1,233 @@
+.header{width: 100%; height: 30px; background-color: rgb(224, 224, 224);}
+.logo{
+    background-image: url(../image/logo_hitejinro.png);
+    background-repeat: no-repeat;
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    margin: auto;
+    padding-top: 10px;
+}
+.menubar-container{
+    width: 100%;
+    height: 60px;
+}
+
+.menu-bar{
+    margin: auto;
+    width: 70%;
+    text-align: center;
+    margin-top: 40px;
+}
+.menu{
+    float: left;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+}
+.menu1{
+}
+.menu2{
+    margin-left: 110px;
+}
+.menu3{
+    margin-left: 110px;
+}
+.menu4{
+    margin-left: 110px;
+}
+.login-menu{
+    float: right;
+}
+.login{
+    float: left;
+    margin-left: 10px;
+    font-size: 10px;
+}
+
+.bigimage{
+    width: 100%;
+    height: 480px;
+    background-image: url(../image/20220928_57785050.png);
+    background-size: cover;
+}
+.boxBigcontainer{
+    width: 100%;
+    height: 1020px;
+    background-color: rgb(224, 224, 224);
+}
+.boxcontainer{
+    width: 1090px;
+    height: 1020px;
+    margin: auto;
+}
+.box{
+    float: left;
+    width: 260px;
+    height: 260px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.box02{
+    height: 260px;
+}
+.box01,.box02,.box03{
+    margin-right: 10px;
+}
+.box05{
+    height: 530px;
+}
+.box06{
+    width: 530px;
+}
+.box08{
+    width: 530px;
+}
+.text{
+    font-size: 20px;
+    line-height: 5;
+}
+.sns{
+    width: 100%;
+    height: 320px;
+}
+.snsboxcontainer{
+    height: 105px;
+    width: 1000px;
+    margin: auto;
+}
+.snsbox{
+    margin-top: 50px;
+    width: 105px;
+    height: 105px;
+    float: left;
+    border-radius: 100%;
+}
+.snsbox01{
+    background-image: url(../image/20220930_15828127.png);
+    background-size: cover;
+    margin-right: 220px;
+}
+.snsbox02{
+    background-image: url(../image/20160822_20972129.jpg);
+    background-size: cover;
+    margin-right: 220px;
+}
+.snsbox03{
+    background-image: url(../image/20220928_57785050.png);
+    background-size: cover;
+}
+.snstext{
+    font-size: 25px;
+    font-weight: 300;
+    margin-top: 30px;
+}
+.top{
+    float: right;
+    margin-top: 230px;
+}
+.icon{
+    width: 20px;
+    height: 70px;
+    background-image: url(../image/icon_top.png);
+    background-repeat: no-repeat;
+    float: left;
+}
+.top a{
+    display: block;
+    color: rgb(0, 38, 255);
+}
+.footercontainer{
+    width: 100%;
+    height: 365px;
+    background-color: rgba(0, 0, 0, 0.829);
+    border-bottom: 1px solid rgba(124, 123, 123, 0.308);
+}
+.listbar{
+    width: 930px;
+    margin: auto;
+}
+.list{
+    margin-top: 50px;
+    float: left;
+    color: white;
+    font-size: 15px;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+.list1{
+    margin-right: 115px;
+}
+.list2{
+    margin-right: 115px;
+}
+.list3{
+    margin-right: 115px;
+}
+.list4{
+    margin-right: 115px;
+}
+.list0{
+    float: left;
+}
+.listunder{
+    color: gray;
+    font-weight: 100;
+    font-size: 13px;
+    width: 1000px;
+    margin: auto;
+    line-height: 2;
+}
+.list_{
+    margin-top: 30px;
+    text-align: center;
+}
+.list01{
+    float: left;
+    margin-right: 30px;
+    letter-spacing: -0.01em;
+}
+.list02{
+    float: left;
+    margin-right: 105px;
+}
+.list03{
+    float: left;
+    margin-right: 99px;
+}
+.list04{
+    float: left;
+    letter-spacing: -0.1em;
+    margin-right: 110px;
+}
+.list05{
+    float: left;
+    letter-spacing: -0.1em;
+    margin-right: 140px;
+}
+.list06{
+    float: left;
+    letter-spacing: -0.1em;
+}
+
+.footer_1{
+    width: 100%;
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0.829);
+    border-bottom: 1px solid rgba(124, 123, 123, 0.308);
+}
+.footer_2{
+    width: 100%;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.829);
+    border-bottom: 1px solid rgba(124, 123, 123, 0.308);
+    padding-top: 50px;
+}
+.address{
+    vertical-align: middle;
+    width: 525px;
+    margin: auto;
+    color: rgba(124, 123, 123, 0.308);
+    font-size: 10px;
+    text-align: center;
+}

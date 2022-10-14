@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border-radius</title>
+    <style>
+        .box{ width: 100px; height: 100px;
+            background-color: darkslategrey;
+            margin: 30px; 
+        }
+        .box01{ border-radius: 20px;}
+        .box02{ border-radius: 10px 30px 50px 70px;}
+        /*  시계방향 : 왼쪽위를 시작으로 각각의 라디우스 지정 */
+        .box03{ border-radius: 20px  60px;}
+        /*  대각선 방향으로 왼쪽위, 오른쪽 아래 / 오른쪽위, 왼쪽아래  */
+        .box04{ border-radius: 100%; }
+        /* 반지름 값을 사용하지 않고 지름을 사용함  */
+        .box05{ border-radius: 50%; }
+        .box06{ border-radius: 50px; border: 20px solid pink;}
+        /* 
+            100px = 100% 
+        */
+        .box07{ border-radius: 100px; border:20px solid pink; }
+
+        .box08{ border-radius: 50px 0 0 0 ;}
+        .box09{ border-radius: 50px/100px;}
+        .box10{ border-radius: 150px/50px;}
+    </style>
+</head>
+<body>
+    <div class="box box01"></div>
+    <div class="box box02"></div>
+    <div class="box box03"></div>
+    <div class="box box04"></div>
+    <div class="box box05"></div>
+    <div class="box box06"></div>
+    <div class="box box07"></div>
+    <div class="box box08"></div>
+    <div class="box box09"></div>
+    <div class="box box10"></div>
+    <div class="box box11"></div>
+    <div class="box box12"></div>
+    <div class="box box13"></div>
+    <div class="box box14"></div>
+    <div class="box box15"></div>
+    <div class="box box16"></div>
+    <div class="box box17"></div>
+    <div class="box box18"></div>
+    <div class="box box19"></div>
+    <div class="box box20"></div>
+</body>
+</html>

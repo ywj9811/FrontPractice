@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            width: 300px; height: 100px;
+            background-color: orange;
+        }
+
+        div:nth-of-type(2n){
+            background-color: skyblue;
+        }
+
+        .box1{
+            padding-top: 50px;
+        }
+        .box2{
+            padding-left: 50px;
+        }
+        .box3{
+            padding-bottom: 50px;
+        }
+        .box4{
+            padding-right: 50px;
+        }
+        .box5{
+            padding:50px 100px 150px 200px;
+            /* 시계방향으로 상 우 하 좌 이런식으로 지정되게 된다. */
+        }
+        .box6{
+            padding: 50px;
+            /* 상하좌우 모두 50px 들어감 */
+        }
+        .box7{
+            padding: 50px 100px
+            /* 상하50 좌우100 */
+        }
+        .box8{
+            padding: 50px 100px 150px;
+            /* 상50 좌우 100 하 150 */
+        }
+    </style>
+</head>
+<body>
+    <h1>박스모델</h1>
+
+    <ul>
+        <li>content : width * height + padding + margin + border 이 모든것이 콘텐츠의 크기에 포함되게 된다.</li>
+        <li>padding : border</li>
+        <li>margin : border를 기준으로 외부 여백</li>
+        <li>border : 테두리</li>
+    </ul>
+
+    <div class="box"> CONTENT </div>
+    <h2>padding</h2>
+    <h2>스타일 적용방법 : 풀어해쳐 사용, 축약형 코드 사용</h2>
+    <div class="box box1">box1</div>
+    <div class="box box2">box2</div>
+    <div class="box box3">box3</div>
+    <div class="box box4">box4</div>
+    <div class="box box5">box5</div>
+    <div class="box box6">box6</div>
+    <div class="box box7">box7</div>
+    <div class="box box8">box8</div>
+
+    <!-- 
+        .box.box$*5{box$}
+        이렇게 하게 되면 box클래스 + box1~5 클래스가 생성되며 box1~box5의 단어가 들어가게 된다.
+        $ == 순번
+    -->
+</body>
+</html>

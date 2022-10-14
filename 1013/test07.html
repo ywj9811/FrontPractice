@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/box.css">
+
+    <style>
+        .box{
+            height: 100px;
+        }
+        
+        .flex-container{
+            display: flex;
+            height: 500px;
+            background-color: palegoldenrod;
+            /* flex 레이아웃은 기존의 너비가 넘어가더라도 줄여서 탈락하지 않도록 한다. */
+        }
+        .box{order: 0;}
+        .item1{order: 5;}
+        /* order를 통해 번호를 지정하면 지정된 번호로 나열함(오름차순) - 0이 기본값*/
+        .item5{order: -5;}
+    </style>
+</head>
+<body>
+    <h1>flex-shirnk</h1>
+    <div class="flex-container">
+        <div class="box item1">1</div>
+        <div class="box item2">2</div>
+        <div class="box item3">3</div>
+        <div class="box item4">4</div>
+        <div class="box item5">5</div>
+    </div>
+</body>
+</html>

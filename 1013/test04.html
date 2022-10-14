@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/box.css">
+
+    <style>
+        .box{
+            height: 100px;
+        }
+        
+        .flex-container{
+            display: flex;
+            width: 1200px;
+            height: 500px;
+            background-color: palegoldenrod;
+            /* flex 레이아웃은 기존의 너비가 넘어가더라도 줄여서 탈락하지 않도록 한다. */
+        }
+        
+        .item{
+            /* 확대, 축소, 기본값 설정 : 자식 설정 */
+            flex-grow: 0;
+            /* flex-grow 기본값 : 0 (남는 여백을 없애줌)
+                나머지 여백을 나누어 설정하는 방법    
+            */
+        }
+        .item:nth-child(2){flex-grow: 1;}
+        .item:nth-child(3){flex-grow: 2;}
+        /* n/전체개수 값으로 여백을 배치함 */
+    </style>
+</head>
+<body>
+    <h1>flex-grow</h1>
+    <div class="flex-container">
+        <div class="box item"></div>
+        <div class="box item"></div>
+        <div class="box item"></div>
+        <div class="box item"></div>
+        <div class="box item"></div>
+    </div>
+</body>
+</html>

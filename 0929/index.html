@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            /* 기본 데이타 셋팅 변수 */
+            /* 가장 최상위 요소를 특정하기 때문에 <html> 을 의미 */
+            /* 여기서는 -- 다음 속성 이름을 정해주고 : 뒤에 값을 적어준다. 마치 전역변수 처럼 사용하는 것 */
+            /* 이것을 사용할 때는 var(이름) 으로 사용할 수 있다. */
+            --color-red:#d31710;
+            --color-yellow:#e2ce92;
+        }
+        *{ margin:0; padding:0; }
+        /* 기본으로 0, 0 설정 */
+        a{ text-decoration: none; color:inherit; }
+        /* inherit(상속) 부모요소의 문자색을 상속 받아 사용함 */
+        body{ 
+            /* 기본 font */
+            font-family: 'Nanum Gothic Coding', monospace;
+            color:#333; 
+        }
+        .container{ width: 1200px; height: 120vh;
+            margin:auto; 
+            background-color: antiquewhite;
+            background-image: url(./images/luisana-zerpa.jpg);
+            background-position: 0 -315px; 
+            background-size: 1574px 2400px; 
+            padding: 70px 50px; 
+        } 
+        
+        h2{ border:3px solid var(--color-yellow);
+            border-left:none; 
+            border-right: none;
+            width:376px;
+            padding: 10px 0 7px 0;
+        }
+        h2>span{ color: var(--color-red); }
+        .headerTitle{ 
+            font-family: 'Pacifico', cursive; color:var(--color-yellow); 
+            font-size: 75px;
+        }
+        h1{ font-size: 90px; color:var(--color-red);
+            margin-bottom:50px; 
+        }
+        p:nth-of-type(2){ margin-bottom: 50px;}
+        .timeTable th{ padding:5px 10px; text-align: justify;}
+        .timeTable{ margin-bottom: 50px;}
+        .divTable{ width:100%; }
+        .divTable:nth-of-type(2){ margin-bottom: 50px; }
+        .divTable::after{ content:''; display: block; clear:both;}
+        /* 여백을 주었더니 적용이 안되서 클리어픽스 적용 */
+
+        .row1>div{ width:20%; float:left;
+            background-color: var(--color-red);
+            color:var(--color-yellow);
+            padding:5px 0;
+            text-align: center;
+        }
+        .row2>div{ width:20%; float:left;
+            background-color: var(--color-yellow); 
+            color: #333;
+            padding:5px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+        .row3>div{ width:20%; float:left;
+            background-color: #fff; 
+            color: #333;
+            padding:5px 0;
+            text-align: center; 
+        }
+        .row3>div>span{}
+        /* 자식선택자 대신 자손선택자를 사용하여 코드량을 줄임  */
+        .row3 span{ display: block;}
+        /* row3 클래스 안의 모든 span */
+        /* br태그를 사용하는 대신 줄을 바꾸기 위한 용도 */
+
+        .bottomInfo>div{ float:left; color:var(--color-yellow);}
+        .bottomInfo cite, 
+        .bottomInfo address{
+            font-style: normal;
+        }
+        .bottomInfo h1{font-size:44px; color:var(--color-yellow); 
+                float:right;
+        }
+        .bottomInfo h1>span{font-size:12px; display: block;
+            letter-spacing: -0.15em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>디저트 스킬업 주말반 <span>추가 오픈!</span></h2>
+        <p class="headerTitle">Best of Best</p>
+        <h1>DESSERT SKILL <br> - UP CLASS</h1>
+        <p>
+            실제 베이커리에서 판매되고 있는  <br>
+            <strong>고퀄리티 베이킹 클래스!</strong>. Provident eligendi <br>
+            <strong>ut autem vel necessitatibus totam atque optio,</strong> nihil nemo ipsam debitis corrupti quasi vero. Neque facilis vero officia nihil impedit.
+        </p>
+
+        <table class="timeTable">
+            <tbody>
+                <tr>
+                    <th>수업요일</th>
+                    <td>주말(토요일/일요일)</td>
+                </tr>
+                
+                <tr>
+                    <th>수업시간</th>
+                    <td>주말(토요일/일요일)</td>
+                </tr>
+                <tr>
+                    <th>수업장소</th>
+                    <td>주말(토요일/일요일)</td>
+                </tr>
+                <tr>
+                    <th>수업정원</th>
+                    <td>주말(토요일/일요일)</td>
+                </tr>
+                <tr>
+                    <th>수 강 료</th>
+                    <td>주말(토요일/일요일)</td>
+                </tr>
+                <tr>
+                    <th>준 비 물</th>
+                    <td>행주3장, 빵 담아갈 쇼핑백, 위생봉투, 볼펜</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="divTable">
+            <div class="row1">
+                <div>5월23일토요일</div>
+                <div>5월23일토요일</div>
+                <div>5월23일토요일</div>
+                <div>5월23일토요일</div>
+                <div>5월23일토요일</div>
+            </div>
+            <div class="row2">
+                <div>수업인원:9명</div>
+                <div>수업인원:9명</div>
+                <div>수업인원:9명</div>
+                <div>수업인원:9명</div>
+                <div>수업인원:9명</div>
+            </div>
+            <div class="row3">
+                <div>
+                    <img src="./images/dessert_01.gif" alt="">
+                    <span>뚱카롱(마카롱+필링)</span>
+                </div> 
+                <div>
+                    <img src="./images/dessert_02.gif" alt="">
+                    <span>당근케이크</span>
+                </div> 
+                <div>
+                    <img src="./images/dessert_03.gif" alt="">
+                    <span>레드벨벳케이크</span>
+                </div> 
+                <div>
+                    <img src="./images/dessert_04.gif" alt="">
+                    <span>뚱카롱(마카롱+필링)</span>
+                </div> 
+                <div>
+                    <img src="./images/dessert_05.gif" alt="">
+                    <span>마카롱+말차가나슈</span>
+                </div> 
+            </div>
+        </div>
+        <div class="divTable">
+            <div class="row1">
+                <div>5월23일토요일</div>
+                <div>5월23일토요일</div>
+                <div>5월23일토요일</div>
+                <div>5월23일토요일</div>
+                <div>5월23일토요일</div>
+            </div>
+            <div class="row2">
+                <div>수업인원:9명</div>
+                <div>수업인원:9명</div>
+                <div>수업인원:9명</div>
+                <div>수업인원:9명</div>
+                <div>수업인원:9명</div>
+            </div>
+            <div class="row3">
+                <div>
+                    <img src="./images/dessert_01.gif" alt="">
+                    <span>뚱카롱(마카롱+필링)</span>
+                </div> 
+                <div>
+                    <img src="./images/dessert_02.gif" alt="">
+                    <span>당근케이크</span>
+                </div> 
+                <div>
+                    <img src="./images/dessert_03.gif" alt="">
+                    <span>레드벨벳케이크</span>
+                </div> 
+                <div>
+                    <img src="./images/dessert_04.gif" alt="">
+                    <span>뚱카롱(마카롱+필링)</span>
+                </div> 
+                <div>
+                    <img src="./images/dessert_05.gif" alt="">
+                    <span>마카롱+말차가나슈</span>
+                </div> 
+            </div>
+        </div>
+        <div class="bottomInfo">
+            <div>
+                 <cite>koreait.academy.co.kr</cite>
+                 <address> 문의전화 02-456-7896</address>
+            </div>
+            <h1> KOREA <span>코리아 아이티 아카데미</span></h1>
+        </div>
+    </div>
+</body>
+</html>
+<!-- 
+    1. 디버그 창 활용
+    2. 브라우저(chrom, firefox, edge) 잘 못 사용 
+     
+    주의 
+    1. 수업중 오류 : 못고치는 학생방에 업로드 
+    2. 녹화 중인 링크 : 반드시 내일 중 받아서 복습
+    3. 과제 : 오늘만든 페이지 한개 스타일 제작 해보세요. 
+       - 하나 업로드 할 수도 있음
+       - 똑같이 제작해도 됨 
+    4. 테이블 예제 업로드한것 제작해보세요.
+    5. 과제는 3일까지 가능한 업로드 부탁합니다.  
+ -->

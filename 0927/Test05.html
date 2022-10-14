@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul{
+            list-style-type: none; width: 300px;
+        }
+        li{
+            border: 1px solid black;
+        }
+        .first a{
+            padding: 50px; 
+            background-color: pink;
+            display: block;
+            /* display: block; 은 inline속성을 block으로 변경시킴 */
+        }
+
+        .second li{
+            padding: 50px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>inline요소의 padding성격</h1>
+    <div>
+        inline형 속성에서는 상하 padding이 안쪽 여백으로 생성되지 않고<br>
+        margin 처럼 생성되게 된다. <br>
+        inline 속성에서 padding을 사용할 경우 block 속성으로 바꿀 필요가 있음
+    </div>
+    <ul class="first">
+        <li><a href="#">MENU01</a></li>
+        <li><a href="#">MENU02</a></li>
+        <li><a href="#">MENU03</a></li>
+        <li><a href="#">MENU04</a></li>
+    </ul>
+
+    <ul class="second">
+        <li>SECOND1</li>
+        <li>SECOND2</li>
+        <li>SECOND3</li>
+        <li>SECOND4</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 태그로만 디자인 하는 건 기초디자인 */
+        h1{font-size:60px;}
+        p{font-size:59px;  }
+        .orangeFont35{font-size:35px; color:orange; }
+        b{font-size:34px; color:skyblue; font-weight: 400;}
+        i{font-size:33px; color:purple; font-style:normal;}
+        .fontSize32{font-size:32px;}
+        .fontSizeViolet{font-size:28px; color:violet;}
+        #heart{font-size:27px; color:red; font-weight: 900;}
+        p8{font-size:23px; color:blue;}
+        p9{font-size:22px; color:green;}
+        
+    </style>
+</head>
+<body>
+    <h1>올망 졸망 글자 놀이</h1>
+    <!-- h1~h6까지 사용 -->
+    <br>
+    <!-- html5이상은 없는 태그도 사용자가 만들어서 사용할 수 있다. -->
+    <!-- 
+        css 클래스 = 디자인 부품의 이름
+        클래스명 : 디자인의 성격을 영어로 표현한 이름
+                  단어를 결합하되 단어와 단어사이 첫글자는 대문자
+                  카멜케이스( 낙타등표기 )   
+                  클래스명은 같은 이름을 중복해서 사용 가능 
+                  필요한 디자인이 제작되어 있다면 재사용(reuse)가 가능
+        java 클래스 = 객체( 부품 ) 와 다른 내용
+
+        아이디명 : 구조(배치: 레이아웃)의 이름을 지정할 때 사용 
+                  카멜케이스, 첫글자 대문자, 전체 대문자  
+                  클래스와 달리 중복해서 사용할 수 없음 
+
+        emmet wrap적용방법
+        span
+        span.orangeFont35
+        span#heart
+        p>span
+
+        디자인 적용 우선순위(상쇄성격)
+        태그 : 1
+        클래스 : 10 
+        아이디 : 100
+        그외 : 0.5
+     -->
+    <p>글자들이 <br>
+     <span class="orangeFont35">올</span> <b>망</b> <span>졸</span> <i>망 </i> <br>
+     <span class="fontSize32">왔다</span> <span class="fontSizeViolet">갔다,</span>  <br>
+     <i>울</i> <span class="orangeFont35">룩</span> <i>불</i> <span class="fontSize32">룩</span> 
+     <span id="heart">마음대로 움직이네요 </span>
+    <br>
+    <p><strong>끝</strong></p>
+
+</body>
+</html>

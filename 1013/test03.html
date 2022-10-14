@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/box.css">
+
+    <style>
+        .box{
+            height: 100px;
+        }
+        .sibiling{
+            width: 200px; height: 200px;
+            background-color: blue;
+        }
+        .flex-container01{
+            display: flex;
+            width: 500px;
+            height: 500px;
+            background-color: palegoldenrod;
+            /* flex 레이아웃은 기존의 너비가 넘어가더라도 줄여서 탈락하지 않도록 한다. */
+            flex-wrap: wrap;
+            /* flex-wrap을 사용하게 되면 너비가 넘어가게 되면 탈락할 수 있도록 (아래로 넘기는 등등) */
+            gap: 50px;
+            /* 각 요소 사이의 간격을 주게 된다. space-between처럼 작동 */
+        }
+        .flex-container02{
+            display: flex;
+            height: 500px;
+            width: 500px;
+            background-color: palegoldenrod;
+            align-items: center;
+            /* 기본축의 반대 정렬(한줄) */
+        }
+        .flex-container03{
+            display: flex;
+            flex-wrap: wrap;
+            /* 한줄 정렬이 아닌 탈락을 넣어줌 */
+            align-content: space-around;
+            /* 기본축의 반대 정렬(여러줄) */
+            height: 500px;
+            width: 500px;
+            background-color: palegoldenrod;
+        }
+    </style>
+</head>
+<body>
+    <h1>gap</h1>
+    <div class="flex-container01">
+        <div class="box item"></div>
+        <div class="box item"></div>
+        <div class="box item"></div>
+        <div class="box item"></div>
+        <div class="box item"></div>
+    </div>
+    <h1>align-item</h1>
+    <div class="flex-container02">
+        <div class="box item"></div>
+        <div class="box item"></div>
+        <div class="box item"></div>
+        <div class="box item"></div>
+        <div class="box item"></div>
+    </div>
+    <h1>align-content</h1>
+    <div class="flex-container03">
+        <div class="box item"></div>
+        <div class="box item"></div>
+        <div class="box item"></div>
+        <div class="box item"></div>
+        <div class="box item"></div>
+    </div>
+</body>
+</html>

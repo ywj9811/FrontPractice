@@ -1,0 +1,13 @@
+/* 외부스타일 */
+*{ margin:0; padding:0; box-sizing: border-box;}
+a{ text-decoration: none; color:inherit; }
+li{ list-style-type: none;}
+body{ font-family: "돋움"; font-size:12px; 
+        /* font: style 또는 weight size family; 
+        축약형 코드에서는 순서를 지켜야함
+        font: bold italic 12px "돋움";
+        */
+        /* background-color: red; */
+}
+
+.clearFix::after{ content:''; display: block; clear:both;}

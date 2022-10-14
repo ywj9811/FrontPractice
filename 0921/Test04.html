@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+       /* 링크로 지정된 폰트는 네트워크가 안정적이어야 표현될 수 있음 */
+       /* 만약 폰트를 다운받는 경우
+          @font-face 를 통해 사용할 폰트 지정 -> 지정한 이름을 font-family로 사용 */
+        @font-face {
+            font-family: nsBold;
+            src: url(./Noto_Sans_KR/NotoSansKR-Bold.otf);
+        }
+
+        @font-face {
+            font-family: nsLight;
+            src: url(./Noto_Sans_KR/NotoSansKR-Light.otf);
+        }
+        
+        @font-face {
+            font-family: nsThin;
+            src: url(./Noto_Sans_KR/NotoSansKR-Thin.otf);
+        }
+        p{ font-size: 20px; }
+
+        p:nth-child(2){font-family: nsBold;}
+        p:nth-child(3){font-family: nsLight;}
+        p:nth-child(4){font-family: nsThin;}
+    </style>
+</head>
+
+<body>
+    <h1>font-family</h1>
+    <p>2 한글은 HELLO, hello, 1234567890 아름다운 글입니다.</p>
+    <p>3 한글은 HELLO, hello, 1234567890 아름다운 글입니다.</p>
+    <p>4 한글은 HELLO, hello, 1234567890 아름다운 글입니다.</p>
+    <p>5 한글은 HELLO, hello, 1234567890 아름다운 글입니다.</p>
+    <p>6 한글은 HELLO, hello, 1234567890 아름다운 글입니다.</p>
+    <p>7 한글은 HELLO, hello, 1234567890 아름다운 글입니다.</p>
+    <p>8 한글은 HELLO, hello, 1234567890 아름다운 글입니다.</p>
+    <p>9 한글은 HELLO, hello, 1234567890 아름다운 글입니다.</p>
+    <p>10 한글은 HELLO, hello, 1234567890 아름다운 글입니다.</p>
+    <p>11 한글은 HELLO, hello, 1234567890 아름다운 글입니다.</p>
+    <p>12 한글은 HELLO, hello, 1234567890 아름다운 글입니다.</p>
+</body>
+</html>

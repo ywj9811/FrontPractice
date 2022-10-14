@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/box.css">
+    <!-- 
+        레이아웃 제작 : 가로 나열하기
+        가로세로 가운데 배치
+
+        flex layout
+        부모 : container -> flex-direction
+        자식 : items -> 설정
+        이렇게 명명을 하고 있다.
+     -->
+
+     <style>
+        .box-container{ display: flex; 
+         background-color: skyblue; 
+         padding: 50px;
+         justify-content: flex-start;
+         /* 
+            flex-start
+            flex-end
+            space-between
+            space-around
+            space
+         */
+      }
+        /* 부모에서 설정 : flex - 기본으로 가로 나열 */
+        /* flex-direction: row = 기본 */
+        /* flex-direction:  row, row-revers, column, column-reverse 가 있다.*/
+        /* 순서대로 왼쪽으로, 오른쪽으로, 세로, 아래에서 부터 세로 */
+        /* 
+            margin, padding 등등에서 말썽을 부리지 않음
+        */
+        .box-container:nth-of-type(2){
+            display: flex;
+            justify-content: flex-end;
+        }
+        .box-container:nth-of-type(3){
+            display: flex;
+            justify-content: space-between;
+            /* 박스 사이 안쪽의 여백을 동일하게 */
+        }
+        .box-container:nth-of-type(4){
+            display: flex;
+            flex-direction: space-around;
+            /* 박스기준 좌우 여백을 준 것처럼 배치 */
+        }
+        .box-container:nth-of-type(5){
+            display: flex;
+            flex-direction: space-evently;
+            /* 벽 ~ 박스 ~ 벽 모두 동일한 여백 */
+        }
+     </style>
+</head>
+<body>
+     <h1>justify-content: flex-start</h1>
+     <div class="box-container">
+        <div class="box item"></div>
+        <div class="box item"></div>
+        <div class="box item"></div>
+        <div class="box item"></div>
+     </div>
+
+     <h1>justify-content: flex-end</h1>
+     <div class="box-container">
+        <div class="box item"></div>
+        <div class="box item"></div>
+        <div class="box item"></div>
+        <div class="box item"></div>
+     </div>
+
+     <h1>justify-content: space-between</h1>
+     <div class="box-container">
+        <div class="box item"></div>
+        <div class="box item"></div>
+        <div class="box item"></div>
+        <div class="box item"></div>
+     </div>
+
+     <h1>justify-content: space-around</h1>
+     <div class="box-container">
+        <div class="box item"></div>
+        <div class="box item"></div>
+        <div class="box item"></div>
+        <div class="box item"></div>
+     </div>
+
+     <h1>justify-content: space-evently</h1>
+     <div class="box-container">
+        <div class="box item"></div>
+        <div class="box item"></div>
+        <div class="box item"></div>
+        <div class="box item"></div>
+     </div>
+</body>
+</html>

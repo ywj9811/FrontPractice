@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 
+            ul>li>ul>li{background-color: red;} 
+            계층의 깊이가 깊은 경우 선택자는 더욱 정확히 사용됨
+            하지만 이렇게 깊게 사용하는 것보다 클래스, 아이디를 사용하는 것이 편리하다
+        */
+        ul li{background-color: red;}
+        /* ul 안에 있는 li */
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <ul>
+                <li>
+                    <dl>
+                        <dt>title</dt>
+                        <dd>definition</dd>
+                    </dl>
+                </li>
+                <dl>
+                    <dt>title</dt>
+                    <dd>definition</dd>
+                </dl>
+            </ul>
+        </li>
+        <ul>
+            <li>ordered1</li>
+            <li>ordered2</li>
+        </ul>
+    </ul>    
+</body>
+</html>

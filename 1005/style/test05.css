@@ -1,0 +1,148 @@
+/* 윗부분에 사진의 높이는 540px정도 */
+.bg-maxim-container{
+    height: 540px; background-image: url(../images/bg_prd_maxim.jpg);
+    margin-bottom: 240px;
+}
+/* nav의 너비가 740임 */
+.maxim-nav-container{
+    width: 740px; margin: auto;  
+    padding: 50px 0;
+    margin-bottom: 70px;
+}
+/* maxim 로고의 경우 220px임 너비가 */
+.maxim-logo-container{
+    width: 220px; margin: auto;
+    margin-bottom: 70px;
+    font-size: 24px;
+    color: white;
+}
+.maxim-logo-container span{
+    font-weight: 100;
+}
+
+/* maxim 종류들 1000px의 너비 */
+.maxim-container{
+    width: 1000px; margin: auto;   
+    overflow: hidden;
+}
+
+
+/* 이제 애들을 배치하고 꾸며주자 */
+.maxim-nav-container li{ float: left; color: white; font-weight: bold;}
+.maxim-nav-container a{display: block; padding: 10px;}
+/* a의 경우 inline이라 padding이 제대로 안들어감 block으로 변환 */
+
+.maxim-container li{
+    float: left;
+    width: calc(100% / 4);
+    text-align: center;
+    font-size: 12px;
+}
+.maxim-container img{
+    width: 100%;
+    /* li태그의 width를 4분의1로 조절을 하였으니 img 또한 거기에 맞도록 100%를 주도록 하자 */
+}
+
+.video-container{
+    clear: both;
+    width: 1200px;
+    margin: auto;
+}
+.video-box{
+    float: left;
+    width: calc(100% / 3);
+}
+.video-box iframe{ width: 98%; margin: auto; height: 250px;}
+
+.video-container h3{
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+
+    background-image: url(../images/bg_leaf_left.png), url(../images/bg_leaf_right.png);
+    background-repeat: no-repeat;
+    background-position: 440px center, 700px center;
+    /* , 을 통해서 각각의 image에 대한 배치를 하였다. */
+}
+.sidebar-container{
+    width: 100px;
+    height: 100vh;
+    position: fixed; right: 100px; top: 0;
+    height: 100vh;
+    background-color: gray;
+}
+.sidebar-container li{
+    width: 100px; height: 100px;
+}
+.sidebar-container a{
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    display: block;
+    /* a는 block속성이 되어야 높이를 가질 ㅜㅅ ㅣㅇㅆ으니 */
+
+    font-size: 0;
+
+    background-image: url(../sprite_img/gnb_brand_menu_2.png);
+}
+.sidebar-container a:hover{ opacity: 0.5; }
+/* 
+    opacity는 투명도를 뜻
+    0 ~ 1 투명도를 지정
+    1은 불투명
+*/
+
+.sidebar-container li:nth-child(1) a{
+    background-position: -5px 0;
+}
+.sidebar-container li:nth-child(2) a{
+    background-position: -5px -100px;
+}
+.sidebar-container li:nth-child(3) a{
+    background-position: -5px -200px;
+}
+.sidebar-container li:nth-child(4) a{
+    background-position: -5px -300px;
+}
+.sidebar-container li:nth-child(5) a{
+    background-position: -5px -400px;
+}
+.sidebar-container li:nth-child(6) a{
+    background-position: -5px -500px;
+}
+.sidebar-container li:nth-child(7) a{
+    background-position: -5px -600px;
+}
+
+.sidebar-right-container{
+    position: fixed; right: 0; top: 0;
+    height: 100vh;
+    background-color: black;
+}
+
+.sidebar-right-container li a{
+    display: block;
+    width: 100px; height: 100px;
+    background-color: black;
+    background-position: -5px 0;
+}
+.sidebar-right-container li :hover{
+    background-position: -105px 0;
+}
+.sidebar-right-container li:nth-child(1) a{
+    background-image: url(../sprite_img/20160823_25789064.png);
+}
+.sidebar-right-container li:nth-child(2) a{
+    background-image: url(../sprite_img/20170804_30604060.png);
+}
+.sidebar-right-container li:nth-child(3) a{
+    background-image: url(../sprite_img/20200714_41383642.png);
+}
+.sidebar-right-container li:nth-child(4) a{
+    background-image: url(../sprite_img/20200923_18788427.png);
+}
+.sidebar-right-container li:nth-child(5) a{
+    background-image: url(../sprite_img/20201231_81719742.png);
+}
+
+/* sprite 이미지를 사용하는 것이다 */

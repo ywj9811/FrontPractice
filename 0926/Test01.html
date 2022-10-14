@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p{ line-height: 2;}
+        /* line-height: n 이것은 줄 간격을 조정하는 것으로 본래의 n배만큼 가져가게 된다. */
+        /* 
+            웹 : 가로, 세로 모두 가운데 기술 필요
+            단위 없이 사용할 경우 폰트의 기본 행간을 100% 로 사용
+            한줄일 경우 세로의 가운데 배치 (폰트에 따라서 가운데 배치되지 않으면 숫자를 조정해줘야 한다.)
+        */
+        h1{
+            background-color: skyblue;
+            line-height: 2;
+        }
+        h2>span{font-size: 26px}
+        /* 이 경우가 ▶ 와 한글이 균형이 맞지 않아 숫자를 조절해준다. */
+
+        .letterSpacing{
+            letter-spacing: 0.1em;
+            /* 
+                letter-spacing과 같은 경우는 px단위가 아닌
+                em 단위를 사용(비율, 대문자 M을 기준으로 사이즈 지정)
+                혹은
+                ex 단위(비율, 소문자 x를 기준으로 사이즈 지정)
+
+                이때 
+                h1~h6, p {모두 글자 사이즈가 다름 -> 같은 em이더라도 기준이 다르게 된다.}
+            */
+        }
+    </style>
+</head>
+<body>
+    <h1>행간 : 줄간격</h1>
+    <h1>line-heigth</h1>
+    <h2><span>▶</span> 봄에 어울리는 차</h2>
+    
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. At modi, fugit dignissimos sed tempora neque molestiae expedita fuga, praesentium a voluptatem illum provident soluta tenetur quas! Odit accusamus ipsa nam!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis unde quasi distinctio. Assumenda veniam possimus architecto fugiat eos, sapiente inventore culpa laboriosam atque unde ipsam odio laborum quam cumque delectus!
+    </p>
+
+    <p>
+        얼마나 놀이 열매를 어디 사랑의 설레는 가슴이 어디 이것이다. 맺어, 그와 못할 구하지 생명을 원질이 때문이다. 그와 모래뿐일 능히 인간에 작고 크고 것이다. 사는가 부패를 사람은 이상의 같이 힘차게 아름다우냐? 우리 인류의 눈에 대중을 목숨이 소리다.이것은 커다란 말이다. 그것을 그들은 천지는 우리 청춘은 있으랴? 무엇을 소리다.이것은 웅대한 찾아 없으면 것이 시들어 있는 속잎나고, 것이다. 들어 우리 그들을 반짝이는 속에 바이며, 아니더면, 부패뿐이다. 같으며, 원질이 품고 부패뿐이다. 우리 바이며, 앞이 같은 위하여서 목숨을 날카로우나 것이다.
+    </p>
+
+    <h1>자간 : letter-spacing -> 문자 사이의 간격</h1>
+    <p class="letterSpacing">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum modi inventore assumenda illo laborum corporis vero repellendus molestiae iste, quasi ad ipsa id sunt voluptatem eaque eligendi, quos obcaecati repellat!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis velit fugit esse ad accusantium suscipit, ut in a ipsam harum nobis incidunt tempore odit nostrum exercitationem culpa rem maiores illo.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, nostrum sint praesentium commodi, eum soluta dolorum architecto non deserunt aliquam veniam eveniet, rem earum assumenda tenetur officia molestias itaque dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam illo excepturi ab earum veniam deleniti. Illo magnam voluptatem unde ea facilis suscipit vero adipisci recusandae esse ipsam? Alias, rem neque.
+    </p>
+</body>
+</html>

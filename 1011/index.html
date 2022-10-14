@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/box.css">
+
+    <style>
+        .container{
+            width: 1240px; margin: auto;
+        }
+        .sns_container{
+            text-transform: lowercase;
+        }
+        .sns_container>ul{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .sns_container li{
+            display: flex;
+        }
+        /* ul이 flex가 되었기 때문에 자식들이 flex 배열이 된다 */
+        .sns_container a{
+            display: block;
+            padding: 10px;
+            background-image: url(./images/gnb_bg_cb.png);
+            background-repeat: no-repeat;
+            background-position: 0 center;
+            /* x는 0이고 세로는 center */
+            font-size: 12px; color: rgb(91, 90, 90);
+        }
+        .sns_container li:nth-child(1) a{
+            background-image: none;
+        }
+
+        header{
+            display: flex;
+            justify-content: space-between;
+            /* 왼쪽끝 가운데 오른쪽끝 이렇게 배치 */
+        }
+        .lnb ul, .choice-item ul, .channel-item ul, .pascucci-container ul{
+            display: flex;
+        }
+        .lnb a{
+            padding: 10px;
+        }
+        /* .choice-item h3 span{
+            display: block;
+        } */
+        .choice-item h3{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .store-container{ 
+            display: flex; 
+            justify-content: center;
+            /* 기본 축을 기준으로 정렬(현재 가로) */
+            height: 500px;            
+            align-items: center;
+            /* 
+            align은 반대 축을 기준으로 정렬 (현재 주축이 가로니) 
+            세로 가운데 배치는 높이가 필요
+            */
+        }
+
+        /* 디자인 부분 */
+        h1{font-size: 0;}
+        header{ background-color: black; color: white;
+            outline: 10px solid black;
+            /* outline은 바깥쪽으로 테두리 그리는 것 border와 다름 */
+            /* border는 box-size 적용으로 너비와 높이에 포함되고 outline은 box-sizing 적용이 안됨 */
+            /* outline-offset 을 통해서 위치를 조절할 수 있다. */
+            border: 2px solid rgba(255, 0, 0, 0.541);
+        }
+        .lnb ul{
+            height: 100%; align-items: center;
+        }
+        .lnb a{
+            display: block;
+            padding: 10px 20px;
+        }
+        header>div{ padding: 10px; background-color: rgba(255, 0, 0, 0.541);
+            line-height: 2.5em;
+        }
+
+        h2{
+            text-align: center;
+            padding: 2em 0;
+        }
+        .choice-item img{
+            width: 100%;
+            /* 공간 안을 꽉채우는 것 옆으로 삐져나가지 않음 */
+        }
+        .choice-item h3{ text-align: center;}
+        .channel-item ul{ justify-content: space-between;}
+        .channel-container iframe{
+            width: 404px; height: 227px;
+        }
+        .pascucci-container img{
+            width: 100%;
+        }
+        .pascucci-container ul{ justify-content: space-between;}
+        .pascucci-container li{width: 404px;}
+        /* 빈공간이 안생기면 너비를 넣어주자 */
+        .bg-container{
+            background-image: url(./images/bg_sns_01.png), url(./images/bg_sns_01.png);
+            background-repeat: no-repeat;
+            background-position: left top, right bottom;
+            padding: 100px 0;
+            background-color: #F5F5F5;
+        }
+        .bg-container h2{ padding: 0;}
+        .bg-container h2+h3{ text-align: center; padding: 50px;}
+        .store-container{
+            background-image: url(./images/bg_sch_store.jpg);
+            color: white;
+            background-size: cover;
+        }
+        .store-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .store-box h3{font-size: 20px; }
+        .store-box h4{font-size: 44px; margin-bottom: 20px;}
+        .store-box input{ width: 500px; height: 50px; margin-bottom: 20px;}
+        .store-box a{display: block; padding: 10px 30px;
+        background-color: gray; font-size: 14px;}
+
+        .mainBanner{
+            background-image: url(./images/main_slide_01.png);
+            background-position: 0 -110px;
+            background-image: cover;
+            height: 720px;
+            font-size: 0;
+        }
+        .sns_container{
+            margin-bottom: 10px;
+        }
+        .sns_container ul{
+            text-align: center;
+        }
+        .sns_container .img1{
+            background-image: url(./images/ic_sns_facebook.png);
+        }
+        .sns_container .img2{
+            background-image: url(./images/ic_sns_blog.png);
+        }
+        .sns_container .img3{
+            background-image: url(./images/ic_sns_insta.png);
+        }
+        .sns_container .img4{
+            background-image: url(./images/ic_sns_youtube.png);
+        }
+        .sns_container .img5{
+            background-image: url(./images/ic_sns_happy.png);
+        }
+        .sns_container .img{
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 20px;
+            height: 20px;
+            margin-top: 8px;
+        }
+    </style>
+    <!-- 가로로 나열되어 있는 놈들 먼저 flex로 만들자 -->
+</head>
+<body>
+    <nav class="container sns_container">
+        <ul>
+            <li><div class="img img1"></div><a href="#">FACEBOOK</a></li>
+            <li><div class="img img2"></div><a href="#">BLOG</a></li>
+            <li><div class="img img3"></div><a href="#">INSTAGRAM</a></li>
+            <li><div class="img img4"></div><a href="#">YOUTUBE</a></li>
+            <li><div class="img img5"></div><a href="#">해피포인트</a></li>
+        </ul>
+    </nav>
+    <!-- header>h1+nav.lnb>ul>li>a^^^p -->
+    <header class="container">
+        <h1>pascucci <img src="./images/h1_logo.png" alt=""></h1>
+        <nav class="lnb">
+            <ul>
+                <li><a href="#">Espresso bar</a></li>
+                <li><a href="#">Caffe pascucci</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">news</a></li>
+                <li><a href="#">store</a></li>
+                <li><a href="#">customer</a></li>
+            </ul>
+        </nav>
+        <div>가맹점사업안내</div>
+    </header>
+    <section>
+        <div class="mainBanner container">
+            배경이미지로 삽입
+        </div>
+        <div class="choice-container container">
+            <h2>PASCCUCI'S CHOICE</h2>
+            <div class="choice-item">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <h3>
+                                <span>흑임자 오트 라떼</span>
+                                <span>Black Sesame Oat Latte</span>
+                            </h3>
+                            <img src="./images/choice_01.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <h3>
+                                <span>흑임자 오트 라떼</span>
+                                <span>Black Sesame Oat Latte</span>
+                            </h3>
+                            <img src="./images/choice_02.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <h3>
+                                <span>흑임자 오트 라떼</span>
+                                <span>Black Sesame Oat Latte</span>
+                            </h3>
+                            <img src="./images/choice_03.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <h3>
+                                <span>흑임자 오트 라떼</span>
+                                <span>Black Sesame Oat Latte</span>
+                            </h3>
+                            <img src="./images/choice_04.jpg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="channel-container container">
+            <h2>PASCCUCI'S CHANNEL</h2>
+            <div class="channel-item">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <iframe src="https://www.youtube.com/embed/vaKPc8ps2X4" title="파스쿠찌 에스프레소바 게스트 바리스타 아워 l 방준배 챔피언ㅣ 2022.01.14(FRI) 11AM-20PM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <iframe src="https://www.youtube.com/embed/LG_1JxTmIJk" title="파스쿠찌 에스프레소 바 오픈 축하 메시지 도착! l PASCUCCI ESPRESSO BAR OPEN ANNIVERSARY l 2021.09.30(THU) 7AM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <iframe src="https://www.youtube.com/embed/LG_1JxTmIJk" title="파스쿠찌 에스프레소 바 오픈 축하 메시지 도착! l PASCUCCI ESPRESSO BAR OPEN ANNIVERSARY l 2021.09.30(THU) 7AM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-container">
+            <h2>pascucci</h2>
+            <h3>스토리를 마시는 일상, 카페 파스쿠치</h3>
+            <div class="pascucci-container container">
+                <ul>
+                    <li><a href="#"><img src="./images/20220819_72159507.png" alt=""></a></li>
+                    <li><a href="#"><img src="./images/20220819_72159507.png" alt=""></a></li>
+                    <li><a href="#"><img src="./images/20220819_72159507.png" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="store-container">
+            <div class="store-box">
+                <h3>store</h3>
+                <h4>매장찾기</h4>
+                <input type="text">
+                <a href="#">자세히보기</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container"></div>
+    </footer>
+</body>
+</html>

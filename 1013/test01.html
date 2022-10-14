@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/box.css">
+
+    <style>
+        body{display: flex;}
+        .box{
+            position: relative;
+            left: 100px; top: 100px;
+            /* position은 margin 등등 과 다르게 다른 부분을 덮어 쓰기를 할 수 있다. */
+        }
+        .sibiling{
+            width: 200px; height: 200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        float-layout : float될 자신에서 설정, 문제 해결은 부모, 동생에서 해결
+        position-layout : 애니메이션 제작에서
+        
+        flex-layout : float가 가지고 있는 문제가 발생하지 않음, 부모에서 설정을 함
+                        부모에서 사용되는 속성, 자식에서 사용되는 속성이 구분
+                        1차원 레이아웃 (가로 배치 or 세로 배치)
+
+                        flex-container(부모) : justifiy-content(주축을 기준으로 정렬), gap(여백을 주는 방법), flex-d    irection(주축을 정함), align-item(주축의 반대를 기준으로 정렬), align-content(주축의 반대축을 기준으로 정렬), flex-wrap(float 레이아웃과 같이 너비가 부족하면 탈락시키는 속성)
+
+                        flex-item(자식) : flex-shrink, flex-glow, flex-basis -> 3개를 합치면 flex로 사용 가능
+                        order
+        
+        grid-layout : 2차원 레이아웃 (가로 세로 모두 배치)
+     -->
+
+     <div class="box"></div>
+     <div class="sibiling"></div>
+</body>
+</html>

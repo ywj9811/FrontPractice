@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{ font-size:12px; }
+        .ex01{ letter-spacing: .1ex; }
+        .ex10{ letter-spacing: 1ex; }
+
+        .em01{ letter-spacing: .1em; }
+        .em10{ letter-spacing: 1em; }
+
+        .fs24{font-size: 24px;}
+        .fs34{font-size: 34px;}
+
+        .rem01{letter-spacing: 0.1rem;}
+        /* rem은 body에서 정한 px 기준의 M을 기준으로 한다. */
+    </style>
+</head>
+<body>
+    <h1>ex & em</h1>
+    <p>한글은 아름다운 글 입니다.</p>
+    <p class="ex01"> ex01 한글은 아름다운 글 입니다.</p>
+    <p class="ex10"> ex10 한글은 아름다운 글 입니다.</p>
+
+    <p class="ex01 fs24"> fs24 ex01 한글은 아름다운 글 입니다.</p>
+    <p class="ex10 fs34"> fs34 ex10 한글은 아름다운 글 입니다.</p>
+    
+    <p>한글은 아름다운 글 입니다.</p>
+    <p class="em01"> em01 한글은 아름다운 글 입니다.</p>
+    <p class="em10"> em10 한글은 아름다운 글 입니다.</p>
+    <p class="em01 fs24"> fs24 em01 한글은 아름다운 글 입니다.</p>
+    <p class="em10 fs34"> fs34 em10 한글은 아름다운 글 입니다.</p>
+    <p class="rem01 fs24"> fs24 rem01 한글은 아름다운 글 입니다.</p>
+    <p class="rem01 fs34"> fs34 rem01 한글은 아름다운 글 입니다.</p>
+    <!-- 글자 크기와 상관없이 rem을 통해서 자간이 결정됨 -->
+</body>
+</html>

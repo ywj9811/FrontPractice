@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 글꼴 위해서 링크 추가 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300&family=Nanum+Pen+Script&family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300&family=Gugi&family=Nanum+Pen+Script&family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- 여기까지 -->
+    <title>Document</title>
+
+    <style>
+        p{
+            font-size: 20px;
+        }
+        /* class명을 짓기도 하지만 class명을 많이 만들어야 하는 경우 뇌에 과부화ㅎ */
+        p:nth-child(2){ font-family: serif;}
+        p:nth-child(3){ font-family: sans-serif;}
+        p:nth-child(4){ font-family: monospace;}
+        p:nth-child(5){ font-family: Impact, sans-serif, '궁서', '고딕';}
+        /* 영문 혹은 한글에만 적용되는 글꼴도 있다 */
+        /* 둘중 하나만 적용되는 경우 여러개의 글꼴을 넣어줄 수 있다. (,를 통해서 넣어줌) */
+        /* 이 경우 적용이 안된 글꼴은 뒤의 것으로 들어가게 된다 */
+
+        /* Google Fonts 를 들어가서 글꼴을 찾아볼 수 있다. */
+        p:nth-child(6){ font-family: 'Nanum Pen Script', cursive, '궁서'; font-weight: 900;}
+        /* 만약 Nanum Pen Script가 안나타날 경우를 대비해서 뒤에 cursive와 같은 기본 글꼴을 추가 등록 */
+        p:nth-child(7){ font-family: 'Nanum Pen Script', cursive, '궁서';}
+        p:nth-child(8){ font-family: 'Noto Sans KR', sans-serif, cursive; font-weight: 100;}
+        p:nth-child(9){ font-family: 'Noto Sans KR', sans-serif, cursive; font-weight: 100;}
+
+    </style>
+</head>
+
+<body>
+    <h1>font-family</h1>
+    <p>한글은 아름다운 글입니다. HELLO, hello, 1234567890</p>
+    <p>한글은 아름다운 글입니다. HELLO, hello, 1234567890</p>
+    <p>한글은 아름다운 글입니다. HELLO, hello, 1234567890</p>
+    <p>한글은 아름다운 글입니다. HELLO, hello, 1234567890</p>
+    <p>한글은 아름다운 글입니다. HELLO, hello, 1234567890</p>
+    <p>한글은 아름다운 글입니다. HELLO, hello, 1234567890</p>
+    <p>한글은 아름다운 글입니다. HELLO, hello, 1234567890</p>
+    <p>한글은 아름다운 글입니다. HELLO, hello, 1234567890</p>
+    <p>한글은 아름다운 글입니다. HELLO, hello, 1234567890</p>
+</body>
+</html>

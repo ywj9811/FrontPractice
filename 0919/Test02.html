@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>순서 있는 목록</title>
+</head>
+
+<body>
+    <h1> 순서 있는 목록 </h1>
+    <hr>
+    <!-- <hr> 수평선 그려주는 태그  -->
+    <h2>기본타입</h2>
+    <ol>
+        <!-- <ol> = ordered list : 숫자 리스트 -->
+        <li>html 웹 레이아웃 제작</li>
+        <li>css 디자인 입력</li> 
+        <li>javascript 동적으로 움직이도록 함</li> 
+        <li>React : html, css, javascript 유기적으로 동작</li> 
+    </ol>
+
+    <h2>type 속성 확인</h2>
+    <ol type="A">
+        <!-- type에 A, a, i, I 등등을 사용할 수 있음 -->
+        <li> ol 부모요소(element) li 자식요소로 구성되어 있음</li>
+        <li> 따라서 다른 태그를 넣기 위해서는 li 내부에 추가 </li>
+        <li>block 형 속성처럼 사용됨</li>
+        <li>왼쪽에 여백을 포함함</li>
+    </ol>
+
+    <h2>목록의 계층</h2>
+    <ol>
+        <li>html 웹 레이아웃 제작</li>
+        <ol>
+            <li>block</li>
+            <ol>
+                <li>h1, h2, h3..., p, div, ...</li>
+            </ol>
+            <li>inline</li>
+            <ol>
+                <li>b, i, u, strong, em, ins, mark, s, del</li>
+            </ol>
+            <li>flex</li>
+            <li>grid</li>
+        </ol>
+        <li>다시 2번으로</li>
+    </ol>
+
+    <h2>목록 태그</h2>
+    <!-- ol>li>a>*5 이렇게 하면 ol태그에 li내부에 a태그가 들어있는 것을 5개 한번에 만듬 -->
+    <ol>
+        <li><a href="./Test01.html">경로 상태</a></li>
+        <li><a href="./Test02.html">순서있는 목록 &lt;ol&gt;</a></li>
+        <li><a href="./Test03.html">순서없는 목록 &lt;ul&gt;</a></li>
+        <li><a href="./Test04.html">정의형 목록 &lt;dl&gt;</a></li>
+    </ol>
+</body>
+</html>

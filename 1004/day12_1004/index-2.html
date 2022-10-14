@@ -1,0 +1,119 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <!-- 외부 스타일 import 불러오기  -->
+    <style>
+        /* 내부 스타일 */
+        /*  학습중이므로 내부스타일 을 쓰고있지만 개발할땐 외부스타일로 빼놓고 따로 적용함 */
+        .container{ height: 100vh; width: 100%;
+                    /* 100vh는 장비 높이의 100% */
+                    /*  height : 100%; width 100%;
+                        % : 부모 높이의 비율
+                            부모가 높이가 없다면 %를 사용할 수 없다.
+                        width : block형 속성인 경우 기본 100%;
+                        
+                    */
+                 border-bottom: 1px solid blue;
+        
+        }
+
+        .container{padding-top: 25vh;}
+
+        .container01 .box01{ width: 50%; height: 50%;
+            background-color: antiquewhite;
+            margin:  auto;
+            /*  마진 오토는 박스를 가로 가운데로! */
+            /* 세로 가운데 : 사용 후 남은 여백을 상단에 두기 
+                margin, padding
+                %단위로 마진을 사용하면 너비의 퍼센트를 사용함
+                top여백을 쓰고싶을땐 padding-top
+                레이아웃 간격 조절용 여백 margin-bottom
+
+            */
+
+        }
+
+        .boxGroup{ width: 880px; margin: auto;}
+
+        .boxGroup li{ width: 200px; height: 260px;
+            background-color: antiquewhite;
+            float: left; margin: 10px;
+            /* 부모의 공간이 부족하면 자동 탈락하는 현상이 생긴다. 
+            부모의 너비를 정할때 마진까지 생각해서 사이즈를 정해야한다.
+            */
+            border: 1px solid black;
+            box-sizing: border-box;
+            padding: 10px;
+            /* 
+                box-sizing : border-box; border padding 을 width내부에 포함
+            */
+        }
+
+        .box3Group{ width:calc((300px + 20px + 20px + 2px ) * 3 ) ; 
+                margin: auto; }
+
+        .box3Group>div{ width: 300px; height: 300px;
+            background-color: orange;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid blueviolet;
+            float: left;
+        }
+
+        .box4Group{width: calc(500px + 600px + 4px + 20px ); margin: auto; }
+        .box41{width: 600px; height: 600px; background-color: yellowgreen;
+                margin-right: 15px;
+                border: 1px solid black;
+                float:left; 
+        }
+        .box42{width: 500px; height: 600px; background-color: skyblue;
+            border: 1px solid black;
+            float:left; 
+        }
+
+        .bottomLayout{ height: 250px; background-color: gray;}
+
+
+    </style>
+</head>
+<body style="background-color: palegoldenrod;">
+    <!-- inline 스타일 시트 -->
+    <!--  태그의 속성으로 style 지정, 스타일 우선순위가 최우선 -->
+
+    <div class="container container01">
+        <div class="box01"></div>
+    </div>
+
+    <div class="container container02">
+        <ul class="boxGroup">
+            <li class="box01">box01</li>
+            <li class="box02">box02</li>
+            <li class="box03">box03</li>
+            <li class="box04">box04</li>
+        </ul>
+
+    </div>
+
+    <div class="container container03">
+        <div class="box3Group">
+            <div class="box31">box31</div>
+            <div class="box32">box32</div>
+            <div class="box33">box33</div>
+        </div>
+    </div>
+
+    <div class="container container04">
+        <div class="box4Group">
+            <div class="box41">box41</div>
+            <div class="box42">box42</div>
+        </div>
+    </div>
+
+    <div class="bottomLayout"></div>
+    
+</body>
+</html>

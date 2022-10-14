@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img</title>
+
+    <style>
+        .leftAlign{
+            text-align: left;
+            /* 기본 성격으로 디폴트 값임 */
+        }
+        .centerAlign>p{margin:auto;}
+        .centerAlign{
+            text-align: center;
+        }
+        .rightAlign{
+            text-align: right;
+        }
+
+        p{
+            width: 500px;
+        }
+
+
+
+        img{width: 300px;}
+        /* 
+            이미지는 특이한 성격
+            너비 조정 가능(너비 조정 가능은 block 속성의 특징)
+            하지만, inline성격을 둘 다 가지고 있다
+            따라서 inline 성격 때문에 text처럼 text-align 속성으로 정렬 가능
+            block 성격 때문에 margin(여백) 정렬도 가능
+            margin-left:auto; 오른쪽 정렬
+            margin-right:auto; 왼쪽 정렬
+            margin:auto; 가운데 정렬
+        */
+    </style>
+</head>
+<body>
+    <h1>문단과 관련한 이미지</h1>
+
+    <div class="centerAlign">
+        <img src="./image/pc_coupon.png" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ducimus autem quas fuga. Ex veritatis, soluta magni omnis explicabo similique possimus fugiat corporis. Sequi dolorem aliquid, ex et repudiandae excepturi.</p>
+    </div>
+
+    <div class="rightAlign">
+        <img src="./image/pc_coupon.png" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ducimus autem quas fuga. Ex veritatis, soluta magni omnis explicabo similique possimus fugiat corporis. Sequi dolorem aliquid, ex et repudiandae excepturi.</p>
+    </div>
+
+    <div class="leftAlign">
+        <img src="./image/pc_coupon.png" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ducimus autem quas fuga. Ex veritatis, soluta magni omnis explicabo similique possimus fugiat corporis. Sequi dolorem aliquid, ex et repudiandae excepturi.</p>
+    </div>
+</body>
+</html>

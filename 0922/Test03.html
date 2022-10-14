@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table제작</title>
+
+    <style>
+        #container{ width: 800px; margin: auto; }
+        .table{ width: 400px; height: 160px; }
+        h1{ background-color: #0a0a0afd;
+            color: white;}
+            /* 
+                상속 : 감싸고 있는 구조를 디자인 하면 안쪽의 구조도 같은 디자인 적용됨
+
+                상속 되지 않는 일부 요소 : a, table, form
+                이러한 요소는 재디자인 필요
+            */
+            h1>a{ 
+                    color: white; text-decoration: none;
+                    text-align: center;
+                    padding: 20px;
+                }
+            /* 
+                a : inline형 성격이므로 문자를 정렬할 수 없다 
+                h1 : block형 성격의 요소에서만 문자를 정렬할 수 있다.
+            */
+
+            table>tr>td:nth-child(1){
+                background-color: lightgray;
+            }
+            /* table>tr>td 순서의 첫번째 자식의 경우 */
+    </style>
+</head>
+<body>
+    <!-- 
+        윈도우 : 윈도우 로그키 + . 누르면 이모지가 나오게 된다.
+     -->
+    <div id="container">
+        <h1><a href="#">▼ 상담 신청 바로가기 ▼</a></h1>
+        <table>
+            <tr>
+                <td>
+                    <img src="./image/main-grandeur-22my-well-side (2).png" alt="">
+                </td>
+                <td>
+                    <h2>2022 grandeur</h2>
+                    <h3>Gde PE</h3>
+                    <table border="1" class="table">
+                        <tr>
+                            <td>차량가격</td>
+                            <td>45,000,000</td>
+                        </tr>
+                        <tr>
+                            <td>초기납입금</td>
+                            <td>10,000,000</td>
+                        </tr>
+                        <tr>
+                            <td>월렌탈료</td>
+                            <td>700,000</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="./image/main-avante-22my-well-side (3).png" alt="">
+                </td>
+                <td>
+                    <h2>2022 grandeur</h2>
+                    <h3>Gde PE</h3>
+                    <table border="1" class="table">
+                        <tr>
+                            <td>차량가격</td>
+                            <td>23,000,000</td>
+                        </tr>
+                        <tr>
+                            <td>초기납입금</td>
+                            <td>5,000,000</td>
+                        </tr>
+                        <tr>
+                            <td>월렌탈료</td>
+                            <td>300,000</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

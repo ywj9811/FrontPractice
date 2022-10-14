@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+                p{ font-size: 20px; }  
+                .orangeFont{ color:orange; }
+                .colorSize1{ font-size: 12px; color:darkslateblue; font-weight: bold;}
+                span.colorSize2#myID2{ font-size: 14px; color:green; font-weight: bold;}
+                .colorSize3{ font-size: 14px;  }
+                .colorSize4{ font-size: 20px;  
+                        color:rgb(163, 163, 39);}
+                .fontBold{ font-weight: bold;}
+                .fontBold{ font-weight: 100;
+                        /* 같은 이름으로 중복 적용했다면 아래 코드로 덮어쓰기 */
+
+                        font-weight: bold;       
+                }
+                
+                /* 
+                디자인 적용 우선순위(상쇄성격)
+                   태그 : 1
+                   클래스 : 10 
+                   아이디 : 100 
+                   그외 : 0.5
+
+                   span.colorSize2#myID2 
+                   1 + 10 + 100 = 111 우선순위
+                   span.colorSize1 == 11 우선순위
+                   .colorSize2
+                   li     =  우선순위 1
+                   ul>li  =  우선순위 2
+
+                 */
+                 #myID{ font-size: 30px; color:red; }
+                 #myID2{ font-size: 30px; color:red; }
+        </style>
+</head>
+<body>
+        <h1>올망 졸망 글자놀이</h1>
+        <p>
+                <span class="orangeFont">글자들이</span>   <br>
+                <span class="colorSize1" id="myID">올</span>망
+                <span class="colorSize2" id="myID2">졸</span>망        <br>
+                <span class="colorSize3 orangeFont">왔다</span> 
+                <span class="colorSize4">갔다,</span>       <br>
+                <span>울</span><span class="colorSize1">룩</span><span>불</span>
+                <span class="colorSize1">룩</span>        <br>
+                마음대로 움직이네요     <br>
+                <span class="fontBold">끝</span>
+        </p>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            background-color: orange;
+            padding: 50px;
+        }
+        p{
+            width: 200px; height: 50px;
+            background-color: red;
+            /* margin: 50px; */
+        }
+    </style>
+</head>
+<body>
+    <h1>margin 겹침현상</h1>
+    <div class="box">
+        <p>CONTENT</p>
+    </div>
+    <div>
+        margin의 상하 겹침 현상은 부모 자식 사이에도 발생하기 때문에<br>
+        margin-top 혹은 margin-bottom 한가지로 주로 사용하고<br>
+        자식 요소의 margin 대신에 부모의 padding을 사용한다.
+    </div>
+</body>
+</html>

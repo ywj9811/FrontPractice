@@ -1,0 +1,150 @@
+.contaniner{ width: 1430px; margin: 10px auto;}
+.box{
+    width: calc((1410px - 846px) / 2);
+    height: calc((626px - 10px) / 2);
+    /* 박스 크기를 정했다. */
+
+    float: left;
+    padding: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    /* text-transform은 영어를 대문자 혹은 소문자로 바꿔주는 속성이다
+        none : 입력된 그대로 출력합니다.
+        capitalize : 단어의 첫번째 글자를 대문자로 바꿉니다.
+        uppercase : 모든 글자를 대문자로 바꿉니다.
+        lowercase : 모든 글자를 소문자로 바꿉니다.
+        initial : 기본값으로 설정합니다.
+        inherit : 부모 요소의 속성값을 상속받습니다. */
+    background-size: cover;
+    /* 배경이미지 크기를 나타내는 것으로 cover를 사용하면 배경 구역에 맞춰서 덮음 */
+    background-position: center center;
+    /* 가로 세로 모두 center로 지정한 것이다. */
+
+    /* 박스의 공통적 특징 정의 완료 */
+}
+h2>span{
+    border-bottom: 1px solid #fff;
+    padding: 0 0 4px 0;
+    /* border과 거리를 두자 */
+    margin-right: 10px;
+    display: block;
+    float: left;
+    /* block 속성을 가짐과 동시에 float을 주어 옆으로 나열하게 함 */
+}
+
+/* 이제 각각의 박스에 대해서 배치 겸 꾸며보자 */
+.box01{
+    width: 846px; height: 626px; 
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.box02{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    /* 동서식품, 경남 창원공장에 스마트팩토리 가동 */
+}
+.box03{
+    margin-bottom: 10px;
+    /* film이미지 */
+}
+.box04{
+    margin-right: 10px; margin-bottom: 10px;
+    border: 1px solid black;
+}
+.box05{ margin-bottom: 10px;}
+.box06{ 
+    height: 626px; margin-right: 10px; 
+    /* 좀 높게 */
+}
+.box07{
+    width: 846px; margin-right: 10px; margin-bottom: 10px;
+}
+.box08{
+    margin-bottom: 10px;
+}
+.box09{
+    margin-right: 10px;
+}
+.box10{
+    width: 846px;
+}
+
+/* 이미지들을 각 박스에 배치 */
+.box01{
+    font-size: 48px;
+    padding: 1em;
+    background-image: url(../images/img_banner1_2.jpg);
+}
+.box02{ color:#333; }
+.box h2{ margin-bottom: 50px;}
+.box02 p{ 
+    clear:both; font-size: 20px;
+    margin-bottom: 100px;
+}
+.box03{
+    background-image: url(../images/img_prfilm.jpg);
+}
+.box03 img{ 
+    padding-left:194px; 
+    padding-top:153px;
+}
+.box04{ 
+    background-image: url(../images/img_product_view_500x50040.png);
+    background-size: 70%;
+    background-repeat: no-repeat;
+}
+.box05{ 
+    background-image: url(../images/img_csr1.jpg);
+}
+.box06{ font-size:48px; padding: 1em;}
+.box06{ 
+    background-image: url(../images/bg_apple.jpg);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center  400px;
+    background-color: #bd87b9;
+}
+.box06 h2, .box10 h2{
+    font-size: 36px; text-transform: capitalize;
+    /* 첫글자만 대문자로 */
+}
+.box06 p, .box10 p{ 
+    font-size: 16px; 
+    letter-spacing: -0.1em;
+    line-height: 1.5;
+}
+.box07{ 
+    background-image: url(../images/img_maxim_flant_banner.jpg);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-color:#9ab2cc;
+}
+.box07 h2{ 
+    font-size: 16px; text-transform: capitalize; 
+    font-weight: 100; letter-spacing: -0.1em; 
+    line-height: 1;
+}
+.box07 h3{ 
+    font-size: 24px; font-weight: bold; 
+    line-height: 1;
+    margin-top:-45px;
+}
+.box07 img{width: 150px;}
+.box07 p{ 
+    font-size: 16px; font-weight: bold; 
+    letter-spacing: 1.3em;
+    margin-top: -1em;
+}
+.box08{ background-image: url(../images/cf_thumb_맥심30초.jpg);}
+.box09{ background-image: url(../images/webjin01.jpg);}
+
+.box10{ 
+    font-size:48px; padding: 1em; 
+    background-image: url(../images/bg_coffee.jpg);
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: 600px 80px;
+    background-color:#bf657e;
+}

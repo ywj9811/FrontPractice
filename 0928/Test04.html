@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table{
+            width: 1000px; height: 240px;
+            border-collapse: collapse;
+        }
+
+        td,th{
+            height: 40px;
+        }
+        thead th{
+            background-color: rgb(159, 220, 245);
+            border: 1px solid rgb(99, 171, 199);;
+        }
+        tbody th{
+            color: rgb(72, 72, 72);
+            border: 1px solid black;
+        }
+        tbody td:nth-child(1){
+            background-color: rgb(230, 230, 230);
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        table>caption+thead>tr*2>th*6^^tbody>tr*4>td*6 
+        ^ : 케럿 (부모계층 표시)
+        ~ : 틸드
+        : : 콜론
+        ; : 세미콜론
+        & : 엠퍼센드
+        등등
+    -->
+    <table>
+        <caption>소형차량 대여요금</caption>
+        <thead>
+            <tr>
+                <th rowspan="2">차종</th>
+                <th rowspan="2">표준대여요금</th>
+                <th colspan="4">대여기간별 요금</th>
+                <!-- <th></th>
+                <th></th>
+                <th></th> -->
+            </tr>
+            <tr>
+                <!-- <th></th>
+                <th></th> -->
+                <th>1~2일</th>
+                <th>3~4일</th>
+                <th>5~6일</th>
+                <th>7일</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>스파크/모닝</td>
+                <td>55,000</td>
+                <td>55,000</td>
+                <td>55,000</td>
+                <td>55,000</td>
+                <td>55,000</td>
+            </tr>
+            <tr>
+                <td>레이/엑센트</td>
+                <td>55,000</td>
+                <td>55,000</td>
+                <td>55,000</td>
+                <td>55,000</td>
+                <td>55,000</td>
+            </tr>
+            <tr>
+                <td>더뉴k3/아반떼</td>
+                <td>55,000</td>
+                <td>55,000</td>
+                <td>55,000</td>
+                <td>55,000</td>
+                <td>55,000</td>
+            </tr>
+            <tr>
+                <td>올뉴k5/쏘나타</td>
+                <td>55,000</td>
+                <td>55,000</td>
+                <td>55,000</td>
+                <td>55,000</td>
+                <td>55,000</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

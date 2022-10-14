@@ -1,0 +1,112 @@
+ 
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>table제작</title>
+      <style>
+            #container{ width: 800px; margin:auto; }
+           .table{ width: 400px; } 
+           h1{ background-color: rgba(0, 0, 0, 0.649);
+                  color:white; 
+                  text-align: center;
+                  padding: 20px;
+                  /* 배경색 안쪽 상하좌우여백 */
+            }
+            /* 
+                 상속 : 감싸고 있는 구조를 디자인 하면 안쪽의 구조도 같은 디자인 적용
+
+                 상속 되지 않은 요소 : a, table, form 
+                 일부 상속되지 않는 성격은 재디자인 필요
+            */
+            h1>a{ color:white; text-decoration: none;}
+            /* a : inline형 성격이므로 문자를 정렬할 수 없다.
+               h1 : block형 성격의 요소에서만 문자를 정렬할 수 있음. 
+            */
+
+            table>tr>td:nth-child(1){
+                  /* 우선순위 : 3.5 */
+            }
+            td:nth-child(1){
+                  /* 우선순위 : 1.5  */
+            }
+            table{ font-weight: bold;}
+            .firstTd{  
+                  background-color: lightgrey; 
+                  text-align: center;
+            }
+            .result{ font-size: 30px; color:red;}
+            
+            /* 자식선택자 */
+            table>tr>td>table>tr{ 
+                  /* 이름이 너무 긴 관계로 클래스 명을 이용할 것임*/
+            }
+            /* 자손 선택자 : 자식의 몇대를 생략 */
+            .table td{ height: 60px;}
+
+            img{
+                  width: 600px;
+            }
+       </style>
+</head>
+<body>
+      <!-- 
+        맥 :  control + command + space 
+        윈도우 : 윈도우 로고키 + .
+
+        브라우저는 스스로 간단한 오류는 처리함 
+        테이블의 tbody 
+      -->
+      <div id="container">
+            <h1><a href="#">▼ 상담 신청 바로가기 ▼</a></h1>
+            <table>
+                  <tr>
+                        <td>
+                              <img src="./image/main-grandeur-22my-well-side (2).png" alt="">
+                        </td>
+                        <td>
+                              <h2>2022 SM6</h2>
+                              <h3>Gde PE</h3>
+                              <table border="1" class="table">
+                                    <tr>
+                                          <td class="firstTd">차량가격</td>
+                                          <td>24,400,000원</td>
+                                    </tr>
+                                    <tr>
+                                          <td class="firstTd">초기납입금</td>
+                                          <td>7,320,000원</td>
+                                    </tr>
+                                    <tr>
+                                          <td class="firstTd">월렌탈료</td>
+                                          <td class="result">349,000원</td>
+                                    </tr>
+                              </table>
+                        </td>
+                  </tr>
+                  <tr>
+                        <td>
+                              <img src="./image/main-avante-22my-well-side (3).png" alt="">
+                        </td>
+                        <td>
+                              <h2>2022 SM6</h2>
+                              <h3>Gde PE</h3>
+                              <table border="1" class="table">
+                                    <tr>
+                                          <td class="firstTd">차량가격</td>
+                                          <td>24,400,000원</td>
+                                    </tr>
+                                    <tr>
+                                          <td class="firstTd">초기납입금</td>
+                                          <td>7,320,000원</td>
+                                    </tr>
+                                    <tr>
+                                          <td class="firstTd">월렌탈료</td>
+                                          <td class="result">349,000원</td>
+                                    </tr>
+                              </table>
+                        </td>
+                  </tr>
+            </table>
+      </div>
+</body>
+</html>

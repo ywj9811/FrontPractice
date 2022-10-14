@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: darkslateblue;
+            margin-bottom: 10px;
+        }
+        .box01{
+            border-radius: 20px;
+        }
+        .box02{
+            border-radius: 10px 30px 50px 80px;
+            /* 왼쪽 위를 시작으로 시계방향 */
+        }
+        .box03{
+            border-radius: 20px 60px;
+            /* 대각선 방향으로 쌍을 이룸 
+            : 왼쪽위, 오른쪽 아래, 오른쪽 위 온쪽 아래 */
+        }
+        .box04{
+            border-radius: 100%;
+        }
+        /* 반지름 값을 지정하지 않고 지름을 사용함 */
+        .box05{
+            border-radius: 50%;
+        }
+        /* 
+            100px == 100%
+            50px == 50%
+        */
+        .box06{
+            border-radius: 50px; border: 20px solid pink;
+        }
+        .box07{
+            border-radius: 100px; border: 20px solid pink;
+        }
+        .box08{
+            border-radius: 50px 0 0 0;
+        }
+        .box09{
+            border-radius: 50px/100px;
+        }
+        .box10{
+            border-radius: 150px/50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box01"></div>
+    <div class="box box02"></div>
+    <div class="box box03"></div>
+    <div class="box box04"></div>
+    <div class="box box05"></div>
+    <div class="box box06"></div>
+    <div class="box box07"></div>
+    <div class="box box08"></div>
+    <div class="box box09"></div>
+    <div class="box box10"></div>
+    <div class="box box11"></div>
+    <div class="box box12"></div>
+    <div class="box box13"></div>
+    <div class="box box14"></div>
+    <div class="box box15"></div>
+    <div class="box box16"></div>
+    <div class="box box17"></div>
+    <div class="box box18"></div>
+    <div class="box box19"></div>
+    <div class="box box20"></div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <style>
+        .header-container{ border-bottom:1px solid black;
+            padding:10px;
+        }
+        .clearFix::after{ content:''; display: block;
+                clear:both;
+                /* 새로만드는 페이지는 사용하지 않을 것이나 
+                    유지보수에서는 필요한 사항 
+                */
+        }
+        /* 인라인 속성의 콘텐츠를 block 속성으로 변경한 후 문제해결 */
+        .header-contents{ width:1000px; margin: auto;
+            /* background-color: pink; */
+        }
+        /* .header-contents::after{ content:''; display: block;
+                clear:both;
+        } */
+        h1{ float:left; margin-right: 4em; }
+        h1>a{ display: block; padding: 15px 0 13px 0; }
+        .lnb{ float:left; }
+        .gnb{ float:right; }
+        .lnb>li{ float:left; }
+        .gnb>li{ float:left; }
+
+        .lnb>li>a{ display:block; padding:18px 20px; font-size: 16px;}
+        /* 
+            사용성 향상 :  padding 콘텐츠 너비 높이에 포함되어서 클릭 범위를 넓게 확대, 사용성이 향상됨 
+        */
+        .gnb>li>a{ display: block; padding:21px 15px;}
+        .gnb>li:last-child>a{ padding-right:0; }
+    </style>
+</head>
+<body>
+    <div class="header-container  clearFix">
+        <div class="header-contents  clearFix">
+            <h1><a href="./test02.html">동서식품</a></h1>
+            <ul class="lnb">
+                <!-- local navigation button -->
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">제품안내</a></li>
+                <li><a href="#">홍보센터</a></li>
+                <li><a href="#">사회공헌</a></li>
+                <li><a href="#">고객의소리</a></li>
+            </ul>
+            <ul class="gnb">
+                <!-- global navigation button -->
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">검색</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 
+        navigation != menu 
+        navigation > menu 
+        menu : 깊이를 생각할 필요 2depth > 3depth 
+     -->
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table, td{ border: 1px solid black; }
+        td:nth-child(2){background-color: orange;}
+        /* 
+            table, ul, ol 의 경우 자식의 번호가 바뀔일이 없기 때문에
+            nth-child를 사용하면 된다.
+            (다만 table이 합쳐진 경우 td의 번호가 달라질 수 있기 때문에 class를 사용하는 것이 편리하게 된다)
+        */
+        td.bgColor{background-color: green;}
+    </style>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td rowspan="2">data01</td>
+                <td colspan="2" class="bgColor">data02</td>
+                <!-- <td>data03</td> -->
+                <td>data04</td>
+                <td>data05</td>
+            </tr>
+            <tr>
+                <!-- <td>data11</td> -->
+                <td rowspan="3" class="bgColor">data12</td>
+                <td>data13</td>
+                <td>data14</td>
+                <td>data15</td>
+            </tr>
+            <tr>
+                <td>data21</td>
+                <!-- <td>data22</td> -->
+                <td>data23</td>
+                <td>data24</td>
+                <td>data25</td>
+            </tr>
+            <tr>
+                <td>data31</td>
+                <!-- <td>data32</td> -->
+                <td colspan="3">data33</td>
+                <!-- <td>data34</td>
+                <td>data35</td> -->
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

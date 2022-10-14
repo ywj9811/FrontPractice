@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table{
+            width: 700px;
+            height: 250px;
+            border: 1px solid black;
+            /* height 균등 분배가 아닌 tbody에 적용함 */
+            border-collapse: collapse;
+            /* 
+                border-collapse: collapse 를 통해서 1줄로 만들 수 있다. table 전용 속성
+                내용에 separate는 분리를 이야기함
+            */
+        }
+
+        th, td{
+            border: 1px solid black;
+        }
+        thead th, tfoot th{
+            height: 48px;
+        }
+        th{
+            background-color: skyblue;
+            font-size: 18px;
+        }
+        tfoot th, tfoot td{
+            background-color: orange;
+            font-size: 18px;
+            font-weight: bold;
+            font-style: italic;
+        }
+        tbody td, tfoot td{
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        caption{
+            background-color: antiquewhite; padding: 1rem 0;
+            /* caption-side: bottom; */
+            /* caption-side를 통해서 위치를 지정할 수 있다.
+               text-align을 통해 좌우 정렬도 가능
+            */
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        웹 접근성에 적합한 table로 만들자
+     -->
+    <table>
+        <caption>2022년 하반기 월별 경비 집계 표</caption>
+        <!-- caption은 제목 -->
+        <thead>
+            <tr>
+                <th>구분</th>
+                <th>7월</th>
+                <th>8월</th>
+                <th>9월</th>
+                <th>총계</th>
+                <th>평균</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>공방 대여료</th>
+                <td>10,200</td>
+                <td>15,000</td>
+                <td>20,000</td>
+                <td>12,000</td>
+                <td>8000</td>
+            </tr>
+            <tr>
+                <th>전시 물품 구입</th>
+                <td>10,200</td>
+                <td>15,000</td>
+                <td>20,000</td>
+                <td>12,000</td>
+                <td>8000</td>
+            </tr>
+            <tr>
+                <th>공예 재료 구입</th>
+                <td>10,200</td>
+                <td>15,000</td>
+                <td>20,000</td>
+                <td>12,000</td>
+                <td>8000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>합계</th>
+                <td>10,200</td>
+                <td>15,000</td>
+                <td>20,000</td>
+                <td>12,000</td>
+                <td>8000</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

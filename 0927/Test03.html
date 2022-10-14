@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            width: 200px; height: 200px;
+            background-color: skyblue;
+            border: 1px solid black;
+        }
+        .box1{margin-bottom: 50px;}
+        .box2{margin-top: 50px; margin-bottom: 50px;}
+        .box3{margin-top: 100px;}
+
+        .content>p{float:left; width: 100px; height: 100px;
+                background-color: orange;}
+
+        .content>p:nth-child(1){margin-right: 50px;}
+        .content>p:nth-child(2){margin-left: 50px;}
+        .content>p:nth-child(3){margin-left: 50px;}
+    </style>
+</head>
+<body>
+    <h1>margin의 성격</h1>
+    <div class="box box1">box1</div>
+    <div class="box box2">box2</div>
+    <div class="box box3">box3</div>
+    <p>
+        margin은 padding과 다르게 상하 여백이 겹치는 형상이 발생함<br>
+        아래의 top과 위의 bottom이 겹치게 된다.(따라서 큰놈이 먹게된다 -> 위 혹은 아래 둘중 하나만 있으면 된다.)<br>
+        좌우는 겹치지 않음!
+    </p>
+
+    <div class="content">
+        <p>paragraph1</p>
+        <p>paragraph2</p>
+        <p>paragraph3</p>
+    </div>
+</body>
+</html>

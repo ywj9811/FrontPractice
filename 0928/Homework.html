@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: rgb(184, 199, 221);
+        }
+
+        .wrap{
+            width: 800px;
+            margin: auto;
+        }
+        .head{
+            margin: auto;
+            margin-top: 30px;
+            width: 750px;
+            height: 150px;
+            border: 1px solid white;
+            padding: 20px;
+        }
+        .head td:nth-child(1){
+            margin: auto;
+            width: 600px;
+            text-align: center;
+            font-size: 45px;
+            color: white;
+            background-color: rgb(37, 79, 141);
+        }
+        img{
+            width: 150px;
+        }
+        .head td:nth-child(2)>img{
+            padding-left: 30px;
+        }
+        .body{
+            margin: auto;
+            margin-top: 40px;
+            width: 750px;
+            height: 350px;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        .body th, .body td{
+            border: 1px solid black;
+        }
+        .body>caption{
+            text-align: left;
+            font-size: 20px;
+            font-weight: 600;
+            color: rgb(8, 26, 131);
+        }
+        .body>thead{
+            background-color: rgb(38, 38, 73);
+            color: rgb(179, 179, 179);
+            height: 50px;
+        }
+        .body>tbody td:nth-child(1){
+            font-weight: 700;
+            background-color: rgb(63, 127, 180);
+            text-align: center;
+        }
+        .body>tbody td:nth-child(1)~td{
+            background-color: white;
+        }
+        .body>tfoot{
+            text-align: center;
+            color: gray;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <table class="head">
+            <tr>
+                <td>TV 편성표 보기</td>
+                <td><img src="./image/tv.png" alt=""></td>
+            </tr>
+        </table>
+        <table class="body">
+            <caption>
+                2012년 12월 17일(월) TV 영화 편성표
+            </caption>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>OCN</th>
+                    <th>SUPER ACTION</th>
+                    <th>CGV</th>
+                    <th>XTM</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>19시</td>
+                    <td rowspan="2">의뢰인</td>
+                    <td>CSI MIAMI</td>
+                    <td>지구 멈춤</td>
+                    <td>Friends(20)</td>
+                </tr>
+                <tr>
+                    <td>20시</td>
+                    <!-- <td></td> -->
+                    <td>미트더 스파르탄</td>
+                    <td rowspan="3">공감랭크쇼</td>
+                    <td>Friends(21)</td>
+                </tr>
+                <tr>
+                    <td>21시</td>
+                    <td>CSI-2(21)</td>
+                    <td rowspan="3">스워드 피시</td>
+                    <td>가제트</td>
+                </tr>
+                <tr>
+                    <td>22시</td>
+                    <td>CSI-2(22)</td>
+                    <td>가제트</td>
+                </tr>
+                <tr>
+                    <td>23시</td>
+                    <td>더록</td>
+                    <td>탑기어</td>
+                    <td>가제트</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5">일간 단위로 업데이트 되며 방송사 사정에 따라 변경될 수 있습니다</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>

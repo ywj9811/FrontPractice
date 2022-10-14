@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/box.css">
+
+    <style>
+        .box{
+            background-color: black;
+        }
+        .box1{
+            background-image: url(./sprite_img/gnb_brand_menu_2.png);
+            background-repeat: no-repeat;
+            /* background-position에서 y축은 +가 이미지를 내리는 것이고 -가 이미지를 올리는 것이다. */
+            background-position: 0px 0px;
+            transition: 5s;
+        }
+        .box1:hover{
+            background-position: 0 -600px;
+        }
+        .box2{
+            background-image: url(./sprite_img/20160823_25789064.png);
+            background-position: -100px 0;
+            transition: 1ms;
+            /* 애니메이션 작업 1ms동안 작동 */
+        }
+        .box2:hover{
+            background-position: 0 0;
+            /* hover를 하게 되면 해당 position으로 움직이게 된다. */
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">box1</div>
+    <div class="box box2">box2</div>
+</body>
+</html>

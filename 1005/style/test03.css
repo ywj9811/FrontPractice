@@ -1,0 +1,23 @@
+div{ width: 400px; height: 300px;
+    border: 5px solid black; 
+    margin: 50px;
+    float:left; 
+}
+div:nth-child(1)>img{ width:100%; }
+/* %는 부모 너비의 비율을 맞춰주는 것 */
+/* img태그로 이미지를 사용하는 경우 크기조절, 위치조절이 자유롭지 않음(현상태 에서는) */
+div:nth-child(2){ 
+    background-image: url(../images/img_banner1_7.jpg);
+    /* 여기서 이미지를 넣어줄 수 있음 */
+    background-size: 100px;
+    /* size: cover를 넣어주면 박스의 크기에 맞춰서 적용시켜 준다.(꽉차게) */
+    background-repeat: no-repeat;
+    /* repeat-x repeat-y 이렇게 x축으로 혹은 y축으로 반복을 시킬 수 있으며 그냥 repeat을 하면 반복되게 된다. */
+    background-position: 20px 50px;
+    /* 
+        가로 3개 세로 3개 총 9개의 공간으로 나누어져
+        bottom left, top left, center left 등등 배치할 수 있으며
+        혹은 px로 배치할 수 있다.
+    */
+}
+/* 배경이미지 크기가 박스보다 작으면 패턴처럼 배치 */

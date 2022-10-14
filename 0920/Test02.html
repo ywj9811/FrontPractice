@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    
+    <style>
+        h1{ font-size: 44px; font-weight: 400;}
+        /* font-weigth : 글꼴의 두깨를 지정 */
+        h2{ font-size: 36px; }
+        h3{ font-size: 28px; }
+        h4{ font-size: 22px; }
+        h5{ font-size: 16px; }
+        h6{ font-size: 12px; }
+        /* 각 크기를 정해놓고 사용하도록 하자 */
+        p{ font-size: 16; }
+        /* 강조 본문 */
+        p{ font-size: 12; }
+        /* 평시 본문 */
+        b{ font-weight: 400;}
+
+        span{ 
+            font-size: 24px;
+            font-weight: 900;
+        }
+
+        u{
+            font-size: 24px;
+            font-weight: 200;
+            text-decoration: none;
+        }
+        
+        a{ 
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>css : font 디자인</h1>
+
+    <div>
+        <!-- div, h2, p, ul, li 모두 block속성 태그 -->
+        <h2>BLOCK TITLE</h2>
+        <p>
+            <b>Lorem ipsum, dolor</b> <span>sit amet consectetur adipisicing elit. Voluptatum, delectus mollitia?</span> Cum eius commodi corrupti magni dicta accusamus sed quos libero molestias ad, <u>voluptatum</u>, obcaecati rerum eveniet nostrum recusandae quasi.
+        </p>
+        <p>
+            한글은 아름다운 글입니다.
+        </p>
+        <ul>
+            <li><a href="#">에스프레소</a></li>
+            <li><a href="#">베리에이션</a></li>
+            <li><a href="#">음료 제작</a></li>
+        </ul>
+    </div>
+    <hr>
+    <pre>
+        크로스 브라우징 : 대부분의 브라우저에서 가능한 비슷한 모양으로 보이도록 노력
+        
+        브라우저의 기본 폰트 사이즈 : 16px
+        유명 브랜드 서치엔진 : 기본 12px
+
+        font-weight : 글꼴의 두깨 100 ~ 900까지 100단위로 두깨를 달리 지정할 수 있음
+                      평소가 400
+    </pre>
+</body>
+</html>

@@ -1,0 +1,7 @@
+.container{ width: 500px; 
+    background-color: orange;
+    /* overflow: auto; */
+}
+/* 
+reset.css에 .clearFix::after{ content: ''; display: block; clear: both;}
+이것이 들어있음 */
