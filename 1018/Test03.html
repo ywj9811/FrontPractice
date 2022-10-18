@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/box.css">
+    <!-- 마우스, 키보드, 시간 제어 -> 동작 : javascript -->
+    <style>
+        .container{
+            flex-wrap: wrap;
+            width: calc(200px * 6 + 10px * 5);
+            margin: 50px auto;
+        }
+        .box{ box-sizing: content-box; margin: 10px;
+            height: 50px;
+            transition: 3s;
+            line-height: 50px;
+        }
+        .box:hover{width: 300px;}
+        .box01{transition-timing-function: ease;}
+        /* transition-timing-function 는 애니메이션의 효과가 처음부터 끝까지 일정한 속도로 진행 */
+        .box02{transition-timing-function: ease-in;}
+        .box03{transition-timing-function: ease-out;}
+        .box04{transition-timing-function: ease-in-out;}
+        .box05{transition-timing-function: linear;}
+        .box06{transition-timing-function:cubic-bezier(0,1.9,.94,.97);}
+        /* cubic-bezier는 구글에 검색하면 세세하게 정할 수 있음 
+            혹은 정해서 제공하는 애들을 사용해도 좋다
+            개발자모드에서 테스트를 해볼 수 있기도 하다
+        */
+        .box07{transition-timing-function: cubic-bezier(.12,-0.72,.6,1.19);}
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="box box01">box1</div>
+        <div class="box box02">box2</div>
+        <div class="box box03">box3</div>
+        <div class="box box04">box4</div>
+        <div class="box box05">box5</div>
+        <div class="box box06">box6</div>
+        <div class="box box07">box7</div>
+        <div class="box box08">box8</div>
+        <div class="box box09">box9</div>
+        <div class="box box10">box10</div>
+        <div class="box box11">box11</div>
+        <div class="box box12">box12</div>
+        <div class="box box13">box13</div>
+        <div class="box box14">box14</div>
+        <div class="box box15">box15</div>
+        <div class="box box16">box16</div>
+        <div class="box box17">box17</div>
+        <div class="box box18">box18</div>
+        <div class="box box19">box19</div>
+        <div class="box box20">box20</div>
+    </div>
+</body>
+</html>

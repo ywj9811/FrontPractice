@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/reset.css">
+
+    <style>
+        .quick-bar-container{
+            position: fixed;
+            right: 0px;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .quick-bar a{
+            display: block;
+            width: 150px;
+            height: 30px;
+            text-align: center;
+            background-color: antiquewhite;
+            margin: 3px;
+            transform: translateX(100px);
+            transition: 0.4s;
+        }
+        .quick-bar a:hover{
+            transform: translateX(0);
+        }
+
+        .icons-set-container ul{
+            display: flex;
+            gap: 5px;
+        }
+        .icons-set-container a{
+            display: block;
+            height: 80px;
+            width: 80px;
+            background-color: rgb(220, 220, 220);
+            text-align: center;
+            line-height: 80px;
+            border-radius: 25px;
+            transition: 400ms;
+        }
+        .icons-set-container a:hover{
+            background-color: black;
+            color: white;
+        }
+
+        .text-banner-container, .text-banner1, .text-banner2{width: 500px; height: 50px;}
+        .text-banner1{background-color: gray;}
+        .text-banner2{background-color: yellow;}
+
+        .text-banner{transition: 0.5s;}
+        .text-banner-container:hover .text-banner{
+            transform: translateY(-50px);
+        }
+        .text-banner-container{
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="quick-bar-container">
+        <ul class="quick-bar">
+            <li><a href="#">list01</a></li>
+            <li><a href="#">list02</a></li>
+            <li><a href="#">list03</a></li>
+            <li><a href="#">list04</a></li>
+            <li><a href="#">list05</a></li>
+            <li><a href="#">list06</a></li>
+            <li><a href="#">list07</a></li>
+        </ul>
+    </div>
+
+    <div class="icons-set-container">
+        <ul>
+            <li><a href="#">icon</a></li>
+            <li><a href="#">icon</a></li>
+            <li><a href="#">icon</a></li>
+            <li><a href="#">icon</a></li>
+            <li><a href="#">icon</a></li>
+            <li><a href="#">icon</a></li>
+            <li><a href="#">icon</a></li>
+            <li><a href="#">icon</a></li>
+            <li><a href="#">icon</a></li>
+        </ul>
+    </div>
+
+    <div class="text-banner-container">
+        <div class="text-banner">
+            <div class="text-banner1">안녕하세요</div>
+            <div class="text-banner2">반갑습니다</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/box.css">
+    <!-- 마우스, 키보드, 시간 제어 -> 동작 : javascript -->
+    <style>
+        .container{
+            flex-wrap: wrap;
+            width: calc(200px * 6 + 10px * 5);
+            margin: 50px auto;
+        }
+        .box{ box-sizing: content-box; 
+            float: left;
+            margin: 10px;
+        }
+        /* transition은 마우스 제어가 있는 경우만 애니메이션 동작 가능 */
+        .box01:hover{width: 300px;}
+        /* 이건 나를 움직이게 하는 것 */
+        .box01:hover+.box02{width: 300px;}
+        /* box01을 건드리면 box1 + box2 모두 변화가 일어남 +를 사용하여 형제에게*/
+        .box01:hover~.box03{opacity: 0.5;}
+        /* ~를 사용하여 바로 옆이 아니어도 가능 */
+        .box04{
+            transition-property: width;
+            /* transition-property를 사용하면 어떤 애니메이션을 적용할 수 있는지 지정할 수 있음 */
+            transition-duration: 1s;
+            /* transition-duration을 통해 어느정도 애니메이션 소요시간 정할 수 있음 */
+            /* transition:all 1s 
+                이렇게 사용하게 되면 width, heigth모두 1초의 소요시간으로 애니메이션을 적용할 수 있음 
+                축약형 코드*/
+        }
+        .box04:hover{width: 400px; height: 500px;}
+        .box05:hover{
+            background-color: red;
+            transition-duration: 1s;
+            transition-delay: 1s;
+            /* transition-delay 이것은 딜레이 이후에 애니메이션 */
+            /* transition하나로 축약형 코드로 사용할 수 있다. */
+        }
+        .box06{transition: background-color 1s 1s;}
+        .box06:hover{
+            background-color: red;
+        }
+        .box07{
+            transition: 1s;
+        }
+        .box07:hover{
+            width: 400px;
+        }
+        .box08:hover{width: 400px; transition: 1s;}
+        /* hover 내부에 transition이 들어가면 마우스가 있을때만 애니메이션이 작동 마우스 올리면 천천히 늘어나지만 때면 바로 줄어들음 */
+    </style>
+    
+</head>
+<body>
+    <div class="container layout-flex">
+        <div class="box box01">box1</div>
+        <div class="box box02">box2</div>
+        <div class="box box03">box3</div>
+        <div class="box box04">box4</div>
+        <div class="box box05">box5</div>
+        <div class="box box06">box6</div>
+        <div class="box box07">box7</div>
+        <div class="box box08">box8</div>
+        <div class="box box09">box9</div>
+        <div class="box box10">box10</div>
+        <div class="box box11">box11</div>
+        <div class="box box12">box12</div>
+        <div class="box box13">box13</div>
+        <div class="box box14">box14</div>
+        <div class="box box15">box15</div>
+        <div class="box box16">box16</div>
+        <div class="box box17">box17</div>
+        <div class="box box18">box18</div>
+        <div class="box box19">box19</div>
+        <div class="box box20">box20</div>
+    </div>
+</body>
+</html>

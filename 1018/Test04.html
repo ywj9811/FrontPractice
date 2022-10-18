@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/box.css">
+    <!-- 마우스, 키보드, 시간 제어 -> 동작 : javascript -->
+    <style>
+        .container{
+            flex-wrap: wrap;
+            width: calc(200px * 6 + 10px * 5);
+            margin: 50px auto;
+            gap: 100px;
+        }
+        .box{ box-sizing: content-box;}
+        span{display: block; width: 200px; height: 200px;
+            background-color: skyblue;
+            border: 1px solid blue;}
+        .box01>span{transform: translateX(50px);}
+        .box02>span{transform: translateY(50px);}
+        /* transform을 통해서 그 자리에서 X축 Y축 Z축 혹은 3D로 이동 */
+        .box03>span{transform: translate(50px, 50px);}
+        /* transform은 애니메이션 사용할 때 주로 사용 */
+        /* positio은 주로 레이아웃 지정시 주로 사용 */
+        .box04>span{transform: rotate(40deg);}
+        /* transfor: rotate는 회전을 주는 것이다. */
+        .box05>span{transform: rotate(-40deg);}
+        .box06>span{transform: skewX(20deg);}
+        /* skew는 평행사변형처럼 변형을 준다. */
+        .box07>span{transform: skewY(20deg);}
+        .box08>span{transform: skew(20deg, 20deg);}
+        .box09>span{transform: scale(0.5);}
+        /* scale은 1을 기준으로 작으면 축소 크면 확대를 한다 */
+        .box10>span{transform: scaleX(0.5);}
+        .box11>span{transform: scaleY(0.5);}
+        .box11~.box>span{transition: 1s;}
+        /* box11 이후의 모든 box의 span에 애니메이션을 줌 */
+        .box12:hover>span{transform: translateX(100px);}
+        .box13:hover>span{transform: rotate(100deg);}
+        .box14:hover>span{
+            transform: scaleX(1.5);
+        }
+        .box15:hover>span{
+            transform: scaleY(.5);
+        }
+        .box16:hover>span{
+            transform: skewX(10deg);
+        }
+
+        .box17>span{
+            transform-origin: left top;
+            /* 애니메이션의 기준점을 찾는 것 
+                left top은 왼쪽 윗부분을 애니메이션의 기준점으로
+            */
+        }
+        .box17:hover>span{
+            transform: scale(0.5);
+        }
+        .box18:hover>span{
+            transform-origin: right bottom;
+            transform: scale(0.5);
+            /* hover에 기준점을 넣어주니 이상함 */
+        }
+
+    </style>
+    
+</head>
+<body>
+    <div class="container layout-flex">
+        <div class="box box01"><span>box01</span></div>
+        <div class="box box02"><span>box02</span></div>
+        <div class="box box03"><span>box03</span></div>
+        <div class="box box04"><span>box04</span></div>
+        <div class="box box05"><span>box05</span></div>
+        <div class="box box06"><span>box06</span></div>
+        <div class="box box07"><span>box07</span></div>
+        <div class="box box08"><span>box08</span></div>
+        <div class="box box09"><span>box09</span></div>
+        <div class="box box10"><span>box10</span></div>
+        <div class="box box11"><span>box11</span></div>
+        <div class="box box12"><span>box12</span></div>
+        <div class="box box13"><span>box13</span></div>
+        <div class="box box14"><span>box14</span></div>
+        <div class="box box15"><span>box15</span></div>
+        <div class="box box16"><span>box16</span></div>
+        <div class="box box17"><span>box17</span></div>
+        <div class="box box18"><span>box18</span></div>
+        <div class="box box19"><span>box19</span></div>
+        <div class="box box20"><span>box20</span></div>
+    </div>
+</body>
+</html>
