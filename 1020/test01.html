@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/box.css">
+    <style>
+        .box{
+            margin: 50px 0; height: 100px; line-height: 100px;
+            position: relative;
+            animation: movie-box 2s paused;
+        }
+
+        .container{
+            background-color: pink;
+        }
+
+        @keyframes movie-box {
+            0%{left: 0px}
+            100%{left: 500px}
+        }
+        .container:hover .box01{
+            animation-play-state: running;
+            animation-timing-function: ease;
+        }
+        .container:hover .box02{
+            animation-play-state: running;
+            animation-timing-function: ease-in;
+        }
+        .container:hover .box03{
+            animation-play-state: running;
+            animation-timing-function: ease-out;
+        }
+        .container:hover .box04{
+            animation-play-state: running;
+            animation-timing-function: ease-in-out;
+        }
+        .container:hover .box05{
+            animation-play-state: running;
+            animation-timing-function: linear;
+        }
+        .container:hover .box06{
+            animation-play-state: running;
+            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box01"><span>box01</span></div>
+        <div class="box box02"><span>box02</span></div>
+        <div class="box box03"><span>box03</span></div>
+        <div class="box box04"><span>box04</span></div>
+        <div class="box box05"><span>box05</span></div>
+        <div class="box box06"><span>box06</span></div>
+        <div class="box box07"><span>box07</span></div>
+        <div class="box box08"><span>box08</span></div>
+        <div class="box box09"><span>box09</span></div>
+        <div class="box box10"><span>box10</span></div>
+    </div>
+</body>
+</html>
