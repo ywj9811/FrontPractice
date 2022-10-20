@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/box.css">
+
+    <style>
+        /* 
+            물론 js를 포함해야 괜찮은 결과물이..
+        */
+        @keyframes movie-box {
+            0%{left: 0; top: 0;}
+            25%{left: 500px; top: 0;}
+            50%{top: 500px; left: 500px;}
+            75%{top: 500px; left: 0;}
+            /* 100%는 일단 생략해도 0% 지점으로 backward가 됨 */
+        }
+        .box{
+            animation-name: movie-box;
+            animation-duration: 4s;
+            position: absolute;
+            left: 0; top: 0;
+
+            animation-iteration-count: infinite;
+            /* 
+                animation:movie-box 2s 4 infinite 축약
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/box.css">
+
+    <style>
+        /* 
+            @keyframes
+            만화영화(애니메이션) : 원리(그림을 한컷한컷 1초에 적어도 24장)
+        */
+        @keyframes movie-box {
+            0%{margin-left: 20%;}
+            /* 0과 100 의 중간은 자동으로 애니메이션 생성
+                -> 보간 = interploation
+
+                0과 100 이외에 중간도 마음대로 추가해도 괜찮다
+            */
+            100%{margin-left: 500px;}
+        }
+        .box{
+            animation-name: movie-box;
+            animation-duration: 2s;
+
+            animation-fill-mode: forwards;
+            /* 이것은 100% 시점에 멈춤 */
+
+            animation-iteration-count: infinite;
+            /* 횟수 지정 infinite는 무한 */
+            animation-direction: alternate;
+            /* 
+                alternate : 애니메이션을 실행, 반실행방향을 반복
+                reverse : 애니메이션을 반대로 실행(현재를 기준으로 오른쪽에서 왼쪽으로)
+            */
+            /* animation-play-state: paused; */
+            /* 
+                기본값 : play로 움직임
+                paused가 되면 멈춤 -> js를 통해 움직이게 하던가 등등
+            */
+            animation-delay: 1s;
+            /* 딜레이 */
+            /* animation: movie-box 1s 2s alternate running infinite; 
+            축약형 코드임
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
