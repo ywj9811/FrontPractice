@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .side{
+            width: 200px; height: 200px;
+            border: 1px solid black;
+            position: relative;
+        }
+        .side span{
+            display: block;
+            width: 20px; height: 20px;
+            background-color: black;
+            border-radius: 20px;
+            position: absolute;
+        }
+
+        .side01{background-color: red;}
+        .side02{background-color: green;}
+        .side03{background-color: skyblue;}
+        .side04{background-color: pink;}
+        .side05{background-color: orange;}
+        .side06{background-color: purple;}
+
+        /* 이제 주사위 점들을 배치하자 */
+        .side01 span{
+            left: 50%; top: 50%;
+            transform: translate(-10px, -10px);
+        }
+        .side02 span:nth-child(1){
+            left: 25%; top: 25%;
+            /* left, top은 부모를 기준으로 */
+            transform: translate(-50%, -50%);
+            /* transform은 나를 기준으로 */
+        }
+        .side02 span:nth-child(2){
+            left: 75%; top: 75%;
+            transform: translate(-50%, -50%);
+        }
+        .side03 span:nth-child(1){
+            left: 25%; top: 25%;
+            transform: translate(-50%, -50%);
+        }
+        .side03 span:nth-child(2){
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .side03 span:nth-child(3){
+            left: calc(75% - 10px);
+            top: calc(75% - 10px);
+        }
+        .side04 span:nth-child(1){
+            left: 25%; top: 25%;
+            transform: translate(-50%, -50%);
+        }
+        .side04 span:nth-child(2){
+            left: 25%; top: 75%;
+            transform: translate(-50%, -50%);
+        }
+        .side04 span:nth-child(3){
+            left: 75%; top: 75%;
+            transform: translate(-50%, -50%);
+        }
+        .side04 span:nth-child(4){
+            left: 75%; top: 25%;
+            transform: translate(-50%, -50%);
+        }
+        .side05 span:nth-child(1){
+            left: 25%; top: 25%;
+            transform: translate(-50%, -50%);
+        }
+        .side05 span:nth-child(2){
+            left: 25%; top: 75%;
+            transform: translate(-50%, -50%);
+        }
+        .side05 span:nth-child(3){
+            left: 75%; top: 75%;
+            transform: translate(-50%, -50%);
+        }
+        .side05 span:nth-child(4){
+            left: 75%; top: 25%;
+            transform: translate(-50%, -50%);
+        }
+        .side05 span:nth-child(5){
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .side06 span:nth-child(1){
+            left: 25%; top: 25%;
+            transform: translate(-50%, -50%);
+        }
+        .side06 span:nth-child(2){
+            left: 25%; top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .side06 span:nth-child(3){
+            left: 25%; top: 75%;
+            transform: translate(-50%, -50%);
+        }
+        .side06 span:nth-child(4){
+            left: 75%; top: 25%;
+            transform: translate(-50%, -50%);
+        }
+        .side06 span:nth-child(5){
+            left: 75%; top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .side06 span:nth-child(6){
+            left: 75%; top: 75%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="rect">
+        <div class="side side01">
+            <span></span>
+        </div>
+        <div class="side side02">
+            <span></span><span></span>
+        </div>
+        <div class="side side03">
+            <span></span><span></span><span></span>
+        </div>
+        <div class="side side04">
+            <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="side side05">
+            <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="side side06">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+    </div>
+</body>
+</html>

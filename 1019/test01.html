@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/box.css">
+
+    <style>
+        *{box-sizing: content-box;}
+
+        .box{float: left; margin: 50px; border: 1px solid black;
+            background-color: transparent;
+            transform-style: preserve-3d;
+            /* 이를 통해서 3d 속성을 사용할 수 있게 함 */
+            perspective: 500px;
+            /* 원금감을 지정하느 것 : 숫자가 작을수록 원근감이 커짐 */
+            /* 이것은 왜곡되는 자식의 부모에게 넣어줘야 함 */
+        }
+
+        .box span{ display: block; width: 200px; height: 200px;
+            background-color: rgba(255, 192, 203, 0.503);
+            transition: 0.5s;
+        }
+        
+        .box01:hover span{transform: translateX(50px);}
+        .box02:hover span{transform: translateY(50px);}
+        .box03:hover span{transform: rotate(50deg);}
+        .box04:hover span{transform: skewX(50deg);}
+        .box05:hover span{transform: scale(1.5);}
+        .box06:hover span{transform: translateZ(50px);}
+        .box07:hover span{transform: rotateX(50deg);}
+        .box08:hover span{transform: rotateY(50deg);}
+        .box09:hover span{transform: rotateZ(50deg);}
+        .box10:hover span{transform: scaleY(.6);}
+        .box11:hover span{transform: scaleX(.6);}
+        .box12:hover span{transform: scaleZ(.6);}
+        .box12 span{
+            transform-origin: top;
+        }
+        .box12:hover span{transform: rotateX(50deg);}
+        .box13 span{
+            transform-origin: bottom;
+        }
+        .box13:hover span{transform: rotateX(50deg);}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box01"><span>box01</span></div>
+        <div class="box box02"><span>box02</span></div>
+        <div class="box box03"><span>box03</span></div>
+        <div class="box box04"><span>box04</span></div>
+        <div class="box box05"><span>box05</span></div>
+        <div class="box box06"><span>box06</span></div>
+        <div class="box box07"><span>box07</span></div>
+        <div class="box box08"><span>box08</span></div>
+        <div class="box box09"><span>box09</span></div>
+        <div class="box box10"><span>box10</span></div>
+        <div class="box box11"><span>box11</span></div>
+        <div class="box box12"><span>box12</span></div>
+        <div class="box box13"><span>box13</span></div>
+        <div class="box box14"><span>box14</span></div>
+        <div class="box box15"><span>box15</span></div>
+        <div class="box box16"><span>box16</span></div>
+        <div class="box box17"><span>box17</span></div>
+        <div class="box box18"><span>box18</span></div>
+        <div class="box box19"><span>box19</span></div>
+        <div class="box box20"><span>box20</span></div>
+    </div>
+</body>
+</html>
+<!-- 
+    transform(왜곡) : 2D, 3D
+    transform : translate(px, % 등등) 이동(Position 상관업이)
+                rotate(deg) 회전
+                skew(deg) 
+                scale(단위를 사용하지 않음)
+    transform-origin : top, center, bottom, left, center, right
+                        혹은 px, % 등 단위의 좌표값도 가능
+    활동적(애니메이션) : css + javaScript
+    동적, 정적 페이지 (데이터 처리)
+    -> css : transition, keyframes
+            transition-property
+            transition-duration
+            transition-timming-function
+            transition-delay
+
+            animation-property
+            animation-duration
+            animation-timming-function
+            animation-delay
+            등등(이것들은 keyframes)
+ -->
