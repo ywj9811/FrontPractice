@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <!-- 80 * 12 + 20(gutter) * 11 = 1200 - 20 = 1180 
+        https://www.toptal.com/developers/css/sprite-generator
+    -->
+    <link rel="stylesheet" href="./style/quick_menu.css">
+    <style>
+        .layout-margin-auto {
+            width: 1180px;
+            margin: auto;
+        }
+
+        header {
+            height: 1000px;
+        }
+
+        #header-container {
+            height: 120px;
+            background-color: skyblue;
+        }
+
+        /* 
+            확인 후 삭제
+        section{ height: 200px;}
+        section:nth-child(2n){ background-color: rgba(255, 0, 0, 0.617);}
+        #section04-container,
+        #footer-container
+        { background-color: aqua; height: 200px;} */
+
+        
+        .visited-menu-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .select-button {
+            margin-right: auto;
+        }
+
+        .visited-menu-items {
+            padding: 20px;
+        }
+
+        /* 1180 - 20px * 2 = 안쪽 너비 */
+        .visted-menu {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .visted-menu li {
+            text-align: center;
+        }
+
+        /* img 가로 가운데 : inline 속성을 가지고 있으므로 텍스트 처럼 동작  */
+        .visted-menu span {
+            display: block;
+            margin: auto;
+
+        }
+
+        .visted-menu span:nth-child(1) {
+            background-color: rgb(232, 232, 232);
+            border-radius: 30px;
+        }
+
+        input[name='select-button'] {
+            display: none;
+        }
+
+        /* input[type='radio']{ display: none;}
+        input{ display: none;} */
+        .select-button label {
+            /* for 속성 중에 select 문자열을 포함한 것 */
+            display: block;
+            width: 100px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            border: 1px solid gray;
+            border-radius: 15px;
+            float: left;
+        }
+
+        #select-button1:checked~label:nth-of-type(1) {
+            background-color: red;
+            color: white;
+        }
+
+        #select-button2:checked~label:nth-of-type(2) {
+            background-color: red;
+            color: white;
+        }
+
+        footer {
+            height: 3000px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="header-container" class="layout-margin-auto"></div>
+
+    </header>
+    <aside class="quick_menu"></aside>
+    <section class="section01 layout-margin-auto"></section>
+    <section class="section02 layout-margin-auto">
+        <div class="visited-menu-container">
+            <h2>방문자별 맞춤 메뉴</h2>
+            <div class="select-button">
+                <!-- 웹접근성에 적합한 기능을 만들기 위한 구조 -->
+                <input type="radio" name="select-button" id="select-button1" checked>
+                <input type="radio" name="select-button" id="select-button2">
+                <label for="select-button1" class="active">개인</label>
+                <label for="select-button2">사업장</label>
+            </div>
+            <a href="#">더보기+</a>
+        </div>
+        <div class="visited-menu-items">
+            <ul class="visted-menu">
+                <li class="visted-item"><a href="#">
+                        <img src="./images/ico-amount-money.png" alt="">
+                        <span>자격득실</span>
+                        <span>확인서 발급</span>
+                    </a></li>
+                <li class="visted-item"><a href="#">
+                        <img src="./images/ico-burden.png" alt="">
+                        <span>보험료</span>
+                        <span>납부확인서</span>
+                    </a></li>
+                <li class="visted-item"><a href="#">
+                        <img src="./images/ico-calculation.png" alt="">
+                        <span>환급금</span>
+                        <span>조회/신청</span>
+                    </a></li>
+                <li class="visted-item"><a href="#">
+                        <img src="./images/ico-checkups.png" alt="">
+                        <span>보험료</span>
+                        <span>조회/납부</span>
+                    </a></li>
+                <li class="visted-item"><a href="#">
+                        <img src="./images/ico-company-certificate.png" alt="">
+                        <span>보험료</span>
+                        <span>계산기</span>
+                    </a></li>
+                <li class="visted-item"><a href="#">
+                        <img src="./images/ico-company-form.png" alt="">
+                        <span>재난적의료비</span>
+                        <span>지원안내</span>
+                    </a></li>
+                <li class="visted-item"><a href="#">
+                        <img src="./images/ico-company-inquiry.png" alt="">
+                        <span>건강검진</span>
+                        <span>대상조회</span>
+                    </a></li>
+                <li class="visted-item"><a href="#">
+                        <img src="./images/ico-edi.png" alt="">
+                        <span>가족</span>
+                        <span>건강관리</span>
+                    </a></li>
+                <li class="visted-item"><a href="#">
+                        <img src="./images/ico-family.png" alt="">
+                        <span>민원</span>
+                        <span>서식자료실</span>
+                    </a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="section03 layout-margin-auto"></section>
+    <section class="section04">
+        <div id="section04-container" class="layout-margin-auto"></div>
+    </section>
+    <!-- <section class="section05 layout-margin-auto"></section> -->
+    <footer>
+        <div id="footer-container" class="layout-margin-auto"></div>
+    </footer>
+
+    <script>
+        const alink = document.querySelectorAll('a');
+        alink.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+            })
+        })
+    </script>
+</body>
+
+</html>

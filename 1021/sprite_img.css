@@ -1,0 +1,55 @@
+
+.bg-ico_burden {
+    width: 36px;
+    height: 33px;
+    background: url('./images/css_sprites.png') -10px -64px;
+}
+
+/* 
+.bg-ico_amount_money {
+    width: 37px; height: 34px;
+    background: url('css_sprites.png') -10px -10px;
+}
+*/
+.bg-ico_calculation {
+    width: 30px;
+    height: 35px;
+    background: url('./images/css_sprites.png') -10px -117px;
+}
+
+
+.bg-ico_checkups {
+    width: 34px;
+    height: 34px;
+    background: url('./images/css_sprites.png') -124px -10px;
+    /* background-img:url();
+    background-position: x y; */
+}
+
+
+.bg-ico_company_certificate {
+    width: 37px;
+    height: 33px;
+    background: url('./images/css_sprites.png') -67px -10px;
+}
+
+
+.bg-ico_company_form {
+    width: 36px;
+    height: 33px;
+    background: url('./images/css_sprites.png') -66px -64px;
+}
+
+
+.bg-ico_company_inquiry {
+    width: 34px;
+    height: 32px;
+    background: url('./images/css_sprites.png') -124px -64px;
+}
+
+
+.bg-ico_qualification {
+    width: 29px;
+    height: 34px;
+    background: url('./images/css_sprites.png') -60px -117px;
+}
