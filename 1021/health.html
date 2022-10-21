@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <!-- 80 * 12 + 20(gutter) * 11 = 1200 - 20 = 1180 
+        https://www.toptal.com/developers/css/sprite-generator
+    -->
+    <link rel="stylesheet" href="./style/quick_menu.css">
+    <style>
+        .layout-margin-auto {
+            width: 1180px;
+            margin: auto;
+        }
+
+        #header-container {
+            height: 120px;
+        }
+
+        /* 
+            확인 후 삭제
+        section{ height: 200px;}
+        section:nth-child(2n){ background-color: rgba(255, 0, 0, 0.617);}
+        #section04-container,
+        #footer-container
+        { background-color: aqua; height: 200px;} */
+
+        .section02{margin-bottom: 150px;}
+        
+        .visited-menu-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .visited-menu-container h2{
+            margin-right: 5px;
+        }
+
+        .select-button {
+            margin-right: auto;
+        }
+
+        .visited-menu-items {
+            padding: 20px;
+        }
+
+        /* 1180 - 20px * 2 = 안쪽 너비 */
+        .visted-menu {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .visted-menu li {
+            text-align: center;
+        }
+
+        /* img 가로 가운데 : inline 속성을 가지고 있으므로 텍스트 처럼 동작  */
+        .visted-menu span {
+            display: block;
+            margin: auto;
+
+        }
+
+        .visted-menu span:nth-child(1) {
+            background-color: rgb(232, 232, 232);
+            border-radius: 30px;
+        }
+
+        input[name='select-button'] {
+            display: none;
+        }
+
+        /* input[type='radio']{ display: none;}
+        input{ display: none;} */
+        .select-button label {
+            /* for 속성 중에 select 문자열을 포함한 것 */
+            display: block;
+            width: 100px;
+            height: 25px;
+            line-height: 22px;
+            text-align: center;
+            border: 1px solid gray;
+            border-radius: 15px;
+            float: left;
+        }
+
+        #select-button1:checked~label:nth-of-type(1) {
+            background-color: red;
+            color: white;
+        }
+
+        #select-button2:checked~label:nth-of-type(2) {
+            background-color: red;
+            color: white;
+        }
+
+        .more-btn{
+            padding: 10px; border: 1px solid black;
+            font-size: 14px;
+            border-radius: 8px;
+        }
+
+        .slider2-container{
+            width: 100%; height: 129px;
+            background-image: url(./images/@banner.png);
+            border-radius: 10px 50px 10px 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        .slider2-container>*{position: absolute;}
+        .slider2-control-btn{
+            width: 100%;
+            padding: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .left-btn{
+            width: 40px; height: 40px;
+            background-image: url(./images/arrow-slide-l.png);
+            background-size: cover;
+            color: transparent;
+        }
+        .right-btn{
+            width: 40px; height: 40px;
+            background-image: url(./images/arrow-slide-r.png);
+            background-size: cover;
+            color: transparent;
+        }
+
+        .slider2-text-container{
+            width: 100%; height: 129px;
+            text-align: center;
+            top: calc(-129px * 0);
+        }
+        .slider2-text-container>*{height: 129px; padding-top: 50px;}
+
+        .section03{margin-bottom: 150px;}
+
+        .section04{
+            background-color: rgb(227, 227, 227);
+            border-bottom: 1px solid gray;
+            padding: 70px 0;
+        }
+        
+        #section04-container{
+            display: flex;
+            flex-wrap: wrap;
+            gap: calc((1180px - (350px * 3)) / 2);
+        }
+
+        .box{
+            padding: 40px;
+            border: 1px solid black;
+            background-color: transparent;
+        }
+
+        .box01, .box02, .box03, .box05, .box06, .box07, .box08{width: 350px; }
+        .box04{width: calc((1180px - (350px * 3)) / 2 + 700px);}
+        .box09{width: 100%;}
+
+        .radius-left-top{
+            border-radius: 50px 20px 20px 20px;
+        }
+        .radius-right-top{
+            border-radius: 20px 50px 20px 20px;
+        }
+        .radius-right-bottom{
+            border-radius: 20px 20px 50px 20px;
+        }
+        .radius-left-bottom{
+            border-radius: 20px 20px 20px 50px;
+        }
+        .radius{
+            border-radius: 20px 20px 20px 20px;
+        }
+
+        .news-area a, .health-info a{
+            display: flex; justify-content: space-between;
+            border-bottom: 1px solid gray;
+            align-items: center;
+        }
+
+        .health-info h3{
+            margin-bottom: 30px;
+        }
+        .health-info li:nth-child(1) a{
+            border-top:  1px solid gray;
+        }
+
+        .quick-link a{
+            border-bottom: 1px solid white;
+        }
+        .quick-link{
+            background-color: rgb(6, 164, 133);
+        }
+        
+
+        footer {
+            height: 500px;
+            background-color: rgb(227, 227, 227);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="header-container" class="layout-margin-auto"></div>
+
+    </header>
+    <aside class="quick_menu"></aside>
+    <section class="section01 layout-margin-auto"></section>
+    <section class="section02 layout-margin-auto">
+        <div class="visited-menu-container">
+            <h2>방문자별 맞춤 메뉴</h2>
+            <div class="select-button">
+                <!-- 웹접근성에 적합한 기능을 만들기 위한 구조 -->
+                <input type="radio" name="select-button" id="select-button1" checked>
+                <input type="radio" name="select-button" id="select-button2">
+                <label for="select-button1" class="active">개인</label>
+                <label for="select-button2">사업장</label>
+            </div>
+            <a href="#" class="more-btn">더보기+</a>
+        </div>
+        <div class="visited-menu-items">
+            <ul class="visted-menu">
+                <li class="visted-item"><a href="#">
+                        <img src="./images/ico-amount-money.png" alt="">
+                        <span>자격득실</span>
+                        <span>확인서 발급</span>
+                    </a></li>
+                <li class="visted-item"><a href="#">
+                        <img src="./images/ico-burden.png" alt="">
+                        <span>보험료</span>
+                        <span>납부확인서</span>
+                    </a></li>
+                <li class="visted-item"><a href="#">
+                        <img src="./images/ico-calculation.png" alt="">
+                        <span>환급금</span>
+                        <span>조회/신청</span>
+                    </a></li>
+                <li class="visted-item"><a href="#">
+                        <img src="./images/ico-checkups.png" alt="">
+                        <span>보험료</span>
+                        <span>조회/납부</span>
+                    </a></li>
+                <li class="visted-item"><a href="#">
+                        <img src="./images/ico-company-certificate.png" alt="">
+                        <span>보험료</span>
+                        <span>계산기</span>
+                    </a></li>
+                <li class="visted-item"><a href="#">
+                        <img src="./images/ico-company-form.png" alt="">
+                        <span>재난적의료비</span>
+                        <span>지원안내</span>
+                    </a></li>
+                <li class="visted-item"><a href="#">
+                        <img src="./images/ico-company-inquiry.png" alt="">
+                        <span>건강검진</span>
+                        <span>대상조회</span>
+                    </a></li>
+                <li class="visted-item"><a href="#">
+                        <img src="./images/ico-edi.png" alt="">
+                        <span>가족</span>
+                        <span>건강관리</span>
+                    </a></li>
+                <li class="visted-item"><a href="#">
+                        <img src="./images/ico-family.png" alt="">
+                        <span>민원</span>
+                        <span>서식자료실</span>
+                    </a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="section03 layout-margin-auto">
+        <div class="slider2-page-container">
+            <span>1</span><span> / 4</span><span> ▶ </span>
+        </div>
+        <div class="slider2-container">
+            <div class="slider2-control-btn">
+                <span class="left-btn">left</span>
+                <span class="right-btn">right</span>
+            </div>
+            <div class="slider2-text-container">
+                <div class="slide2-text-item">
+                    <div>주택금융부채</div>
+                    <div>건강보험료 공제 시행</div>
+                </div>
+                <div class="slide2-text-item">
+                    <div>안녕하세요</div>
+                    <div>공단 홈페이지 방문을 환영합니다.</div>
+                </div>
+                <div class="slide2-text-item">
+                    <div>*</div>
+                    <div>나의 건강 보험료 알아보기</div>
+                </div>
+                <div class="slide2-text-item">
+                    <div>2022년 9월</div>
+                    <div>건강보험료 부과체계 2단계 개편 시행</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section04">
+        <div id="section04-container" class="layout-margin-auto">
+            <!-- 
+                (1180 - 350*3) / 2
+             -->
+            <div class="box box01 news-area radius-left-top">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span>공지사항</span><img src="./images/ico-amount-money.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>채용공고</span><img src="./images/ico-amount-money.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>보도공고</span><img src="./images/ico-amount-money.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>입찰공고</span><img src="./images/ico-amount-money.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>겨영공사</span><img src="./images/ico-amount-money.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- news-area end -->
+            <div class="box box02 health-info radius-right-top">
+                <h3>건강정보</h3>
+                <ul>
+                    <li>
+                        <a href="">
+                            <span>가까운 병원 찾기 &gt; </span>
+                            <img src="./images/ico-calculation.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>검진기관 찾기 &gt; </span>
+                            <img src="./images/ico-calculation.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>건강뉴스 &gt; </span>
+                            <img src="./images/ico-calculation.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>건강웹툰 &gt; </span>
+                            <img src="./images/ico-calculation.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- health-info end -->
+            <div class="box box03 quick-link radius-right-bottom"></div>
+            <!-- quick-link end -->
+            <div class="box box04 main-policy radius-left-top"></div>
+            <!-- main-policy end -->
+            <div class="box box05 banner-event-zone radius-right-bottom"></div>
+            <!-- banner-event-zone end -->
+            <div class="box box06 health-state radius-left-bottom"></div>
+            <!-- health-state end -->
+            <div class="box07">
+                <div class="box box71 organization radius-right-top"></div>
+                <div class="box box72 center-search radius-left-top"></div>
+            </div>
+            <!-- box7 end -->
+            
+            <div class="box box08 banner-marketing-zone radius-right-bottom"></div>
+            <!-- banner-marketing-zone end -->
+            <div class="box box09 news-hiwell radius"></div>
+            <!-- news-hiwell end -->
+        </div>
+        <!-- section04-container end -->
+    </section>
+    <!-- <section class="section05 layout-margin-auto"></section> -->
+    <footer>
+        <div id="footer-container" class="layout-margin-auto"></div>
+    </footer>
+
+    <script>
+        const alink = document.querySelectorAll('a');
+        alink.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+            })
+        })
+    </script>
+</body>
+
+</html>
