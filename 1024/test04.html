@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>breakPoint</title>
+
+    <style>
+        /* 데스크탑 퍼스트 */
+        /* 
+            max-width를 사용하며 모니터 사이즈는 내림차순으로 디자인
+        */
+        body{background-color: skyblue;}
+
+        @media screen and (max-width:1200px){
+            /* 1200px 최대사이즈 : 1200px 이하의 모니터인 경우 */
+            body{
+                background-color: red;
+            }
+        }
+        @media screen and (max-width:1024px){
+            body{
+                background-color: green;
+            }
+        }
+        @media screen and (max-width:480px){
+            /* 
+                브라우저의 최소 사이즈가 480 * 110% 정도임
+            */
+            body{
+                background-color: pink;
+            }
+        }
+        /* @media screen(기본 모니터) print(출력) 등등 지정 */
+    </style>
+</head>
+<body>
+    <!-- 
+        반응형 웹사이트를 만들 때 BreakPoint를 기점으로 나누어 제작하게 된다.
+
+        1920px은 비권장 만약 사용한다면 (100%) (100vw 쓰지마)
+        1200px > 1024px or 970px > 670px(휴대폰 가로 사이즈) > 480px or 320px 이런식으로
+     -->
+</body>
+</html>

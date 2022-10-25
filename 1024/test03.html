@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../style/reset.css">
+
+    <style>
+        /* 위에서 나타나기 */
+        .downShow {
+            height: 130px;
+            width: 300px;
+            overflow: hidden;
+            position: relative;
+            /* 마우스를 올리기 위한 공간디자인 */
+        }
+        .textBox{
+            width: 300px;
+            height: 0px;
+            position: absolute;
+            overflow: hidden;
+            left: 0; top: 0;
+            transition: 1s;
+            /* 보이고 숨기기 위한 공간 */
+        }
+        .text{font-size: 100px;}
+        .downShow:hover .textBox{height: 130px;}
+
+        /* 아래에서 나타나기 */
+        .upShow {
+            height: 130px;
+            width: 300px;
+            overflow: hidden;
+            position: relative;
+            /* 마우스를 올리기 위한 공간디자인 */
+        }
+        .maskBox {
+            width: 100%;
+            overflow: hidden;
+            position: absolute;
+            height: 0;
+            bottom: 0;
+            transition: 1s;
+        }
+        .upShow .text{
+            position: absolute;
+            bottom: 0;
+        }
+        .upShow:hover .maskBox{height: 130px;}
+
+    </style>
+</head>
+<body>
+    <div class="downShow">
+        <div class="textBox">
+            <div class="text">Mask Img Text</div>
+        </div>
+    </div>
+    <div class="upShow">
+        <div class="maskBox">
+            <div class="text">Mask Img Text</div>
+        </div>
+    </div>
+</body>
+</html>

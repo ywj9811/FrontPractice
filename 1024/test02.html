@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/box.css">
+    <style>
+        .box{margin: 50px;}
+        .outer{position: relative;}
+        .line{
+            background-color: red;
+            position: absolute;
+            transition: 1s;
+        }
+
+        .top{
+            width: 10px; height: 10px;
+            right: 0; top: 0;
+        }
+        .right{
+            width: 10px; height: 10px;
+            right: 0; top: 0;
+        }
+        .left{
+            width: 10px; height: 10px;
+            left: 0; bottom: 0;
+        }
+        .bottom{
+            width: 10px; height: 10px;
+            left: 0; bottom: 0;
+        }
+
+        .outer:hover .top{width: 100%;}
+        .outer:hover .right{height: 100%;}
+        .outer:hover .bottom{width: 100%;}
+        .outer:hover .left{height: 100%;}
+    </style>
+</head>
+<body>
+    <div class="outer box">
+        <div class="line top"></div>
+        <div class="line right"></div>
+        <div class="line bottom"></div>
+        <div class="line left"></div>
+    </div>
+</body>
+</html>

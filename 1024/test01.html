@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>line-animation</title>
+
+    <link rel="stylesheet" href="../style/reset.css">
+
+    <style>
+        .box{width: 150px; height: 40px; margin: 40px;}
+        .box a{
+            display: block;
+            background-color: skyblue;
+            line-height: 40px;
+            text-align: center;
+        }
+
+        .box01:hover a{ text-decoration: underline;}
+        .box02 a:hover{ text-decoration: underline;}
+        .box03:hover { text-decoration: underline;}
+        /* 3개 똑같은 일을 함 */
+
+        .box04:hover a{border-bottom: 3px solid black;}
+        
+        .box05 a{transition: 1s; border-bottom: 0px solid black;}
+        .box05:hover a{border-bottom-width: 5px;}
+        /* 세로로 두깨가 늘어나는 것은 애니메이션 필요 없다 */
+
+        .box06 span{display: block; width: 10px; height: 10px; 
+            background-color: red;
+            transition: 1s;
+        }
+        .box06:hover span{width: 100%;}
+        /* 
+        길이가 늘어나는 효과는 border가 아닌 다른 것이 필요(두깨임)
+        길이는 width를 이용하여 선처럼 보이도록 함
+        a를 직접 애니효과 주는 것이 아닌 추가 옵션이 필요
+        */
+        /* 
+            하지만 span과 같은 부가적인 구조를 사용하면 코드 가독성이 떨어짐
+            이를 위해서 가상클래스를 사용
+            ex) ::after, ::before
+        */
+        .box07 a::after{
+            content: '';
+            display: block;
+            width: 10px; height: 5px;
+            background-color: red;
+            transition: 1s;
+        }
+        .box07:hover a::after{
+            width: 100%;
+        }
+        
+        .box08 a::before{
+            content: '';
+            display: block;
+            width: 10px; height: 5px;
+            background-color: transparent;
+            transition: 1s;
+        }
+        .box08:hover a::before{
+            width: 100%;
+            background-color: red;
+        }
+        
+        .box09 a{
+            position: relative;
+        }
+        .box09 a::before{
+            content: '';
+            display: block;
+            width: 10px; height: 5px;
+            transition: 1s;
+            position: absolute;
+            background-color: red;
+            right: 0;
+        }
+        .box09:hover a::before{
+            width: 100%;
+        }
+        
+        .box10{
+            overflow: hidden;
+        }
+        .box10 a{
+            position: relative;
+        }
+        .box10 a::before{
+            content: '';
+            display: block;
+            width: 100%; height: 5px;
+            transition: 1s;
+            position: absolute;
+            background-color: red;
+            right: -100%;
+        }
+        .box10:hover a::before{
+            right: 0;
+        }
+
+
+        /* 세로로 길어지는 선 */
+        .box11 a{border-left: 2px solid red;}
+
+        .box12 a{border-left: 2px solid red;
+        transition: 1s;}
+        .box12:hover a{border-left-width: 10px;}
+        /* 이건 원하는 효과가 아님 */
+        
+        .box13 a::before {
+            content: '';
+            display: block;
+            width: 5px; height: 0px;
+            background-color: red;
+            transition: 1s;
+            position: absolute;
+            /* 
+            부모가 없어도 left, top을 지정하는 것이 아니기 때문에 기본 위치 0,0에 붙어있는 것 
+            사용하려면 마찬가지로 부모에 relative를 부여하면 된다.
+            */
+        }
+        .box13:hover a::before{
+            height: 40px;
+        }
+
+        .box14 a{
+            position: relative;
+        }
+        .box14 a::before {
+            content: '';
+            display: block;
+            width: 5px; height: 0px;
+            background-color: red;
+            transition: 1s;
+            position: absolute;
+            left: 0;
+            top: 100%;
+        }
+        .box14:hover a::before{
+            top: 0;
+            height: 40px;
+        }
+        .box14 a{
+            position: relative;
+        }
+        .box14 a::after {
+            content: '';
+            display: block;
+            width: 5px; height: 0px;
+            background-color: red;
+            transition: 1s;
+            position: absolute;
+            right: 0;
+            bottom: 100%;
+        }
+        .box14:hover a::after{
+            bottom: 0;
+            height: 40px;
+        }
+        
+        .box15{
+            position: relative;
+        }
+        .box15 a{
+            display: block;
+            height: 40px;
+        }
+        .box15 a::before {
+            content: '';
+            display: block;
+            width: 0%; height: 100%;
+            background-color: red;
+            position: absolute;
+            transition: 1s;
+        }
+        .box15:hover a::before{
+            width: 100%;
+        }
+        
+        .box16 a{
+            display: block;
+            width: 150px;
+            height: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .box16 span{
+            position: absolute;
+            display: block;
+            height: 40px;
+            width: 100%;
+        }
+        .box16 .spanBg{
+            background-color: orange; 
+            left: -100%;
+            transition: 1s;
+        }
+        .box16:hover .spanBg { left: 0;}
+        
+        .box17 a{
+            display: block;
+            width: 150px;
+            height: 40px;
+            position: relative;
+            /* overflow: hidden; */
+        }
+        .box17 span{
+            position: absolute;
+            display: block;
+            height: 40px;
+            width: 100%;
+        }
+        .box17 .spanBg{
+            background-color: orange; 
+            left: -150%;
+            transition: 1s;
+            transform: skewX(-30deg);
+            width: 200px;
+        }
+        .box17:hover .spanBg { left: -20%;}
+    </style>
+</head>
+<body>
+    <div class="box box01"><a href="">CLICK01</a></div>
+    <div class="box box02"><a href="">CLICK02</a></div>
+    <div class="box box03"><a href="">CLICK03</a></div>
+    <div class="box box04"><a href="">CLICK04</a></div>
+    <div class="box box05"><a href="">CLICK05</a></div>
+    <div class="box box06"><a href="">CLICK06</a><span></span></div>
+    <div class="box box07"><a href="">CLICK07</a></div>
+    <div class="box box08"><a href="">CLICK08</a></div>
+    <div class="box box09"><a href="">CLICK09</a></div>
+    <div class="box box10"><a href="">CLICK10</a></div>
+    <div class="box box11"><a href="">CLICK11</a></div>
+    <div class="box box12"><a href="">CLICK12</a></div>
+    <div class="box box13"><a href="">CLICK13</a></div>
+    <div class="box box14"><a href="">CLICK14</a></div>
+    <div class="box box15"><a href="">CLICK15</a></div>
+    <div class="box box16"><a href="">
+        <span class="spanBg"></span><span>CLICK16</span>
+    </a></div>
+    <div class="box box17"><a href="">
+        <span class="spanBg"></span><span>CLICK17</span>
+    </a></div>
+</body>
+</html>
