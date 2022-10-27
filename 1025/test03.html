@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../style/reset.css">
+    <style>
+        header{ width: 95%; height: 50px;
+            background-color: orange; 
+            border-radius: 10px;
+            margin: 40px auto;
+            padding:0 16px;
+        }
+        .bars{ display: none; line-height: 50px;
+            font-size:28px;
+        }
+        .header-container{ display: flex; justify-content: space-between;}
+        .lnb>ul{ display: flex; align-items: center; height: 50px;
+            gap:15px;
+        }
+         /*  메뉴 : bars 또는 글씨 메뉴 보임/숨김 선택 */
+         /*  데이타(콘텐츠)는 보임/숨김 선택하지 않음  */
+
+        .section01,
+        .section02,
+        .section03,
+        .section04{  height: 100vh; display: flex;
+            justify-content: center; align-items: center;
+        }
+
+        .section01-container,
+        .section02-container,
+        .section03-container,
+        .section04-container{ display: flex;
+            width: 1200px; height: 400px;
+            background-color: pink;
+        }
+        .section02-container{ background-color: antiquewhite;
+            gap:30px;
+        }
+        .items{ 
+            width: calc((1200px - 90px ) / 4);
+            text-align: center;
+            background-color: pink;
+            /*( 1200px - 90px ) / 4 */
+        }
+
+        .slider{ position: relative; width: 100%; 
+            background-color: skyblue; height:400px;
+            display: flex; justify-content: center;
+            align-items: center;
+        }
+        .ctrls{ position: absolute; font-size:28px;}
+        .ctrls{ top:50%; display: flex; justify-content: space-between;
+            width:100%; transform: translateY(-50%);
+        }
+
+        .slider-contents{ display: flex; gap:30px;}
+        .slider-content{ width: calc((1000px - 60px ) / 3);
+            height: 200px; background-color: pink;
+        }
+
+        .section04-container{gap:30px;}
+        .section04-left{ width: 55%; height: 400px; 
+            background-color: aqua;
+        }
+        .section04-right{ width: 45%; height: 400px; }
+        .section04-contents{ display: flex;
+            flex-direction: column; gap:30px;
+        }
+        .section04-content{ width:100%; height: calc( (400px - 60px ) / 3);
+            background-color: antiquewhite;
+        }
+        footer{ background-color: burlywood; 
+        }
+        .border{ border-bottom:1px solid black; 
+            height: 90px;
+        }
+        .footer-top{ width: 1200px; margin: auto;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }    
+
+        .familySite{ position: absolute; right: 0; top :20px; }
+        .footer-bottom{ width: 1200px; margin: auto;
+            height: 300px;
+            text-align: right;
+        }
+
+        @media screen and (max-width:1250px) {
+            header{ width:95%;}
+            /* 변경되는 디자인만 다시 디자인 */
+            .section01-container{ width:80%; }
+            .section02-container{ width:90%; }
+            .section03-container{ width:90%; }
+            .section04-container{ width:90%; }
+            .items{ width: calc((100% - 90px ) / 4);   }
+
+            .slider-contents{ width:100%; display: flex; justify-content: center; }
+            .slider-content{ width: calc((85% - 60px ) / 3); }
+
+
+            .footer-top{ width:100%; }
+            .footer-bottom{ width:100%; }
+        }
+
+        @media screen and (max-width:1024px) {
+            .bars{ display: block;}
+            .lnb{ display: none;}
+            .section01-container{ flex-direction: column;}
+            .section02-container{ flex-wrap: wrap; }
+            .items{ width: calc((100% - 30px ) / 2); 
+                    background-color: orange;
+            }
+
+            .section04-container{ flex-direction: column;}
+            .section04-left{ width: 100%;}
+            .section04-right{ width: 100%;}
+            .section04-content:nth-child(1){width: 50%; align-self: flex-start;}
+            .section04-content:nth-child(3){width: 50%; align-self: flex-end;}
+            /* 부모의 정렬과 상관 없이 자식 스스로의 위치를 지정  */
+        }
+        
+        @media screen and (max-width:760px) {
+            .slider-content{ width: calc((85% - 30px ) / 3); }
+            .slider-content:nth-child(3){ display: none;}
+            .section04-content:nth-child(1){width: 100%;  }
+            .section04-content:nth-child(3){width: 100%;  }
+            .familySite{ top :110px; }
+            .footer-bottom{text-align: left;}
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>ipet</h1>
+            <div class="bars"><i class='bx bx-menu'></i></div>
+            <nav class="lnb">
+                <ul>
+                    <li><a href="#">ipet스토리</a></li>
+                    <li><a href="#">ipet반려동물보험</a></li>
+                    <li><a href="#">커뮤니티</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="section01">
+        <div class="section01-container">
+            <div class="contants content01">content01</div>
+            <div class="contants content02">content02</div>
+            <div class="contants content03">content03</div>
+        </div>
+    </section>
+    <section class="section02">
+        <div class="section02-container">
+            <div class="items item01">item01</div>
+            <div class="items item02">item02</div>
+            <div class="items item03">item03</div>
+            <div class="items item04">item04</div>
+        </div>
+    </section>
+    <section class="section03">
+        <div class="section03-container">
+            <div class="slider">
+                <div class="ctrls">
+                    <div class="left-btn">
+                        <i class='bx bx-caret-left-circle'></i>
+                    </div>
+                    <div class="right-btn">
+                        <i class='bx bx-caret-right-circle'></i>
+                    </div>
+                </div>
+                <div class="slider-contents">
+                    <div class="slider-content">content1</div>
+                    <div class="slider-content">content2</div>
+                    <div class="slider-content">content3</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section04">
+        <div class="section04-container">
+            <div class="section04-left">자주 묻는 질문</div>
+            <div class="section04-right">
+                <div class="section04-contents">
+                    <div class="section04-content">content1</div>
+                    <div class="section04-content">content2</div>
+                    <div class="section04-content">content3</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-top">  
+            <ul>
+                <li><a href="#">개인정보처리방침</a></li>
+            </ul>
+            <div class="familySite"> Family Site </div>
+        </div>
+        <div class="border"></div>
+        <div class="footer-bottom"> 다이렉트 고객센터</div>
+    </footer>
+</body>
+</html>

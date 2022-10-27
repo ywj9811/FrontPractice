@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../style/reset.css">
+
+    <style>
+        header {
+            width: 95%; height: 50px;
+            background-color: orange;
+            border-radius: 10px;
+            margin: 40px auto;
+        }
+
+        .bars{ display: none; line-height: 50px;}
+        .header-container{ display: flex; justify-content: space-between;}
+        .lnb>ul{display: flex; align-items: center; height: 50px; gap: 15px;}
+
+        @media screen and (max-width: 1024px){ 
+            .bars{ display: block;}
+            .lnb { display: none;}
+            /* 변형되는 디자인만 다시 디자인 하는 것이다. */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>ipet</h1>
+            <div class="bars"><i class='bx bx-menu'></i></div>
+            <nav class="lnb">
+                <ul>
+                    <li><a href="#">ipet스토리</a></li>
+                    <li><a href="#">ipet반려동물보험</a></li>
+                    <li><a href="#">커뮤니티</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</body>
+</html>
