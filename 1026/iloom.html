@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>layout2</title>
+        <link rel="stylesheet" href="../style/reset.css">
+
+        <style>
+            body{font-size: 12px;}
+            /* body{
+                display: flex;
+                justify-content: center;
+            } */
+            /* flex를 사용하면 내부에 컨텐츠가 없다면 자동으로 가로 스크롤바가 없게 줄어든다 */
+            .container{
+                width: 1200px; margin: auto;
+                display: flex;
+            }
+
+            /* .container>*{float: left;} */
+            header{width: 240px;
+                /* float: left; */
+            }
+            section{
+                /* margin-left: 300px;
+                margin-right: 300px; */
+                /* margin: 0 228px 0 240px; */
+                /* 이 부분은 기본적으로 너비가 지정이 되어있지 않기 때문에 100%를 가져가는데 margin을 통해 양 옆을 지정했으니 화면이 줄어들면 orange색이 줄어들게 된다 */
+                width: calc(100% - 280px - 240px);
+            }
+            aside{
+                width: 228px;
+                top: 0; right: 0;
+            }
+            /*                          header design                           */
+            /* h1{font-size: 0;} */
+            h1{
+                color: rgba(255, 0, 0, 0.692);
+                height: 240px;
+                display: flex; justify-content: center;
+                align-items: center;
+                outline: 5px solid rgba(255, 0, 0, 0.692);
+                outline-offset: -10px;
+            }
+
+            .lnb{ padding: 10px;}
+            .lnb li{ border-bottom: 1px solid gray;}
+            .lnb a{display: block; padding: 10px 0;}
+            .lnb a:hover{ text-align: center;
+                background-color: rgba(255, 0, 0, 0.692);
+                color: white;
+            }
+
+            .search-box{padding: 10px;}
+            #search {
+                border: 5px solid rgba(255, 0, 0, 0.692);
+                padding: 10px 10px 8px 10px; width: 100%;
+                background-image: url(./images/btn_search.png);
+                background-repeat: no-repeat;
+                background-position: right center;
+            }
+            /* input 태그는 너비, 기본 디자인 적용이 안되는 경우가 많다 */
+
+            .header-title-box{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-transform: uppercase;
+                font-size: 8px;
+                padding: 10px;
+            }
+
+            .color-product-items>ul {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .color-product-items>ul>li {padding: 5px;}
+            .color-prouct-box, .event-box, .new-box{margin-bottom: 15px; padding: 10px;}
+
+            .new-item-title{margin-bottom: 10px;}
+            .new-item-title>h3{margin-bottom: 10px;}
+
+            /*                                      section design                   */
+            .slider-box{width: 100%;}
+            .slider-box img{width: 100%;}
+            /* 이미지를 부모의 너비의 %를 해야 함께 줄어들게 된다. */
+            .main-product-list-box>ul {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .youtube-movie {
+                display: flex;
+                gap: 10px;
+            }
+            .video-box {width: 50%;}
+            .video-box video{width: 100%;}
+            .video-box span{display: block;}
+
+            /*                                  aside design                        */
+            aside{ display: flex; flex-direction: column;}
+            aside img{width: 100%;}
+            
+            @media screen and (max-width:1240px) {
+                .container{ width: 100%; }
+            }
+            @media screen and (max-width:970px) {
+                .container{flex-wrap: wrap;}
+                section{
+                    /* margin: 0 0 0 240px; */
+                    /* 970px로 줄어들면 section부분이 더이상 줄지않고 왼쪽 여백만 남기고 오른쪽 부분을 아래로 내려버린다 */
+                    width: calc(100% - 240px);
+                }
+                aside{ 
+                    width: calc(100% - 240px);
+                    width: auto;
+                    flex-direction: row;
+                    margin-left: 240px;
+                /* position을 다시 기본인 static으로 돌려버림 */
+                }
+            @media screen and (max-width:480px) {
+                header{position: static; width: 100%;}
+                section{margin: 0;}
+                aside{ margin:0;}
+                .lnb ul{display: flex; flex-wrap: wrap;}
+                .lnb li{width: 33.333333%;}
+                .lnb li:nth-child(1),
+                .lnb li:nth-child(2),
+                .lnb li:nth-child(3) {
+                    border-top: 1px solid gray;
+                }
+                .lnb li:nth-child(1),
+                .lnb li:nth-child(2),
+                .lnb li:nth-child(4), 
+                .lnb li:nth-child(5){
+                    border-right: 1px solid gray;
+                }
+                .lnb a{text-align: center;}
+                .new-items-box img{width: 100%;}
+                .youtube-movie{flex-direction: column;}
+                .video-box{width: 100%;}
+
+                aside{flex-wrap: wrap;}
+                aside>div{width: calc(50% - 5px);}
+
+                section{width: 100%; margin: 0;}
+                aside{width: 100%; margin: 0;}
+            }
+        }
+        footer{
+            height: 40vh;
+            background-color: gray;
+        }
+        </style>
+    </head>
+    <body>
+        <!-- position 사용해보자 -->
+        <div class="container">
+            <header>
+                <h1>
+                    iloom
+                </h1>
+                <nav class="lnb">
+                    <ul>
+                        <li><a href="#">E-SHOP</a></li>
+                        <li><a href="#">NEW-PRODUCT</a></li>
+                        <li><a href="#">WEB CATALOG</a></li>
+                        <li><a href="#">MAGAZINE</a></li>
+                        <li><a href="#">COMMUNITY</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </nav>
+                <div class="search-box">
+                    <input type="text" name="search" id="search" placeholder="검색어를 입력하세요">
+                    <!-- 
+                        id : #search
+                        class : .search
+                        name : input[name='search']
+                     -->
+                </div>
+                <div class="color-product-box">
+                    <div class="header-title-box">
+                        <h2>color-product</h2>
+                        <span><img src="./images/btn_more.png" alt=""></span>
+                    </div>
+                    <div class="color-product-items">
+                        <ul>
+                            <li><a href="#"><img src="./images/f_icon_001.png" alt=""></a></li>
+                            <li><a href="#"><img src="./images/f_icon_002.png" alt=""></a></li>
+                            <li><a href="#"><img src="./images/f_icon_003.png" alt=""></a></li>
+                            <li><a href="#"><img src="./images/f_icon_004.png" alt=""></a></li>
+                            <li><a href="#"><img src="./images/f_icon_005.png" alt=""></a></li>
+                            <li><a href="#"><img src="./images/f_icon_006.png" alt=""></a></li>
+                            <li><a href="#"><img src="./images/f_icon_007.png" alt=""></a></li>
+                            <li><a href="#"><img src="./images/f_icon_008.png" alt=""></a></li>
+                            <li><a href="#"><img src="./images/f_icon_009.png" alt=""></a></li>
+                            <li><a href="#"><img src="./images/f_icon_010.png" alt=""></a></li>
+                            <li><a href="#"><img src="./images/f_icon_011.png" alt=""></a></li>
+                            <li><a href="#"><img src="./images/f_icon_012.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="event-box">
+                    <div class="header-title-box">
+                        <h2>evnet</h2>
+                        <span><img src="./images/btn_more.png" alt=""></span>
+                    </div>
+                    <div class="event-text-box">
+                        국민카드와 함께 하는 캐쉬백 이트윈 모션 베드 구매고객 대상 추구맥대별 사은품이 쏟아지는
+                    </div>
+                </div>
+                <div class="new-box">
+                    <div class="header-title-box">
+                        <h2>what's new</h2>
+                        <span><img src="./images/btn_more.png" alt=""></span>
+                    </div>
+                    <div class="new-items-box">
+                        <div><img src="./images/new_product01.jpg" alt=""></div>
+                        <div class="new-item-title">
+                            <h3>드라마 "도깨비" 은탁의 방</h3>
+                            <div>은탁의 집을 아늑하게 채우는 아르지안 시리즈의 가구들</div>
+                        </div>
+                        <div><img src="./images/new_product02.jpg" alt=""></div>
+                        <div class="new-item-title">
+                            <h3>트윈 모션베드, 아르지안</h3>
+                            <div>은탁의 집을 아늑하게 채우는 아르지안 시리즈의 가구들</div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section>
+                <div class="slider-box">
+                    <div class="slider-img">
+                        <div><img src="./images/bn_main_00.jpg" alt=""></div>
+                    </div>
+                </div>
+                <div class="main-product-box">
+                    <div class="header-title-box">
+                        <h2>iloom-Product</h2>
+                        <span><img src="./images/btn_more.png" alt=""></span>
+                    </div>
+                    <div>
+                        -당신만의 감각과 스타일, 마음까지도 하나
+                    </div>
+                    <div class="main-product-list-box">
+                        <ul>
+                            <li><a href="#">
+                                <img src="./images/list_product_01.png" alt="">
+                                <span>세타(GR)</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="./images/list_product_01.png" alt="">
+                                <span>세타(GR)</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="./images/list_product_01.png" alt="">
+                                <span>세타(GR)</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="./images/list_product_01.png" alt="">
+                                <span>세타(GR)</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="./images/list_product_01.png" alt="">
+                                <span>세타(GR)</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="./images/list_product_01.png" alt="">
+                                <span>세타(GR)</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="./images/list_product_01.png" alt="">
+                                <span>세타(GR)</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="./images/list_product_01.png" alt="">
+                                <span>세타(GR)</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="./images/list_product_01.png" alt="">
+                                <span>세타(GR)</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="./images/list_product_01.png" alt="">
+                                <span>세타(GR)</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="./images/list_product_01.png" alt="">
+                                <span>세타(GR)</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="./images/list_product_01.png" alt="">
+                                <span>세타(GR)</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="./images/list_product_01.png" alt="">
+                                <span>세타(GR)</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="./images/list_product_01.png" alt="">
+                                <span>세타(GR)</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="./images/list_product_01.png" alt="">
+                                <span>세타(GR)</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="./images/list_product_01.png" alt="">
+                                <span>세타(GR)</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="./images/list_product_01.png" alt="">
+                                <span>세타(GR)</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="./images/list_product_01.png" alt="">
+                                <span>세타(GR)</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="./images/list_product_01.png" alt="">
+                                <span>세타(GR)</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="./images/list_product_01.png" alt="">
+                                <span>세타(GR)</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="./images/list_product_01.png" alt="">
+                                <span>세타(GR)</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="./images/list_product_01.png" alt="">
+                                <span>세타(GR)</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="./images/list_product_01.png" alt="">
+                                <span>세타(GR)</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="./images/list_product_01.png" alt="">
+                                <span>세타(GR)</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="./images/list_product_01.png" alt="">
+                                <span>세타(GR)</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="./images/list_product_01.png" alt="">
+                                <span>세타(GR)</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="./images/list_product_01.png" alt="">
+                                <span>세타(GR)</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="youtube-cf-box">
+                    <div class="header-title-box">
+                        <h2>Youtube</h2>
+                        <span><img src="./images/btn_more.png" alt=""></span>
+                    </div>
+                </div>
+                <div>- iloom CF</div>
+                <div class="youtube-movie">
+                    <div class="video-box">
+                        <!-- 만약 영상이 깨지면 poster로 설정된 사진이 나오게 된다 -->
+                        <!-- 
+                            loop는 반복 muted는 기본적으로 음소거 상태 시작
+                            autoplay는 자동 시작 controls는 아래 상태바를 통해 조작 가능하게
+                        -->
+                        <video poster="./images/bn_main_01.jpg" loop muted autoplay controls>
+                            <source src="./images/iloom_20160627.mp4">
+                        </video>
+                        <div>
+                            <span>[2016.06.27]</span>
+                            <span>2022 가구를 만듭니다. 일룸|움직이는 가구 편</span>
+                        </div>
+                    </div>
+                    <div class="video-box">
+                        <video poster="./images/bn_main_02.jpg" loop muted autoplay controls>
+                            <source src="./images/iloom_20170101.mp4">
+                        </video>
+                        <div>
+                            <span>[2016.06.27]</span>
+                            <span>2022 가구를 만듭니다. 일룸|움직이는 가구 편</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <aside>
+                <div><img src="./images/event_01_off.png" alt=""></div>
+                <div><img src="./images/event_02_off.png" alt=""></div>
+                <div><img src="./images/event_03_off.png" alt=""></div>
+                <div><img src="./images/event_04_off.png" alt=""></div>
+            </aside> 
+        </div>
+        <footer></footer>
+    </body>
+</html>
