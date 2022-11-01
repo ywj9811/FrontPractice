@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <style>
+        /* body{display: flex;} */
+        header{width: 300px; height: 100vh; background-color: pink; 
+            position: fixed; left: 0; top: 0;}
+            /* fixed를 통해 해당 부분은 계속 고정으로 */
+        .container{width: calc(100% - 300px); margin-left: 300px;}
+        nav{height: 30px; background-color: black;}
+        section{ background-color: skyblue;}
+
+        article{
+            height: 260px; width: calc(100% / 5); 
+            border: 1px solid black;
+            float: left;
+        }
+        .art01{width: calc((100% / 5) * 3); height: 520px;
+            background-image: url(./images/frontend_2);
+            background-size: cover;
+        }
+        .art02{width: calc((100% / 5) * 2);}
+        .art06{width: calc((100% / 5) * 2);}
+        .art09{width: calc((100% / 5) * 2);}
+        @media screen and (max-width:1600px) {
+            /* body{flex-direction: column;} */
+            header{width: 100%; height: 10vh;
+                position: static;
+            }
+            .container{width: 100%; margin-left: 0;}
+        }
+        
+        @media screen and (max-width:1200px) {
+            article{ width: calc(100% / 4);}
+            .art01{width: calc((100% / 4) * 3);}
+            .art02{width: calc((100% / 4));}
+            .art06{width: calc((100% / 4) * 2);}
+            .art07{width: calc((100% / 4) * 2);}
+            .art10{width: calc((100% / 4) * 2);}
+            .art09{width: calc((100% / 4));}
+        }
+        
+        @media screen and (max-width:970px) {
+            article{ width: calc(100% / 3);}
+            .art01{width: 100%;}
+            
+            .art02{width: calc((100% / 3) * 2);}
+            .art05{width: calc((100% / 3) * 2);}
+
+            .art06{width: calc((100% / 3));}
+            .art07{width: calc((100% / 3));}
+            .art08{width: calc((100% / 3));}
+            .art09{width: calc((100% / 3));}
+            
+            .art10{display: none;}
+        }
+       
+        @media screen and (max-width:600px) {
+            article{ width: 50%;}
+
+            .art02{width: 100%;}
+            .art05{width: 50%;}
+
+            .art06{width: 50%;}
+            .art07{width: 50%;}
+            .art08{width: 50%;}
+            .art09{width: 50%;}
+            .art10{width: 50%; display: block;}
+        }
+        
+
+        @media screen and (max-width:480px) {
+            header{ height: 100vh;
+                position: fixed;
+                width: 100%;
+                background-color: rgba(255, 192, 203, 0);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }            
+            nav{display: none;}
+            .art01{width: 100%; height: 100vh;}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hotel</h1>
+    </header>
+    <div class="container">
+        <nav></nav>
+        <section class="clearFix">
+            <article class="art01">article01</article>
+            <article class="art02">article02</article>
+            <article class="art03">article03</article>
+            <article class="art04">article04</article>
+            <article class="art05">article05</article>
+            <article class="art06">article06</article>
+            <article class="art07">article07</article>
+            <article class="art08">article08</article>
+            <article class="art09">article09</article>
+            <article class="art10">article10</article>
+            <article class="art11">article11</article>
+            <article class="art12">article12</article>
+        </section>
+    </div>
+</body>
+</html>

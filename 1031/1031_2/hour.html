@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/common.css">
+    <link rel="stylesheet" href="./style/hour.css">
+    <style>
+        .hourTable{ width: 900px; margin: auto;
+            border-collapse: collapse;
+        }
+        .hourTable td, 
+        .hourTable th{ border: 1px solid black; height: 40px;
+            padding:10px;
+        }
+
+        @media screen and (max-width:1200px) {
+            
+        }
+        
+        @media screen and (max-width:970px) {
+            .hourTable{ width: 98%;}
+        }
+        @media screen and (max-width:480px) {
+            .hourTable th span{ display: block;}
+            .hourTable td span{ display: none;}
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="./index.html">logo</a></h1>
+        <nav class="lnb">
+            <ul>
+                <!-- <li><a href="#about">about</a></li>
+                <li><a href="#menu">메뉴</a></li> -->
+                <li><a href="./hour.html">운영시간</a></li>
+                <li><a href="./reservation.html">예약</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>hour</h2>
+         
+        <table class="hourTable">
+            <caption>
+                제철 식재료에 따라 메뉴와 가격이 바뀔 수 있습니다.
+            </caption>
+            <thead>
+                <tr>
+                    <th><i class='bx bxs-bowl-hot'></i> <span>코스</span></th>
+                    <th><i class='bx bxs-popsicle' ></i> <span>메뉴명</span></th>
+                    <th><i class='bx bxs-baguette' ></i> <span>가격</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th rowspan="3">만찬코스</th>
+                    <td>진어별<span>마찬</span></td>
+                    <td>180000원/1인</td>
+                </tr>
+                <tr>
+                    <!-- <td></td> -->
+                    <td>진어별<span>마찬</span></td>
+                    <td>180000원/1인</td>
+                </tr>
+                <tr>
+                    <!-- <td></td> -->
+                    <td>진어별<span>마찬</span></td>
+                    <td>180000원/1인</td>
+                </tr>
+                <tr>
+                    <th rowspan="4">정찬세트</th>
+                    <td>소갈비구이<span>수라</span></td>
+                    <td>80000원/1인</td>
+                </tr>
+                <tr>
+                    <td>소갈비구이<span>수라</span></td>
+                    <td>80000원/1인</td>
+                </tr>
+                <tr>
+                    <td>소갈비구이<span>수라</span></td>
+                    <td>80000원/1인</td>
+                </tr>
+                <tr>
+                    <td>소갈비구이<span>수라</span></td>
+                    <td>80000원/1인</td>
+                </tr>
+
+            </tbody>
+            <tfoot>
+                예약 주문은 <a href="./reservation.html">예약</a>사이트를 확인하세요.
+            </tfoot>
+        </table>
+    </section>
+    <a href="#" id="top-btn">맨위로</a>
+    <footer></footer>
+
+</body>
+</html>
