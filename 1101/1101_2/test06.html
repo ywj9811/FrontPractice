@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제어문</title>
+</head>
+<body>
+    <h1>제어문 : if</h1>
+    <div>
+        if(조건문){
+            조건문 == true  처리할 명령어;
+        }else{
+            조건문 == false  처리할 명령어;
+        }
+
+        // 처리한 명령어가 한개라면  {코드 브레이스} 를 생략할 수 있음
+    </div>
+    <script>
+        // 나이를 성인이면 입장, 미성년자면 입장 불가
+
+        let age = prompt('나이를 입력하세요');
+        // prompt , 그외의 js로 입력된 데이터는 문자이므로 필요한 처리를 해야함
+        // '20'
+
+        // if( parseInt(age) === 20 )
+        //     console.log('성인식 ');
+        // else
+        //     console.log('20살만 입장 가능 합니다.');
+
+        if( age == 20 ) // 데이터 타입을 비교하지 않으므로 숫자로 변경하지 않아도 상관 없음 
+            console.log('성인식 ');
+        else
+            console.log('20살만 입장 가능 합니다.');
+        
+    </script>
+</body>
+</html>

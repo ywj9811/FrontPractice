@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제어문</title>
+</head>
+<body>
+    <h1>제어문 : if</h1>
+    <div>
+        if(조건문){
+            조건문 == true  처리할 명령어;
+        }else{
+            조건문 == false  처리할 명령어;
+        }
+
+        // 처리한 명령어가 한개라면  {코드 브레이스} 를 생략할 수 있음
+    </div>
+    <script>
+        // 아이디가 정상적으로 존재하면 로그인, 존재하지 않으면 확인하세요. 
+
+        let userId = window.prompt('아이디를 입력하세요');
+
+        if( userId == 'test01')
+            console.log('고객님 환영합니다.');
+        else
+            console.log('아이디를 확인하세요.');
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>함수:function</h1>
+    <div>
+        함수 하나에 하나의 작업만 하도록 제작
+
+        function    함수명(파라미터, ... ){
+            // 처리 
+            return 값; 
+        }
+
+        함수명 : 생성자 함수로 사용될 것이면 첫글자 대문자( 자바의 클래스 )
+        파라미터 : 개수 많을수록 불편한 함수, 생략할 수 있다. 
+        return : 값은 1개만 리턴, 리턴도 생략 할 수 있다. 
+
+        // 다른 개발자, 학생도 함수 개발해서 어딘가에 공유가능 : npm
+        // animate.css 
+    </div>
+    <script>
+        let result = add( 10, 20); // 30
+        console.log(result);
+
+        function  add(a, b){ // a = 10, b = 20  // a = 'a', b = 10
+            return a+b; // 30 // 'a' + 10 = a10
+        }
+
+        let result2 = add( 'a', 10);
+        console.log( result2);
+
+        // 파라미터 생략 
+        function subtract(){
+            // let num1 = 10; 
+            // let num2 = 20; 
+            return  num1 - num2;
+        }
+
+        var num1 = 10; 
+        var num2 = 5; 
+
+        let result3 = subtract();
+        console.log(result3);
+
+        function myName(){
+            console.log( 'kim');
+        }
+
+        myName();
+
+    </script>
+</body>
+</html>

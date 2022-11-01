@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{ }
+        h1:nth-child(1){}
+    </style>
+    <script>
+        // dom 을 모두 읽고 처리하도록 해주어야 함 
+        // script를 최후에 실행하도록 처리해야 함 
+    </script>
+</head>
+<body>
+    <h1> 입력(input) </h1>
+    <h2> js 데이터 </h2>
+    <div>
+        숫자, 문자, 논리형, undefined, NaN, Null, Array, function, objec, class ...
+
+        변수 : 데이터를 저장하는 공간(메모리)
+        <ul>
+            <li> 첫글자는 숫자를 제외한 나머지 언어로 시작 </li>
+            <li> var 전역변수 처럼 사용 : 
+                같은 이름의 변수를 여러번 선언해도 에러가 발생하지 않음 <br>
+                프로젝트가 커지면 중복 현상으로 오류를 해결하지 못할 수도 있음    
+            </li>
+            <li> let : var 문제를 해결하는 방법
+                <br> 변수를 중복 선언시 오류 발생
+            </li>
+            <li> const :  상수선언 </li>
+            <li> const 남자 = true; </li>
+            <li> const 여자 = false; </li>
+            <li>
+                변수명을  한글로 사용할 수 있으나 사용하지 않음 
+            </li>
+        </ul>
+    </div>
+    <script>
+         var num;
+         num = 10;
+         var num = 10; 
+         var num = 20;
+         console.log(num);
+
+         let num_let = 30;
+         console.log(num_let);
+
+         num = 'hello';
+         console.log(num);
+
+         num_let = 'javascript';
+         console.log( num_let );
+
+         // var, let 사용법과 선언 방법만 같음
+         const num_const = 40;
+         console.log(num_const);
+         // num_const = 'my num';
+
+         const fontSize = 40; 
+         // 상수 : 값에 별명을 짖어서 오류를 손쉽게 찾을 수 있도록 하는 방법
+        //  const fontSize = 50; 
+         const height = 40; 
+         console.log( fontSize );
+
+         const bodyFontsize = fontSize; 
+         // 변수명 중복 제외, 
+         // 값의 특이성에 따라 다른 이름 사용
+         console.log("bodyFontsize = ", bodyFontsize);
+    </script>
+</body>
+</html>

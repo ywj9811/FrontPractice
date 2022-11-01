@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./script/user.js"></script>
+    <script src="./script/mylog.js"></script>
+    <script>
+        //  const date = {
+        //     year : '',
+        //     month : '',
+        //     day : '',
+        //     getFullYear : function (){
+        //         return year; 
+        //     }
+        //  }
+         mylog(new Date());
+        
+         const today = new Date();
+         mylog( today );
+         mylog( today.getFullYear() );
+         mylog( today.getMonth() + 1 );
+         mylog( today.getDate()  );
+         mylog( today.getDay()  );
+
+         var weekday = 0; 
+         if( today.getDay() == 0 ){  weekday = '일'   }
+         else if( today.getDay() == 1 ){  weekday = '월'   }
+         else if( today.getDay() == 2 ){  weekday = '화'   }
+         else if( today.getDay() == 3 ){  weekday = '수'   }
+         else if( today.getDay() == 4 ){  weekday = '목'   }
+         else if( today.getDay() == 5 ){  weekday = '금'   }
+         else if( today.getDay() == 6 ){  weekday = '토'   }
+
+         mylog( weekday + '요일');
+    </script>
+    <!-- 
+        함수 : 기능 만들어 둔 것 
+        모듈
+        모듈 여러개 = 라이브러리
+        프레임워크
+     -->
+</body>
+</html>

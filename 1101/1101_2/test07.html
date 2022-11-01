@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제어문</title>
+</head>
+<body>
+    <h1>제어문 : if</h1>
+    <div>
+        if(조건문){
+            조건문 == true  처리할 명령어;
+        }else{
+            조건문 == false  처리할 명령어;
+        }
+
+        if(조건식){
+            조건문 == true  처리할 명령어;
+        }
+
+        if(조건식1){
+            조건식1 == true  처리할 명령어;
+        }else  if(조건식2){
+            조건식1 == false, 조건식 2 == true 처리할 일
+        }else  if(조건식3){
+            조건식1 == false, 조건식 2 == false, 조건식3 == true 처리할 일
+        }...
+    </div>
+    <script src="./script/mylog.js"></script>
+    <!-- 모듈을 가지고 옴 : import  -->
+    <script>
+        // 90 >= A, 80 >= B, 70 >= C, 60 >= D , 59 <= F
+
+        let grade = prompt('점수를 입력하세요.');
+        
+        if( grade>=90 ){
+            console.log( 'A학점');
+        }else if( grade>=80 ){
+            console.log( 'B학점');
+        }else if( grade>=70 ){
+            console.log( 'C학점');
+        }else if( grade>=60 ){
+            console.log( 'D학점');
+        }else{
+            console.log( 'F학점');
+        }
+
+        let hakjum = 'F';
+        if( grade>=90 ){
+            hakjum = 'A';
+        }else if( grade>=80 ){
+            hakjum = 'B';
+        }else if( grade>=70 ){
+            hakjum = 'C';
+        }else if( grade>=60 ){
+            hakjum = 'D';
+        }else{
+            hakjum = 'F';
+        }
+        console.log( hakjum + '학점');
+
+        function  hakjumFun( grade ){ // 33line의 grade와 상관 없는 변수
+            let hakjum = 'F';
+            if( grade>=90 ){
+                hakjum = 'A';
+            }else if( grade>=80 ){
+                hakjum = 'B';
+            }else if( grade>=70 ){
+                hakjum = 'C';
+            }else if( grade>=60 ){
+                hakjum = 'D';
+            }else{
+                hakjum = 'F';
+            }
+
+            return hakjum; 
+        }
+
+        // 함수로 만들어 둔것 : 모듈(부품), 재사용성이 높아진다. 개발속도가 빨라진다.
+        console.log(hakjumFun( grade )); // 33line에서 입력받은 값
+        console.log(hakjumFun( 90 )); //  
+        console.log(hakjumFun( 88 )); //  
+        mylog( hakjumFun(76)) ;
+        mylog( hakjumFun(56)) ;
+        mylog( hakjumFun(66)) ;
+    </script>
+</body>
+</html>

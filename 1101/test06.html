@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <style>
+
+    </style>
+</head>
+<body>
+     <!--
+        낱개 데이타 
+
+        변수, 상수(숫자, 문자, 논리형 데이타),
+        undefined : 데이터가 정의 되지 않음
+        null : 값이 빔, 즉 데이터는 정의 되었고 빈값
+        NaN : Not a Number
+        Infinity : 0으로 나눈 값 
+
+        true : 암묵적 true,  0 아닌 숫자, 문자
+        false : 암묵적 false, 0, undefined,null,NaN,Infinity
+
+        typeof : 데이터 타입을 확인하는 연산자
+        number 숫자
+        string 문자
+        boolean true, false
+        object  null : 오류 
+
+        그룹 데이타 
+        배열, 오브젝트, 함수, 클래스
+
+        var a, b, c, d, e; 
+        var aryNum = []; // 여러개 만들 준비
+        var aryNum = [0, 1, 2 ,3 ,4]; // 5개를 만들어서 값을 초기화
+        javascript 의 배열은 c, java의 배열과 완전히 다름
+        배열 : 동일한 데이터 타입을 연속적인 메모리에 저장하는 메모리
+        탐색 시간을 절약하기 위한 방법이나 js는 탐색절약과 상관 없음 
+        공통적인 데이터를 사용하기 위한 방법일 뿐
+       -->
+
+    <script>
+        let num ; 
+        console.log( num );
+
+        let num2 = null ; 
+        console.log( num2);
+
+        console.log( 10/'a');
+        console.log( 10/0);
+
+        console.log( typeof 0 );
+        console.log( typeof 22 );
+        console.log( typeof '22' );
+        console.log( typeof undefined );
+        console.log( typeof null );  // 초기 js 오류, 
+        console.log( !true );
+        console.log(!undefined );
+        console.log( typeof !undefined );
+        //                   
+        console.log( !null );
+        console.log( !!null );
+        console.log( `!-22 = ${!-22}` );
+        console.log( `!!22 = ${!!22}` ); 
+        console.log( `!'hello' = ${!'hello'}` );
+
+        const ary = [ 1,2,3,4,5];
+        console.log(ary[4]);
+        const aryStr = [ 'a', 'b', 'c', 'd'];
+        console.log(aryStr[4]);
+
+        const aryData = [ 1, true, false, 'hello' , null];
+        //js 동일한 데이타 타입으로 저장하지 않아도 됨 
+        console.log(aryData[4]);
+        console.log(aryData[2]);
+    </script>
+</body>
+</html>
