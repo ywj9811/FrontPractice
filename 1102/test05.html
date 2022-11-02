@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1"></h1>
+    <script>
+        // 1s = 1000
+
+        let today = new Date().getSeconds();
+        //document.getElementById('h1').innerHTML = today; 
+
+        let count = 0; 
+        const timer = setInterval( function(){
+            count++;
+            if( count >= 1000 ){ clearInterval( timer ); }
+            document.getElementById('h1').innerHTML = `${count}`.padStart( 4, '0'); 
+            // padStart는 문자열 제어하는 것이라  count 숫자로 에러 
+            // count 강제로 문자로 만든 후 보정 함 
+        }, 10)
+        // 지연시간으로 속도 조절 
+
+        // 34.12345346 소수를 정수만 표현, 소수점자리를 지정하는 방법은 별도 
+        // npm, github에서 가져다 사용하는 것은 시간이 걸리므로
+        // codepen 회원가입 해두세요.
+        // repl 
+        // 반복제어: for
+    </script>
+</body>
+</html>

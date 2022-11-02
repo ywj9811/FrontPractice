@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> 날짜 set </h1>
+    <div>
+
+    </div>
+    <script src="./script/weekDay.js"></script>
+    <!-- 언제든지 가져다 사용할 수 있는 모듈로 만들어 둔다. -->
+    <script>
+        let today = new Date(); 
+        console.log( getWeekDateSwitch(today.getDay()));
+
+        let birthday = new Date();
+        birthday.setFullYear(1999);
+        console.log( birthday );
+        birthday.setMonth(12 - 1);
+        console.log( birthday );
+        birthday.setDate(25);
+        console.log( birthday );
+
+        console.log( getWeekDateSwitch(birthday.getDay()));
+
+        let time = today.getHours(); // 4 : 12
+        time += ' : '; // 4 : 
+        time += today.getMinutes(); // 4 : 12
+        time += ' : '; // 4 : 12 :
+        time += today.getSeconds(); // 4 : 12 : 56
+
+
+        let currentTime = 
+        `${today.getHours()} : ${today.getMinutes()} : ${today.getSeconds()}`;
+
+        console.log( time );
+        console.log( currentTime );
+
+        function  getCurrentTime(t){
+            let currentTime = `${t.getHours()} : ${t.getMinutes()} : ${t.getSeconds()}`;
+            return currentTime; 
+        }
+
+        console.log( getCurrentTime(today));
+    </script>
+</body>
+</html>

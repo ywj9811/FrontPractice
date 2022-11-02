@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>다중if</h1>
+    <div>
+        // switch(수식){
+            //     case 값1: 처리할 내용; break;
+            //     case 값2: 처리할 내용; break;
+            //     default : 처리할 내용;
+            // }
+    </div>
+    <script>
+        let jumsu = 89; 
+        
+        function getGrade( a ){
+            let grade = 'F'; // 기본값 : 가장 많이 사용할 것 같은 값
+            // 학점을 구하는 함수 
+            if( a >= 90 ){ grade = 'A'; }
+            else if( a >= 80 ){ grade = 'B'; }
+            else if( a >= 70 ){ grade = 'C'; }
+            else if( a >= 60 ){ grade = 'D'; }
+            else { grade = 'F'; }
+
+            return grade;
+        }
+        let kimGrade = getGrade( jumsu );
+        console.log( kimGrade );
+
+        function getGradeSwitch( a ){
+            let grade = "F";
+
+            switch(parseInt(a/10)){
+                // 100, 99, 98, 97, 96, 95, 94, 93, 92, 91, 90 : 십의단위 9
+                // 89, 88, 87, 86, 85, 84, // 십의 단위 8
+                case 10: 
+                case 9: grade= 'A' ; break;  
+                case 8: grade= 'B' ; break;  
+                case 7: grade= 'C' ; break;  
+                case 6: grade= 'D' ; break;  
+                default: grade= 'F' ;   
+            }
+
+            return grade; 
+        }
+        
+        kimGrade = getGradeSwitch( 100 );
+        console.log( kimGrade );
+
+        function  getWeekDate( w ){ // 0 ~ 6
+            let weekDate = 99 ; 
+            if( w == 0 ){ weekDate = '일';}
+            else if( w == 1 ){ weekDate = '월';}
+            else if( w == 2 ){ weekDate = '화';}
+            else if( w == 3 ){ weekDate = '수';}
+            else if( w == 4 ){ weekDate = '목';}
+            else if( w == 5 ){ weekDate = '금';}
+            else if( w == 6 ){ weekDate = '토';}
+            else if( w == 99 ){ weekDate = 'error';}
+
+            return weekDate;
+        }
+
+        const today = new Date();
+        let todayWeek = getWeekDate( today.getDay() );
+        console.log( '오늘은 "' + todayWeek + '"요일 입니다.');
+        console.log( `오늘은  "${todayWeek}"요일 입니다.` ); // 임시문자열 = template letteral
+        
+
+        function getWeekDateSwitch( w ){
+            let date; 
+            switch(w){
+                case 0: date='일'; break; 
+                case 1: date='월'; break; 
+                case 2: date='화'; break; 
+                case 3: date='수'; break; 
+                case 4: date='목'; break; 
+                case 5: date='금'; break; 
+                case 6: date='토'; break; 
+                default : date='요일은 0~6사이의 숫자만 가능'
+            }
+
+            return date;
+        }
+
+        console.log(getWeekDateSwitch(today.getDay()));
+    </script>
+</body>
+</html>

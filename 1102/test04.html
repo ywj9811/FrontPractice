@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{ display: flex; 
+              height: 100vh;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+        }
+        h1{ font-size: 52px;}
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <script src="./script/currentTime.js"></script>
+    <script>
+        // document.write( new Date() );
+        // let today  =  new Date();  // 시계는 한번 생성해서 재사용 
+
+        setInterval( function(){
+            let today  =  new Date(); // 호출될때 마다 시계를 재생성
+            // document.write(getCurrentTime(today));
+            document.getElementsByTagName('h1')[0].innerHTML = getCurrentTime(today);
+        }, 1000)
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>지연시간</h1>    
+    <div>
+        한번 setTimeout(function, 지연시간)  <-> clearTimeout(timer)
+        여러 반복 setInterval(function, 지연시간) <-> clearInterval()
+
+        callback_fun : 함수의 파라미터로 전달되는 함수 
+                    // 어떤 작업이 끝난 후 처리할 일을 정의
+
+        // anomymous function : 이름없는 함수
+        function (){ 
+            /// 처리할 일 
+            // 어떤 위치에서 1번만 사용할 것이라 이름이 필요없음
+        }
+    </div>
+
+    <!-- <script>
+        setTimeout(function (){
+            alert('생일 축하합니다.')
+        }, 5000); // timer 자동 생성
+
+        function birthdayAlert(){
+            alert('생일 축하합니다.');
+
+            clearTimeout( timer ); /// 눈에 보이지 않음 
+        }
+
+        const timer = setTimeout( birthdayAlert,7000);  // timer 자동 생성 
+    </script> -->
+    <script>
+        let counter = 0; 
+        setInterval( function(){
+            counter = counter + 1; 
+
+            console.log(counter + ' 쿠폰이 발행되었습니다.');
+        }, 3000)
+        // 3초마다 실행하세요.
+
+        let count = 0; 
+        const timer = setInterval( myCupon, 2500);
+        function myCupon(){
+            count++; // 1 2 3 4 ...
+
+            if( count >= 5 )  clearInterval(timer);
+
+            console.log( 'myCupon pop');
+        }
+    </script>
+</body>
+</html>
