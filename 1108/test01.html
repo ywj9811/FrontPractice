@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>forEach</h1>
+    <div>
+        변수 = 상수(숫자, 문자, 논리값, undefined, NaN, null  )
+        상수그룹 : 배열, 객체(=>class), 함수(function => 화살표함수)
+
+        처리  : 연산자 (산술, 비교, 논리, 증감 : ++ -- )
+        a = 10 + 20 ; 
+        a = a + 1; 
+        ++a; // 선행, 증가된 값이 연산의 결과에 영향을 줌, 우선순위가 최고로 높아진다.
+        후행 a++; // 값을 나중에 증가, 연산 결과에 영향을 주지 않음
+        // 연산의 우선순위가 최하로 떨어짐 
+
+        대입연산자 
+        =, +=, -= , *= , /= 
+        a += 1; 
+        a += 10; 
+        a += 20;
+
+        statement
+        if( 조건식 ){ 처리할 내용 }
+
+        if( 조건식 ){ 처리할 내용 }
+        else{ 처리할 내용}
+
+        switch(수식){
+            case 값: 처리 ; break; 
+            case 값: 처리 ; break; 
+            case 값: 처리 ; break;  
+            ... 
+            default: 처리
+        }
+
+        동일한 여러일을 반복 처리할 때 
+        for(){
+
+        }
+
+        setInterval(callback, 지연시간)
+        clearInterval(시계이름)
+
+    </div>
+
+    <ul class="lnb">
+        <li>LIST1</li>
+        <li>LIST2</li>
+        <li>LIST3</li>
+        <li>LIST4</li>
+        <li>LIST5</li>
+    </ul>   
+
+    <script>
+        // let lnb = document.getElementsByTagName('li')[1];
+        // alert(lnb.innerHTML);
+
+        let lnb = document.querySelector('li');
+        let lnbs = document.querySelectorAll('li');
+        // NodeList(5) [li, li, li, li, li]
+        // NodeList 배열처럼 생긴 유사배열
+        console.log(lnbs);
+
+        const ary = [1,2,3,4,5];
+        ary[0] = 10; 
+        console.log( ary[1]);
+
+        console.log(lnbs[0].innerHTML);
+        for( let a = 0; a< lnbs.length ; a++){
+            console.log( lnbs[a].innerHTML,  ary[a]);
+        }
+
+        // // es6
+        // 배열.forEach(function(변수, index){
+        //     처리할일
+        // })
+
+        ary.forEach(function(a, idx){ 
+            // 파라미터로 오는 변수명은 알아서 사용
+            // 그룹명을 지을때는 복수형 s를 붙이고 
+            // 파라미터로 전달되는 변수는 낱개 데이터
+            // 인덱스 값은 반드시 2번째 사용 
+            console.log(a , idx );     
+            // idx 필요하면 사용하고 그렇지 않으면 생략     
+            // 낱개 데이터도 생략은 가능하나 데이터를 사용하지 않고 
+            // 반복 처리하기 위함   
+        })
+
+        lnbs.forEach(function( lnb, i ){
+            console.log(  lnb.innerHTML, i );
+            if( lnb.innerHTML == 'LIST3'){
+               //alert( i + '번째 메뉴입니다.');
+            }
+        })
+
+        lnbs.forEach(function(){
+            console.log('한글');
+            // 파라미터를 직접적으로 사용하지 않고 어떤 처리를 하기위함
+        })
+    </script>
+
+
+</body> 
+</html>

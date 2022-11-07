@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        li{ }
+        .li{ }
+        #li{ }
+        .lnb a{ }
+        .lnb>li{ }
+
+    </style>
+</head>
+<body>
+    <h1> 자바스크립트 선택자 </h1>
+    <div>
+        변수 = 상수(숫자, 문자, 논리값, undefined, NaN, null  )
+        상수그룹 : 배열, 객체(=>class), 함수(function => 화살표함수)
+
+        처리  : 연산자 (산술, 비교, 논리, 증감 : ++ -- )
+        a = 10 + 20 ; 
+        a = a + 1; 
+        ++a; // 선행, 증가된 값이 연산의 결과에 영향을 줌, 우선순위가 최고로 높아진다.
+        후행 a++; // 값을 나중에 증가, 연산 결과에 영향을 주지 않음
+        // 연산의 우선순위가 최하로 떨어짐 
+
+        대입연산자 
+        =, +=, -= , *= , /= 
+        a += 1; 
+        a += 10; 
+        a += 20;
+
+        statement
+        if( 조건식 ){ 처리할 내용 }
+
+        if( 조건식 ){ 처리할 내용 }
+        else{ 처리할 내용}
+
+        switch(수식){
+            case 값: 처리 ; break; 
+            case 값: 처리 ; break; 
+            case 값: 처리 ; break;  
+            ... 
+            default: 처리
+        }
+
+        동일한 여러일을 반복 처리할 때 
+        for(){
+
+        }
+
+        setInterval(callback, 지연시간)
+        clearInterval(시계이름)
+
+    </div>
+
+    <ul class="lnb">
+        <li class="li">LIST1</li>
+        <li class="li">LIST2</li>
+        <li class="li">LIST3</li>
+        <li class="li"  id="li">LIST4</li>
+        <li class="li">LIST5</li>
+        <li class="li">LIST6</li>
+        <li class="li">LIST7</li>
+        <li class="li">LIST8</li>
+        <li class="li">LIST9</li>
+        <li class="li">LIST10</li>
+    </ul>   
+
+    <script>
+         // 이벤트(사건) => 이벤트 리스너 
+         // 마우스 제어(클릭, 이동, 오버, 아웃);
+         // 키보드 제어(눌리는 중, 때는 중, ..)
+         // 스롤바 제어
+         // setInterval()
+
+
+         // 각각 처리 할 필요도 있고 
+         // 버튼이 늘어나면 늘어나는 수만큼 코드를 더 필요하나 
+         let li01 = document.querySelector('li');
+         li01.addEventListener('click', function(){
+            console.log('clicked');
+         })
+
+         // 한번에 처리할 일도 있고
+         // 버튼의 늘어나는 개수와 상관 없음
+         let lnbs = document.querySelectorAll('li');
+         //  for문 할 때 왜 lnbs로 쓸까용??
+
+         // 배열을 처리하지 않고 여러번 같은 작업을 해야할 경우 
+         for(let a = 0; a < lnbs.length ; a++){
+            lnbs[a].addEventListener('click', function(){
+                    console.log(lnbs[a].innerText + 'clicked');
+            }) 
+         }
+
+        // 처리할 일이 배열(그룹데이타)인 작업을 해야할 경우
+        //  lnbs.forEach(function(lnb){
+        //       lnb.addEventListener('click', function(){
+        //             console.log(lnb.innerText + 'clicked');
+        //       })  
+        //  })
+
+        li01.addEventListener('mouseover', function(){
+            li01.style.backgroundColor = 'rgb(255, 0, 0)';
+            // li01{ background-color:red; }
+        })
+        li01.addEventListener('mouseout', function(){
+            li01.style.backgroundColor = 'transparent';
+            // li01{ background-color:red; }
+        })
+
+        lnbs.forEach(function(lnb, index){
+            lnb.addEventListener('mouseover', function(){
+                //lnb.style.backgroundColor = 'red';
+                lnb.style.backgroundColor = `rgb(255, ${index*20}, ${255 - index * 10})`;
+            })
+            lnb.addEventListener('mouseout', function(){
+                lnb.style.backgroundColor = 'transparent';
+            })
+        })
+    </script>
+
+
+</body> 
+</html>

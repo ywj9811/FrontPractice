@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/box.css">
+    <style>
+        .box{
+            position: relative;
+            background-color: pink;
+        }
+        .inner{ position: absolute;
+            width:100%; 
+            height: 100px;
+            background-color: skyblue;
+            top:100%; 
+        }
+        /* .box:hover>.inner{ top:calc( 100% - 100px);} */
+    </style>
+
+</head>
+<body>
+    <h1> 캡션 </h1>
+    <div class="box">
+        <div class="inner"></div>
+    </div>
+     
+    <script>
+        // js 로는 over와 out 모두 필요 
+        let box = document.querySelector('.box');
+        let inner = document.querySelector('.inner');
+
+        box.style.overflow = 'hidden';
+        inner.style.transition = '0.5s';
+
+        box.addEventListener('mouseover', function(){
+            inner.style.top = `100px`;
+        })
+        box.addEventListener('mouseout', function(){
+            inner.style.top = `100%`;
+        })
+    </script>
+    <!-- 
+        forEach, event handler 확인
+        Math 클래스 사용 
+     -->
+</body>
+</html>

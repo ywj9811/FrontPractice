@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>템플릿 리터럴</h1>
+    <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+        <li>list5</li>
+        <li>list6</li>
+        <li>list7</li>
+        <li>list8</li>
+        <li>list9</li>
+        <li>list10</li>
+    </ul>
+
+    <script>
+        "use strict";
+        // javascript 문법을 엄격하게 사용하겠다. 
+
+        let str1 = 'hello';
+        let str2 = 'javascript';
+        let result1 = str1 + ' " ' + str2; 
+        let result2 = 'hello'+'"javascript';
+        // '' , "" 문자열을 표현하는 것은 중첩 표현이 힘듬 
+
+        let result3 = 10 + 30; //40
+        let result4 = '10' + 30;  // 1030  // 문자열 결합연산
+
+        // es6 
+        let result5 = `${str1} " ${str2}`; 
+        console.log( result1 );
+        console.log( result5 );
+
+        let  color = `rgb( 255, ${10 * 25},255 )`; 
+        console.log( color );
+
+        let lnbs = document.querySelectorAll('li');
+
+        for( let a = 0 ; a<10 ; a++ ){
+            let red = Math.floor(Math.random()*255); 
+            let blue = Math.floor(Math.random()*255); 
+            let green = Math.floor(Math.random()*255); 
+
+            console.log( `rgb(${red}, ${green}, ${blue})` );
+            lnbs[a].style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+        }
+    </script>
+</body>
+</html>

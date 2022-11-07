@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <style>
+        .box{ position: fixed; left:0; top:0; bottom:0; right:0; 
+            /* background-color: pink; */
+        }
+        button{ position: fixed; padding: 10px; 
+            left: 50px; top:50px; 
+        }
+    </style>
+
+</head>
+<body>
+    <h1>5초마다 배경 바꾸기</h1>
+    <div class="box"></div>
+    <button>색변경</button>
+    <script>
+        bgColor(); // 최초한번은 색이 칠해지지 않으므로 함수를 임의로 호출함
+
+        // 5초마다 배경 바꾸기
+        let timer = setInterval(bgColor, 5000);
+        
+        function bgColor(){
+            let red = Math.floor(Math.random()*255); 
+            let blue = Math.floor(Math.random()*255); 
+            let green = Math.floor(Math.random()*255); 
+
+            let color = `rgb(${red}, ${green}, ${blue})`;
+
+            const box = document.querySelector('.box');
+            box.style.backgroundColor = color; 
+        }
+
+        let btn = document.querySelector('button');
+        btn.addEventListener('click', function(){
+            clearInterval( timer );
+            // 시간 제어와 마우스등 제어를 동시에 사용시 시간 제어 꺼야함
+            bgColor();
+        })
+
+        btn.addEventListener('mouseout', function(){
+            timer = setInterval( bgColor, 5000 );
+        })
+
+        // mouseover : mouseout  
+        // mouseenter : mouseleave 
+        // 이벤트 전이에 따른 다른 동작 
+    </script>
+</body>
+</html>

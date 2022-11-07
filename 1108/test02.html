@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        li{ }
+        .li{ }
+        #li{ }
+        .lnb a{ }
+        .lnb>li{ }
+
+    </style>
+</head>
+<body>
+    <h1> 자바스크립트 선택자 </h1>
+    <div>
+        변수 = 상수(숫자, 문자, 논리값, undefined, NaN, null  )
+        상수그룹 : 배열, 객체(=>class), 함수(function => 화살표함수)
+
+        처리  : 연산자 (산술, 비교, 논리, 증감 : ++ -- )
+        a = 10 + 20 ; 
+        a = a + 1; 
+        ++a; // 선행, 증가된 값이 연산의 결과에 영향을 줌, 우선순위가 최고로 높아진다.
+        후행 a++; // 값을 나중에 증가, 연산 결과에 영향을 주지 않음
+        // 연산의 우선순위가 최하로 떨어짐 
+
+        대입연산자 
+        =, +=, -= , *= , /= 
+        a += 1; 
+        a += 10; 
+        a += 20;
+
+        statement
+        if( 조건식 ){ 처리할 내용 }
+
+        if( 조건식 ){ 처리할 내용 }
+        else{ 처리할 내용}
+
+        switch(수식){
+            case 값: 처리 ; break; 
+            case 값: 처리 ; break; 
+            case 값: 처리 ; break;  
+            ... 
+            default: 처리
+        }
+
+        동일한 여러일을 반복 처리할 때 
+        for(){
+
+        }
+
+        setInterval(callback, 지연시간)
+        clearInterval(시계이름)
+
+    </div>
+
+    <ul class="lnb">
+        <li class="li">LIST1</li>
+        <li class="li">LIST2</li>
+        <li class="li">LIST3</li>
+        <li class="li"  id="li">LIST4</li>
+        <li class="li">LIST5</li>
+    </ul>   
+
+    <script>
+        // javascript selector
+        let lnb1 = document.getElementsByTagName('li')[1];
+        let lnb2 = document.getElementsByClassName('.li')[1];
+        let lnb3 = document.getElementById('li');
+        // alert(lnb.innerHTML);
+
+        // querySelector는 중복된 데이터 중 첫번째 선택
+        let tagS = document.querySelector('li'); // 낱개
+        let classS = document.querySelector('.li'); // 낱개
+        let idS = document.querySelector('#li'); // 낱개
+        console.log(tagS);
+        console.log(classS); 
+        console.log(idS);
+        let selector1 = document.querySelector('.lnb #li');
+        let selector2 = document.querySelector('.lnb>#li');
+        console.log( selector1);
+        console.log( selector2);
+
+        let lnbs1 = document.querySelectorAll('li');
+        let lnbs2 = document.querySelectorAll('.li');
+        let lnbs3 = document.querySelectorAll('.lnb>.li');
+        // 태그, 클래스, 아이디 등 다양한 선택자를 사용할 수 있음 
+
+        // for(), forEach() 
+        // 배열의 인덱스는 배열의 개수 - 1 이므로 (0 번부터 시작)
+        for( let a = lnbs1.length - 1 ; a>=0 ; a--){
+            console.log( lnbs1[a] );
+        }
+
+        lnbs2.forEach(function( menu, index){
+            console.log(menu);
+            // 배열을 reverse
+        })
+    </script>
+
+
+</body> 
+</html>
